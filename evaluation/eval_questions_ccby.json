@@ -1,0 +1,114 @@
+[
+  {
+    "question": "What is this document, and what does it grant licensees permission to do?",
+    "type": "summary",
+    "reference": "It is the full legal text of the Creative Commons Attribution 4.0 International Public License (\"CC BY 4.0\"). By exercising the Licensed Rights, the recipient accepts and agrees to be bound by its terms; Section 2 grants a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to reproduce and Share the Licensed Material, and to produce, reproduce, and Share Adapted Material, subject to the license conditions (primarily attribution).",
+    "reference_chunk_ids": [],
+    "note": "Summary-type question over the license's opening framing. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What kind of license does Section 2(a)(1) grant, and what two things does it let you do with the Licensed Material?",
+    "type": "detail",
+    "reference": "A worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license. It lets you (A) reproduce and Share the Licensed Material, in whole or in part, and (B) produce, reproduce, and Share Adapted Material.",
+    "reference_chunk_ids": [],
+    "note": "Detail/enumeration question over Section 2's license grant. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "How does the license define \"Adapted Material\"?",
+    "type": "detail",
+    "reference": "Material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. Where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over a Section 1 definition. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "How does the license define \"Share\"?",
+    "type": "detail",
+    "reference": "To provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access it from a place and at a time individually chosen by them.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over a Section 1 definition. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What must you do to satisfy the Attribution condition when you Share the Licensed Material, including in modified form?",
+    "type": "detail",
+    "reference": "If supplied by the Licensor, retain identification of the creators (and any others designated to receive attribution, in any reasonable manner requested, including by pseudonym), a copyright notice, a notice referring to this Public License, a notice referring to the disclaimer of warranties, and a URI or hyperlink to the Licensed Material to the extent reasonably practicable. You must also indicate if you modified the Licensed Material and retain an indication of any previous modifications, and indicate the Licensed Material is licensed under this Public License, including the text of, or a URI or hyperlink to, this Public License.",
+    "reference_chunk_ids": [],
+    "note": "Detail/enumeration question over Section 3(a)'s Attribution condition -- the license's core obligation. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "If the Licensor asks you to remove the attribution information, what must you do?",
+    "type": "detail",
+    "reference": "If requested by the Licensor, you must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.",
+    "reference_chunk_ids": [],
+    "note": "Short precision-testing detail question. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What happens automatically when you fail to comply with the license, and how -- and within what time limit -- can your rights be reinstated?",
+    "type": "cross_paragraph",
+    "reference": "Under Section 6(a), your rights terminate automatically if you fail to comply with the License. Under 6(b), where your right to use the Licensed Material has terminated under 6(a), it reinstates automatically as of the date the violation is cured, provided it is cured within 30 days of your discovery of the violation, or upon express reinstatement by the Licensor. This does not affect any right the Licensor may have to seek remedies for your violations of the license.",
+    "reference_chunk_ids": [],
+    "note": "Cross-paragraph question combining the termination trigger (6a) with the reinstatement mechanics and time limit (6b). Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "Which sections of the license survive termination?",
+    "type": "detail",
+    "reference": "Sections 1, 5, 6, 7, and 8.",
+    "reference_chunk_ids": [],
+    "note": "Short enumeration/detail question. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "Does this license authorize use of the \"Creative Commons\" trademark or logo? Does it license moral rights, patent rights, or trademark rights?",
+    "type": "detail",
+    "reference": "No. The \"About Creative Commons\" section states Creative Commons does not authorize use of the \"Creative Commons\" trademark or any other CC trademark or logo without its prior written consent (this paragraph does not form part of the public licenses themselves). Separately, Section 2(b) states moral rights (such as the right of integrity) and publicity/privacy/similar personality rights are not licensed under this Public License -- though the Licensor waives them to the limited extent necessary to allow exercise of the Licensed Rights -- and that patent and trademark rights are not licensed under this Public License at all.",
+    "reference_chunk_ids": [],
+    "note": "Detail question combining the license's own 'Other rights' clause with the non-license trademark notice at the end of the document -- checks whether retrieval distinguishes rights NOT covered by the license. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "Under what circumstance does the Licensor reserve the right to collect royalties from you for exercising the Licensed Rights?",
+    "type": "detail",
+    "reference": "To the extent possible, the Licensor waives any right to collect royalties from you for exercising the Licensed Rights, whether directly or through a collecting society, under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases, the Licensor expressly reserves any right to collect such royalties.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over Section 2(b)(3). Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What does the license say about warranties and the Licensor's liability?",
+    "type": "detail",
+    "reference": "Unless otherwise separately undertaken, the Licensor offers the Licensed Material as-is and as-available and makes no representations or warranties of any kind concerning it (express, implied, statutory, or other), including warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors. To the extent possible, the Licensor will also not be liable to you on any legal theory for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of the license or use of the Licensed Material, even if advised of the possibility of such damages.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over Section 5 (Disclaimer of Warranties and Limitation of Liability). Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "How does Section 4 (Sui Generis Database Rights) relate to the license grant in Section 2, and what happens if you include a substantial portion of the database's contents in your own database?",
+    "type": "cross_paragraph",
+    "reference": "Section 4 supplements, and does not replace, your obligations under this Public License where the Licensed Rights include Sui Generis Database Rights that apply to your use of the Licensed Material. For the avoidance of doubt, Section 2(a)(1) already grants you the right to extract, reuse, reproduce, and Share all or a substantial portion of the database's contents. If you include all or a substantial portion of the database contents in a database in which you have Sui Generis Database Rights, then that database (but not its individual contents) is Adapted Material, and you must comply with the Section 3(a) conditions if you Share all or a substantial portion of the database's contents.",
+    "reference_chunk_ids": [],
+    "note": "Cross-paragraph question tying the standalone Section 4 back to the Section 2 license grant it supplements. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What does \"No downstream restrictions\" mean under Section 2(a)(5)(B)?",
+    "type": "detail",
+    "reference": "You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over a specific downstream-recipients sub-clause. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What does Section 8 (Interpretation) say about how ambiguities or unenforceable provisions in the license should be handled?",
+    "type": "summary",
+    "reference": "The License is not interpreted to reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under the License. To the extent possible, an unenforceable provision is automatically reformed to the minimum extent necessary to make it enforceable, or severed from the License without affecting the enforceability of the remaining terms if it cannot be reformed. No term or condition is waived, and no failure to comply is consented to, unless expressly agreed by the Licensor. Nothing in the License limits or waives any privileges or immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.",
+    "reference_chunk_ids": [],
+    "note": "Summary-type question over the whole Section 8, which functions as the license's general interpretive/severability rules. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What is the difference between 'Adapted Material' and 'Licensed Material' as defined in this license?",
+    "type": "cross_paragraph",
+    "reference": "Licensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License. Adapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material, in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor.",
+    "reference_chunk_ids": [],
+    "note": "Comparison-style question added to improve QueryEngine intent-routing coverage (COMPARISON intent was underrepresented in the eval set). Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What steps must you take, in order, to satisfy the Attribution condition when you Share the Licensed Material?",
+    "type": "detail",
+    "reference": "If You Share the Licensed Material (including in modified form), You must: (A) retain, if supplied by the Licensor, identification of the creator(s), a copyright notice, a notice referring to this Public License, a notice referring to the disclaimer of warranties, and a URI or hyperlink to the Licensed Material to the extent reasonably practicable; (B) indicate if You modified the Licensed Material and retain an indication of any previous modifications; and (C) indicate the Licensed Material is licensed under this Public License and include the text of, or the URI or hyperlink to, this Public License.",
+    "reference_chunk_ids": [],
+    "note": "Procedural-style question added to improve QueryEngine intent-routing coverage (PROCEDURAL intent was underrepresented in the eval set). Fill in reference_chunk_ids via list_chunks.py."
+  }
+]

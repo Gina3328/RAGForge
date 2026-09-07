@@ -1,0 +1,121 @@
+[
+  {
+    "question": "What is RAGBench, and what gap in RAG evaluation does it aim to fill?",
+    "type": "summary",
+    "reference": "RAGBench is introduced as the first comprehensive, large-scale RAG benchmark dataset of 100k examples, covering five unique industry-specific domains and various RAG task types, sourced from industry corpora such as user manuals. It aims to address the fact that comprehensive evaluation of RAG systems has remained a challenge due to the lack of unified evaluation criteria and annotated datasets -- prior benchmarks are often small, target a disjoint set of labels, or vary in their exact evaluation criteria from study to study.",
+    "reference_chunk_ids": [],
+    "note": "Summary-type question over the Abstract/Introduction. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What are the four TRACe metrics, and what does each letter stand for?",
+    "type": "detail",
+    "reference": "uTilization, Relevance, Adherence, and Completeness.",
+    "reference_chunk_ids": [],
+    "note": "Detail/enumeration question over the TRACe framework introduction. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What does Context Relevance measure, and what does a low relevance score indicate?",
+    "type": "detail",
+    "reference": "Context Relevance is defined as the fraction of the retrieved context that is relevant to the input query. Low relevance points to an inefficient retriever that supplies excess information to the generation model -- long, low-relevance context inputs may accrue unnecessary costs and compromise the quality of the generated output.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the 'Context Relevance' subsection of TRACe. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What is Context Utilization, and how does it differ from Completeness?",
+    "type": "cross_paragraph",
+    "reference": "Context Utilization measures the fraction of the retrieved context that is actually used by the generator to produce the response; low Utilization alone points to a weak generator that fails to leverage the provided context efficiently, while low Utilization combined with low Relevance points to a greedy retriever. Completeness measures how well the response incorporates all the relevant information in the context, and is a distinct failure mode: it is possible to have high Relevance and high Utilization but low Completeness, when the generator uses irrelevant information in the context to produce a low-quality response.",
+    "reference_chunk_ids": [],
+    "note": "Cross-paragraph question combining the 'Context Utilization' and 'Completeness' TRACe subsections to test whether the distinction between them survives retrieval. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "How is Adherence defined, and what is it synonymous with in prior literature?",
+    "type": "detail",
+    "reference": "Adherence is designed to detect hallucinations in RAG responses, and is synonymous with previously proposed answer faithfulness, groundedness, and attribution. Example-level Adherence is defined as a boolean indicating whether or not all parts of the response are grounded in the context.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the 'Adherence' TRACe subsection. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "How many domains does RAGBench cover, and what are they?",
+    "type": "detail",
+    "reference": "Five distinct domains: bio-medical research (PubMedQA, CovidQA-RAG), general knowledge (HotpotQA, MS Marco, HAGRID, ExpertQA), legal contracts (CUAD), customer support (DelucionQA, EManual, TechQA), and finance (FinQA, TAT-QA).",
+    "reference_chunk_ids": [],
+    "note": "Detail/enumeration question over the 'Source Domains' subsection. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What is the range of context token lengths in RAGBench, and which component dataset has the longest contexts?",
+    "type": "detail",
+    "reference": "Context token length ranges from 100 to 11k tokens. CUAD documents feature long contexts of up to 11k tokens each, compared to the relatively short context in PubMedQA.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the 'Context Token Length' subsection. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "Which two LLMs were used to generate responses for RAGBench, and why was Claude 3 Haiku used exclusively for the CUAD dataset?",
+    "type": "detail",
+    "reference": "GPT-3.5 (gpt-3.5-0125) and Claude 3 Haiku. For CUAD, responses were generated only with Claude 3 Haiku because CUAD's long-context legal contracts exceed the GPT-3.5 16k token limit.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the 'Response Generation' subsection. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "How large is RAGBench in total, and how is it split?",
+    "type": "detail",
+    "reference": "RAGBench totals 100k samples. Each component dataset is split into train, validation, and test sets, ensuring no overlap in queries across splits from the same data source (78k train, 12k dev, 11k test overall, per the component dataset table).",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the 'Data Splits' subsection and the component dataset table. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "Which three RAGBench component datasets have the highest fraction of hallucinated responses, and which have the least?",
+    "type": "detail",
+    "reference": "ExpertQA, CovidQA, and MS Marco contain the highest fraction of hallucinated responses (12%, 16%, and 13% respectively), while CUAD, FinQA, and TAT-QA contain the least (about 1% each).",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the 'RAGBench Statistics' subsection. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "How were ground-truth TRACe labels produced for RAGBench, and how well did this method align with human judgments on DelucionQA?",
+    "type": "cross_paragraph",
+    "reference": "GPT-4 (gpt-4-0125-preview) was prompted with chain-of-thought techniques to produce ground truth Adherence, Relevance, and Utilization labels for input (documents, query, response) tuples; Completeness is derived from span-level Relevance and Utilization annotations rather than separately annotated. This GPT-4 annotator achieved 93% and 95% example- and span-level agreement with human judgements on the DelucionQA test split.",
+    "reference_chunk_ids": [],
+    "note": "Cross-paragraph question combining the 'LLM annotator' subsection's method with its validation result stated a few sentences later. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What model architecture did the authors fine-tune to predict all TRACe metrics, and what is novel about its design?",
+    "type": "detail",
+    "reference": "A DeBERTa-v3-Large NLI checkpoint, with one key architecture modification: a shallow prediction head is added for each output RAG metric. This allows computing all TRACe metrics in a single forward pass and enables transfer learning across metrics through back-propagation down to the shared base layers.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the 'Fine-tuned Judge' subsection. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What is the main empirical finding comparing the fine-tuned DeBERTa model to LLM-based judges?",
+    "type": "detail",
+    "reference": "The fine-tuned DeBERTa model, despite being only about 400M parameters, achieves competitive performance with billion-parameter LLM judges and existing RAG evaluation systems (RAGAS, TruLens) across numerous domain subsets of the RAGBench test set, with AUROC scores ranging from 0.64 to 0.86 for hallucination detection and RMSE ranging from 0.04 to 0.26 for relevance and utilization predictions.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the 'Results' section. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "Why is estimating Context Relevance harder than estimating Context Utilization, according to the paper's results discussion?",
+    "type": "detail",
+    "reference": "Utilization can be assessed through a straightforward semantic comparison between the context and the response. Relevance is a more intricate metric because, due to the nature of RAG, the majority of retrieved documents are already semantically related to the query -- so mere semantic similarity is insufficient. The model must instead ascertain whether the provided context includes the specific information necessary to answer the question, and then assess what information in the context may be used to arrive at that answer.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the 'Estimating Context Relevance is Difficult' results discussion. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "Beyond releasing a dataset, what does this paper contribute to RAG evaluation research?",
+    "type": "summary",
+    "reference": "Beyond releasing the RAGBench dataset (100k examples across 12 component datasets and 5 domains), the paper formalizes the TRACe evaluation framework -- four comprehensive metrics (Utilization, Relevance, Adherence, Completeness) applicable across RAG domains -- and demonstrates that a small fine-tuned DeBERTa model trained on RAGBench can perform competitively with, and offer more granular and actionable feedback than, larger LLM-based judges. The authors motivate future work on leveraging this data to further narrow the gap between automated RAG evaluators and ground truth.",
+    "reference_chunk_ids": [],
+    "note": "Summary-type question over the Conclusion, requiring synthesis of the paper's contributions beyond just 'it's a dataset.' Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What is the difference between Context Utilization and Context Relevance in the TRACe framework?",
+    "type": "cross_paragraph",
+    "reference": "Context Relevance is the fraction of the retrieved context that is relevant to the input query -- low relevance points to an inefficient retriever that supplies excess information. Context Utilization measures the fraction of the retrieved context that is actually used by the generator to produce the response -- low Utilization alone points to a weak generator that fails to leverage the provided context, while low Utilization combined with low Relevance points to a greedy retriever.",
+    "reference_chunk_ids": [],
+    "note": "Comparison-style question added to improve QueryEngine intent-routing coverage (COMPARISON intent was underrepresented in the eval set). Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What is the process by which GPT-4 produced the ground-truth TRACe labels for RAGBench?",
+    "type": "detail",
+    "reference": "GPT-4 (gpt-4-0125-preview) was prompted with chain-of-thought techniques to produce ground truth Adherence, Relevance, and Utilization labels for input (documents, query, response) tuples; Completeness is derived from span-level Relevance and Utilization annotations rather than separately annotated.",
+    "reference_chunk_ids": [],
+    "note": "Procedural-style question added to improve QueryEngine intent-routing coverage (PROCEDURAL intent was underrepresented in the eval set). Fill in reference_chunk_ids via list_chunks.py."
+  }
+]

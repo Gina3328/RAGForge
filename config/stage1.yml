@@ -1,0 +1,26 @@
+llm:
+  model: "claude-haiku-4-5"
+
+embedding:
+  baseUrl: "http://localhost:11434"
+  model: "nomic-embed-text"
+  dimension: 768
+  timeout: 30
+
+vectorStore:
+  host: "localhost"
+  port: 19530
+  collectionPrefix: "ragforge_"
+
+chunker:
+  strategy: "fixed_size"
+  maxSize: 500
+  overlap: 50
+
+retriever:
+  topK: 5
+  scoreThreshold: 0.5
+
+evaluation:
+  datasetPath: "evaluation/eval_set.json"
+  reportPath: "evaluation/reports"

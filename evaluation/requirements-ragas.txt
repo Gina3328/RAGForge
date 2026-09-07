@@ -1,0 +1,24 @@
+# Dependencies for the RAGAS scoring layer ONLY (evaluation/run_ragas_eval.py).
+#
+# These are installed into their OWN throwaway virtual environment
+# (evaluation/.ragas_venv), completely separate from the project's main
+# .venv. They are pinned to slightly older versions on purpose: newer
+# releases of `ragas` currently have a broken import
+# (langchain_community.chat_models.vertexai, which recent langchain-community
+# releases removed), and newer langchain-anthropic requires a langchain-core
+# major version that would otherwise conflict with these pins. This
+# combination was verified to install and import cleanly.
+#
+# To set up (one time):
+#   python3 -m venv evaluation/.ragas_venv
+#   evaluation/.ragas_venv/bin/pip install -r evaluation/requirements-ragas.txt
+#
+# To remove entirely: delete evaluation/.ragas_venv (and this file if you
+# don't want the RAGAS layer at all). Nothing outside evaluation/ is
+# affected either way -- the main project's .venv never sees these packages.
+
+ragas==0.2.15
+langchain-community==0.3.27
+langchain-anthropic==0.3.13
+langchain-core<0.4
+python-dotenv>=1.0.0

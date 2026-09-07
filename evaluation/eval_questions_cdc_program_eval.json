@@ -1,0 +1,121 @@
+[
+  {
+    "question": "What is the purpose of this report, and how does it relate to the 1999 CDC framework?",
+    "type": "summary",
+    "reference": "This report updates the 1999 CDC Framework for Program Evaluation in Public Health by integrating major advancements in the fields of evaluation and public health, lessons learned from practical applications of the original framework, and current Federal agency policies and practices. The updated 2024 framework is a practical, nonprescriptive tool designed to summarize and organize essential elements of program evaluation, and can be applied at any level from individual programs to broader systems by both novices and experts.",
+    "reference_chunk_ids": [],
+    "note": "Summary-type question over the report's Summary/Introduction. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What two key principles guided the 2024 update process?",
+    "type": "detail",
+    "reference": "1) Maintain the practicality and simplicity of the framework, and 2) refresh the framework rather than engage in a wholesale change.",
+    "reference_chunk_ids": [],
+    "note": "Short detail/enumeration question over the Introduction. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "Why was the term \"stakeholder\" replaced with \"interest holder\" in this updated framework?",
+    "type": "detail",
+    "reference": "\"Stakeholder\" was replaced with \"interest holder\" to align with an equity-centered approach to communications, because the term \"stakeholder\" can indicate a power differential between groups and is recognized as having a violent connotation for certain American Indian or Alaska Native tribes and tribal members.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the 'Defining Key Concepts' section's terminology rationale. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What is the most substantial change from the 1999 framework to the 2024 update?",
+    "type": "detail",
+    "reference": "The addition of three cross-cutting actions that are core tenets to incorporate within each evaluation step: 1) engage collaboratively, 2) advance equity, and 3) learn from and use insights.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the framework overview. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What are the five Federal program evaluation standards described in this report?",
+    "type": "detail",
+    "reference": "Relevance and Utility, Rigor, Independence and Objectivity, Transparency, and Ethics.",
+    "reference_chunk_ids": [],
+    "note": "Detail/enumeration question over the 'Program Evaluation Standards' section headers. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What are the three cross-cutting actions, and how are they depicted in relation to the framework's six steps?",
+    "type": "detail",
+    "reference": "Engage Collaboratively, Advance Equity, and Learn From and Use Insights. They are depicted as wrapping around the framework steps (Figure 1), which is intentional because these actions affect how all six steps are performed, rather than being a separate, standalone step.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the 'Cross-Cutting Actions' section. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What are the five types of evaluation defined in this report?",
+    "type": "detail",
+    "reference": "Formative evaluation, process or implementation evaluation, outcome evaluation, impact evaluation, and economic evaluation.",
+    "reference_chunk_ids": [],
+    "note": "Detail/enumeration question over the 'Types of Evaluation' section. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What four categories of interest holders does Step 1 (Assess Context) describe, and what distinguishes \"persons who might use the evaluation findings\" from \"persons who are skeptical about the program\"?",
+    "type": "cross_paragraph",
+    "reference": "The four categories are: persons served or affected by the program, persons who plan or implement the program, persons who might use the evaluation findings, and persons who are skeptical about the program. Persons who might use the findings learn from and act on them -- e.g., they may have authority to adjust funding or modify program processes, or a general interest because they design, implement, evaluate, or advocate for the program. Persons who are skeptical or antagonistic toward the program may oppose it due to differing values about what change is needed or how to achieve it; engaging them can still strengthen the evaluation's credibility and reveal additional needs and uses.",
+    "reference_chunk_ids": [],
+    "note": "Cross-paragraph question requiring all four interest-holder bullet points plus the contrast between two of them. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What four factors does Step 1 (Assess Context) say to consider when assessing context?",
+    "type": "detail",
+    "reference": "1) Readiness for evaluation, 2) interest holders, 3) place, and 4) evaluation capacity.",
+    "reference_chunk_ids": [],
+    "note": "Detail/enumeration question over the Step 1 introduction. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What six aspects of a program does the narrative description in Step 2 (Describe the Program) cover?",
+    "type": "detail",
+    "reference": "Need, inputs, activities, outcomes, contextual factors, and stage of development.",
+    "reference_chunk_ids": [],
+    "note": "Detail/enumeration question over the Step 2 'Narrative description' subsection headers. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What are the three main categories of evaluation design described in Step 3, and which is typically considered most rigorous for answering causal or outcome questions?",
+    "type": "detail",
+    "reference": "Experimental, quasi-experimental, and observational designs. Experimental and quasi-experimental designs are typically viewed as more rigorous than observational designs for answering whether a program has contributed to or resulted in the outcomes of interest, because they can often rule out other reasons why an observed outcome occurred.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the Step 3 'Evaluation design' subsection. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What three common indicator categories does Step 4 (Gather Credible Evidence) describe?",
+    "type": "detail",
+    "reference": "Inputs, activities (which includes outputs, the products of program activities), and outcomes.",
+    "reference_chunk_ids": [],
+    "note": "Detail/enumeration question over the Step 4 'Indicators' subsection. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What three main activities does Step 5 (Generate and Support Conclusions) involve, and how do conclusions and recommendations relate to the underlying data?",
+    "type": "cross_paragraph",
+    "reference": "Step 5 involves conducting robust data analysis, interpreting the findings, and developing recommendations. Both evaluative conclusions and recommendations must be rooted in, and supported by, the evaluation's underlying data: results of data analyses are compared with the expectations identified in Step 4 and interpreted within the context established in Step 1, and recommendations must similarly be tied to the evidence and feasible given that context.",
+    "reference_chunk_ids": [],
+    "note": "Cross-paragraph question combining the Step 5 overview with its 'Analysis'/'Interpretation'/'Recommendations' subsections and back-references to Steps 1 and 4. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What three misconceptions about program evaluation does this report address, and how does the framework counter each one?",
+    "type": "summary",
+    "reference": "1) That the perceived cost and time required for evaluation deters its use -- countered by noting a simple, low-cost evaluation can deliver valuable results, and investment should be aligned with program needs rather than assuming evaluation must be expensive or left until a program's end. 2) The perceived technical demands of designing and conducting an evaluation -- countered by noting most public health program evaluations do not require elaborate analytic techniques or controlled environments; a practical, context-sensitive approach usually suffices. 3) Concerns that evaluation is punitive, exclusionary, or adversarial -- countered by the framework encouraging an approach designed to be helpful and to welcome all interest holders' participation, where any penalties should result from failing to use the learning to improve, not from discovering negative findings.",
+    "reference_chunk_ids": [],
+    "note": "Summary-type question over the entire 'Applying the Framework: Addressing Evaluation Misconceptions' section -- tests whether all three misconceptions are retrieved together. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "Is program evaluation the same as research? How does this report distinguish the two?",
+    "type": "detail",
+    "reference": "No. Although program evaluation often uses methods that are also used in research, its purpose is different: research primarily aims to contribute to generalizable knowledge, whereas evaluation aims to continuously improve programs and organizations and produce findings and recommendations for decision-making.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the Introduction's evaluation-vs-research distinction. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What is the difference between formative evaluation and process (implementation) evaluation?",
+    "type": "cross_paragraph",
+    "reference": "Formative evaluation assesses whether a program, policy, or organizational approach, or some aspect of these, is feasible, appropriate, and acceptable before it is fully implemented, and can include process and outcome measures. Process or implementation evaluation assesses how the program, intervention, operation, or regulation is implemented relative to its intended theory of change, often including information on processes, content, quantity, quality, and structure of what is being assessed.",
+    "reference_chunk_ids": [],
+    "note": "Comparison-style question added to improve QueryEngine intent-routing coverage (COMPARISON intent was underrepresented in the eval set). Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What are the six steps of the Program Evaluation Framework, in order?",
+    "type": "detail",
+    "reference": "Step 1: Assess Context. Step 2: Describe the Program. Step 3: Focus the Evaluation Questions and Design. Step 4: Gather Credible Evidence. Step 5: Generate and Support Conclusions. Step 6: Act on Findings.",
+    "reference_chunk_ids": [],
+    "note": "Procedural-style question added to improve QueryEngine intent-routing coverage (PROCEDURAL intent was underrepresented in the eval set). Fill in reference_chunk_ids via list_chunks.py."
+  }
+]

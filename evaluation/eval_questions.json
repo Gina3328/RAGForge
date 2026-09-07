@@ -1,0 +1,394 @@
+[
+  {
+    "question": "What is this document mainly about?",
+    "type": "summary",
+    "reference": "The document describes a full-stack Clinical Note Structuring Tool, built for an AHMC Software Engineer take-home exercise, that converts unstructured ER and H&P clinical notes into structured summaries aligned with MCG (Milliman Care Guidelines) admission criteria and generates a Revised HPI narrative supporting the admission decision.",
+    "reference_chunk_ids": [],
+    "note": "Summary-type question, used to check whether the scoreThreshold under-retrieval issue causes over-generalized answers. reference_chunk_ids left empty on purpose -- run evaluation/list_chunks.py against the real document and fill in the chunk_id(s) that contain this answer before computing hitRate."
+  },
+  {
+    "question": "How is the project deployed?",
+    "type": "detail",
+    "reference": "The backend deploys to Cloudflare Workers via `pnpm deploy` from apps/api, with secrets (OPENAI_API_KEY, ANTHROPIC_API_KEY) set through the Cloudflare dashboard or `wrangler secret put`. The frontend builds with `bun run build` (output to dist/) and deploys to Cloudflare Pages or any static host.",
+    "reference_chunk_ids": [],
+    "note": "Detail-type question about a specific technical choice/config. Best at revealing whether retrieval is precise. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What reference standard is used for the results this project generates?",
+    "type": "cross_paragraph",
+    "reference": "Case A's human-optimized Revised HPI document is used as the reference standard (\"essentially a ground truth\"). It's already used to derive the 6-sentence HPI framework and content conventions like spelling out lab units; the document also proposes (as a future improvement, not yet confirmed implemented) turning it into an automated regression test that runs Case A through the pipeline after prompt changes and scores semantic similarity against it.",
+    "reference_chunk_ids": [],
+    "note": "Cross-paragraph synthesis question -- the full answer needs the 'reference standard / ground truth' chunk plus the '6-sentence framework' and 'lab units' chunks combined. Good test of whether topK=5 is enough to pull all of them in. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "How many distinct glucose pathways does the Stage 2 prompt encode, and why?",
+    "type": "detail",
+    "reference": "Three. Certain confounders (such as SGLT2 inhibitor use) complicate how glucose readings should be interpreted, so the Stage 2 prompt explicitly encodes all three glucose pathways to handle this correctly.",
+    "reference_chunk_ids": [],
+    "note": "Detail/numeric question -- good at catching retrieval that grabs a nearby-but-wrong chunk. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What are the top-level fields of the final structured output?",
+    "type": "detail",
+    "reference": "chief_complaint, hpi_summary, key_findings, suspected_conditions, disposition, mcg_criteria, inpatient_management_criteria, ed_treatment, and uncertainties.",
+    "reference_chunk_ids": [],
+    "note": "Detail/enumeration question. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What port does the frontend dev server run on, and what does it proxy?",
+    "type": "detail",
+    "reference": "The frontend dev server (bun dev / vite) runs on localhost:5173 and proxies /api and /health requests to localhost:8787, avoiding CORS issues in local development.",
+    "reference_chunk_ids": [],
+    "note": "Detail/config question. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "How do you start the backend locally, and what port does it run on?",
+    "type": "detail",
+    "reference": "From apps/api, run `pnpm install` then `pnpm dev`, which starts a wrangler dev server on localhost:8787.",
+    "reference_chunk_ids": [],
+    "note": "Detail/config question. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What database does the backend use, and how is it set up for production?",
+    "type": "cross_paragraph",
+    "reference": "The backend uses Cloudflare D1. Wrangler handles a local D1 instance automatically in dev mode; for production you create a D1 database and update database_id in wrangler.toml. The schema lives in apps/api/src/db/schema.ts, and after editing it you run `pnpm db:sync` to regenerate the migration and validate it, then `pnpm test`.",
+    "reference_chunk_ids": [],
+    "note": "Combines the 'production database setup' chunk with the 'schema changes' chunk. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "Why does the project spell out lab units like \"millimoles per liter\" instead of abbreviations like \"mmol/L\"?",
+    "type": "cross_paragraph",
+    "reference": "Because the reference Revised HPI (Case A's human-optimized document) does this -- it reads more naturally in a narrative paragraph and avoids ambiguity for non-specialist reviewers.",
+    "reference_chunk_ids": [],
+    "note": "Ties the 'reference standard' chunk to the design-decisions chunk explaining this specific convention. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "Why is the Revised HPI structured as a 6-sentence framework (presentation, signs, labs, diagnosis, treatment, justification)?",
+    "type": "cross_paragraph",
+    "reference": "This framework was derived by analyzing the human-optimized Case A Revised HPI document, which follows this consistent pattern. Each sentence maps to a different MCG alignment function.",
+    "reference_chunk_ids": [],
+    "note": "Cross-paragraph synthesis question. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What AI tools were used to build this project, and what content is disclosed as AI-generated?",
+    "type": "detail",
+    "reference": "Claude (Anthropic) was used for prompt wording refinement, code generation, and targeted bug fixes. The disclosed AI-generated content includes the concrete prompt wording and JSON schema structures in prompts.ts, based on the author's own 3-stage architecture and per-stage responsibility definitions.",
+    "reference_chunk_ids": [],
+    "note": "Detail question testing retrieval of the AI/Tool Usage Disclosure section specifically. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "How does the system distinguish AI-generated content from user edits, and why does that matter?",
+    "type": "detail",
+    "reference": "The exercise requires distinguishing machine-generated content from user-edited content, so edits are tracked separately (e.g. an *_edited column) making it trivial to tell what the model produced versus what the user changed, without needing diff computation or versioning. llm_model and llm_prompt_version columns also record which model and prompt version were used, so results are reproducible.",
+    "reference_chunk_ids": [],
+    "note": "Detail question about a specific design choice. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What principle governs how the Revised HPI handles information that isn't present in the source clinical notes?",
+    "type": "detail",
+    "reference": "No fabrication and no gap-filling: if the source notes don't mention something, it doesn't appear in the Revised HPI.",
+    "reference_chunk_ids": [],
+    "note": "Short factual/detail question, good precision check since the correct chunk is very short. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What does the key_finding's mcg_criteria_match field do, and why was it added?",
+    "type": "detail",
+    "reference": "It ties each key finding back to the specific MCG criterion it supports, so a reviewer can see exactly which finding satisfies which admission criterion instead of having to mentally map between two separate lists.",
+    "reference_chunk_ids": [],
+    "note": "Detail question on a specific field-level design rationale. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What clinical problem does this tool solve, and what does it produce as output?",
+    "type": "summary",
+    "reference": "It converts unstructured ER and H&P clinical notes into structured summaries aligned with MCG (Milliman Care Guidelines) admission criteria, and generates a Revised HPI narrative supporting the admission decision.",
+    "reference_chunk_ids": [],
+    "note": "Summary question phrased around the clinical problem rather than the document as a whole -- checks whether a differently-worded summary query still retrieves the opening description. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "Where are the frontend and backend deployed (demo URLs)?",
+    "type": "detail",
+    "reference": "Frontend: https://clinical-41l.pages.dev. Backend: https://clinical-note-api.<your-subdomain>.workers.dev.",
+    "reference_chunk_ids": [],
+    "note": "Very short, precision-testing detail question -- the correct chunk is just the Demo section. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What does Stage 1 of the pipeline do, and what does it explicitly NOT do?",
+    "type": "detail",
+    "reference": "Stage 1 (Fact Extraction) takes the raw ER Note and H&P Note and pulls out every clinical fact (demographics, vitals, labs, meds, timeline, etc.) into structured JSON, with source tracking of which note each fact came from. It does not do any interpretation -- just faithful extraction.",
+    "reference_chunk_ids": [],
+    "note": "Detail question on a single pipeline stage's scope. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What does Stage 2 of the pipeline evaluate, and what are the possible verdicts for each criterion?",
+    "type": "detail",
+    "reference": "Stage 2 (MCG Criteria Matching) evaluates the Stage 1 output against MCG Diabetes M-130 admission criteria. Each DKA criterion (glucose, ketones, acidosis) and each inpatient management criterion gets a MET / NOT_MET / UNABLE_TO_ASSESS verdict with cited evidence; this stage also produces the disposition recommendation and flags missing information.",
+    "reference_chunk_ids": [],
+    "note": "Detail question on a single pipeline stage's scope. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What does Stage 3 produce, and where did its sentence structure come from?",
+    "type": "detail",
+    "reference": "Stage 3 (Revised HPI Generation) takes both Stage 1 and Stage 2 outputs and writes a 6-sentence admission-supporting HPI paragraph, whose sentence structure was reverse-engineered from the human-optimized Case A Revised HPI, with each sentence mapping to a specific MCG alignment function.",
+    "reference_chunk_ids": [],
+    "note": "Detail question on a single pipeline stage's scope. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "Why does the pipeline use three separate LLM calls instead of one, and how is the resulting latency cost addressed?",
+    "type": "cross_paragraph",
+    "reference": "Clinical notes are messy (especially EHR-exported ones like Case B), and asking a model to simultaneously extract, evaluate, and write produces worse results than giving it one job at a time -- a single-pass approach was tried early on and produced noticeably worse output because extraction errors cascaded into incorrect MCG matching and a misleading HPI. The tradeoff is latency from three sequential API calls, handled via SSE streaming so the user sees progress in real time.",
+    "reference_chunk_ids": [],
+    "note": "Cross-paragraph question combining the 'How it works' rationale with the 'Design decisions' section's account of the abandoned single-pass approach. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What backend framework and hosting does this project use, and why was it chosen?",
+    "type": "detail",
+    "reference": "Hono on Cloudflare Workers, chosen for lightweight, fast cold starts, and native streaming support.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the tech-stack table. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What frontend stack does this project use, and why?",
+    "type": "detail",
+    "reference": "React + Tailwind + shadcn/ui, chosen for being quick to build with clean defaults.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the tech-stack table. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "How does the project support switching between LLM providers?",
+    "type": "detail",
+    "reference": "The LLM choice (OpenAI GPT or Anthropic Claude) is configurable via env vars -- just flip LLM_PROVIDER.",
+    "reference_chunk_ids": [],
+    "note": "Detail/config question over the tech-stack table. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What file contains all the system/user prompts for the three pipeline stages?",
+    "type": "detail",
+    "reference": "apps/api/src/prompts.ts.",
+    "reference_chunk_ids": [],
+    "note": "Very short precision-testing detail question over the project-structure tree. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "Which file is the single source of truth for the database table schema, and what generates the migration file?",
+    "type": "detail",
+    "reference": "apps/api/src/db/schema.ts is the single source of truth for the D1 table schema; migrations/0001_init.sql is generated from schema.ts.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the project-structure tree. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What does services/llm.ts implement?",
+    "type": "detail",
+    "reference": "The LLM service -- dual provider support, the 3-stage pipeline, and retry logic.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the project-structure tree annotations. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What does the edit-badge.tsx frontend component do?",
+    "type": "detail",
+    "reference": "It's a machine-generated vs user-edited indicator.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the frontend project-structure annotations. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What does the use-cases.ts hook handle?",
+    "type": "detail",
+    "reference": "Data fetching plus the SSE streaming hook.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the frontend project-structure annotations. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "Which API endpoint creates a new case, and which endpoint runs the pipeline on it with streaming progress?",
+    "type": "detail",
+    "reference": "POST /api/cases creates a new case (accepts er_note, hp_note). GET /api/cases/:id/generate/stream runs the 3-stage pipeline with SSE progress events (as opposed to POST /api/cases/:id/generate, which runs the same pipeline but just returns JSON).",
+    "reference_chunk_ids": [],
+    "note": "Detail/enumeration question over the API endpoints table. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "How does a user save edits to a case's structured output or Revised HPI?",
+    "type": "detail",
+    "reference": "Via PUT /api/cases/:id, which saves structured_output_edited and revised_hpi_edited.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the API endpoints table. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "How are machine-generated and user-edited versions of a case's output stored, and what two columns support reproducibility of the LLM output itself?",
+    "type": "cross_paragraph",
+    "reference": "Each case stores both versions in separate columns (structured_output_generated vs structured_output_edited, revised_hpi_generated vs revised_hpi_edited). Separately, the llm_model and llm_prompt_version columns record which model and prompt version were used, so results are reproducible.",
+    "reference_chunk_ids": [],
+    "note": "Cross-paragraph question combining the Data model section's storage description with its reproducibility-columns detail. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What commands do you run to bring up the backend and frontend dev servers, in order?",
+    "type": "detail",
+    "reference": "Backend: cd apps/api, pnpm install, then pnpm dev (wrangler dev server on localhost:8787). Frontend: cd apps/web, bun install (or pnpm install), then bun dev (vite dev server on localhost:5173).",
+    "reference_chunk_ids": [],
+    "note": "Detail/enumeration question over the 'Running locally' section. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "Where do you configure environment variables for local development, and what variables does it need?",
+    "type": "detail",
+    "reference": "Create a .dev.vars file in apps/api/, containing LLM_PROVIDER (pick one provider) plus OPENAI_API_KEY and/or ANTHROPIC_API_KEY depending on the chosen provider.",
+    "reference_chunk_ids": [],
+    "note": "Detail/config question. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What two steps should you run immediately after editing the database schema?",
+    "type": "detail",
+    "reference": "pnpm db:sync (regenerate the migration and validate it), then pnpm test (make sure nothing broke).",
+    "reference_chunk_ids": [],
+    "note": "Detail/enumeration question over the 'Schema changes' section. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "Walk through the full path from editing the local schema to deploying the backend to production.",
+    "type": "cross_paragraph",
+    "reference": "Edit apps/api/src/db/schema.ts, run pnpm db:sync to regenerate and validate the migration, then pnpm test. For production, create a D1 database and update database_id in wrangler.toml. Finally, from apps/api run pnpm deploy to deploy to Cloudflare Workers, setting secrets (OPENAI_API_KEY, ANTHROPIC_API_KEY) via the Cloudflare dashboard or wrangler secret put.",
+    "reference_chunk_ids": [],
+    "note": "Cross-paragraph question spanning the 'Schema changes', 'Running locally' (D1 setup), and 'Deploying' sections -- a strong test of whether topK is large enough to pull in three separate chunks. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "Why was the single-pass (one LLM call) approach abandoned early on?",
+    "type": "detail",
+    "reference": "The output quality was noticeably worse -- extraction errors would cascade into incorrect MCG matching, which would produce a misleading HPI.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the 'Design decisions' section. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "Explain why the Stage 2 prompt encodes three distinct glucose pathways, using Case A as the motivating example.",
+    "type": "cross_paragraph",
+    "reference": "Case A is euglycemic (normal glucose from SGLT2 inhibitor use), which doesn't meet the simple \"glucose >= 200\" path. Because MCG criteria include a specific euglycemic pathway (glucose < 200 plus risk factors like SGLT2 inhibitor use), the Stage 2 prompt explicitly encodes all three glucose pathways so this case is handled correctly.",
+    "reference_chunk_ids": [],
+    "note": "Cross-paragraph rephrasing of the glucose-pathways question that forces the answer to be grounded in the Case A example rather than just the count -- checks whether the model retrieves the same evidence under a differently-worded query. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What does the UNABLE_TO_ASSESS verdict mean, and when should the model use it?",
+    "type": "detail",
+    "reference": "It's one of three possible MCG criteria verdicts, used specifically when the data is ambiguous or absent. The prompt tells the model to be conservative: if it's not clear, mark it UNABLE_TO_ASSESS and explain what's missing.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the 'Handling uncertainty and missing information' section. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What are the two dedicated arrays Stage 2 outputs to surface unclear or absent information?",
+    "type": "detail",
+    "reference": "uncertainties (things that are unclear) and missing_information (things that should be there but aren't in the notes); these propagate into the final structured output so the reviewer can see them.",
+    "reference_chunk_ids": [],
+    "note": "Detail/enumeration question. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "How is the 'no fabrication' principle enforced differently across the three pipeline stages?",
+    "type": "cross_paragraph",
+    "reference": "In Stage 1, the extraction prompt has a hard rule to extract only what's explicitly stated and never infer -- an undocumented field stays empty rather than getting filled with a guess. In Stage 2, ambiguous or absent data is marked UNABLE_TO_ASSESS rather than guessed, with dedicated uncertainties/missing_information arrays surfacing the gaps. In Stage 3, the HPI generation prompt constrains the model to use only facts already present in the extraction -- no fabrication, no gap-filling -- so anything the source notes don't mention doesn't appear in the Revised HPI.",
+    "reference_chunk_ids": [],
+    "note": "Cross-paragraph question requiring the single 'Handling uncertainty and missing information' chunk to be retrieved in full, since it covers all three stages together -- tests whether chunking splits this section in a way that loses one stage's part. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What kind of project is this, and who was it built for?",
+    "type": "summary",
+    "reference": "A full-stack Clinical Note Structuring Tool built for the AHMC Software Engineer take-home exercise.",
+    "reference_chunk_ids": [],
+    "note": "Short summary question focused on project context rather than the clinical problem -- checks retrieval of the title/opening lines specifically. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What AI-generated code or content does the author disclose, beyond just prompt wording?",
+    "type": "detail",
+    "reference": "Exponential backoff retry logic and stop_reason truncation detection in llm.ts; SSE streaming endpoint scaffolding in cases.ts; input validation for empty notes; and the entire frontend application (apps/web) -- pages, components, hooks, and styling.",
+    "reference_chunk_ids": [],
+    "note": "Detail/enumeration question over the 'What was AI-generated' list. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What parts of the system did the author say they designed and built manually?",
+    "type": "detail",
+    "reference": "The overall system architecture (3-stage pipeline design, per-stage responsibility scope, decision to separate extraction/MCG matching/HPI generation); the 6-sentence HPI framework (reverse-engineered from Case A); project setup and tech stack choices (Hono + D1 + wrangler); the LLMService class architecture (refactored to a config-object pattern with dual provider support, configurable base URLs, and per-stage model selection); the createLLMService factory function and environment variable wiring; route structure, CRUD endpoints, and database queries; frontend-backend integration and UX flow adjustments; deployment configuration; and identifying the need for retry logic and truncation detection after debugging Anthropic API failures in testing.",
+    "reference_chunk_ids": [],
+    "note": "Detail/enumeration question over the 'What I designed and built manually' list -- a long list, good test of whether a single chunk captures it all or the answer gets truncated. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What five steps did the author describe going through when designing the prompts?",
+    "type": "detail",
+    "reference": "1) Read through the Case A materials (ER Note, H&P, MCG guideline, human-optimized Revised HPI) to understand the expected transformation. 2) Decided to break the problem into three stages to isolate extraction from evaluation from generation, inspired by a \"skill\" pattern where each step has a narrow, well-defined job. 3) For Stage 3, reverse-engineered the 6-sentence structure from Case A's Revised HPI via a sentence-by-sentence comparison with the MCG criteria. 4) Used Claude to help refine prompt wording and JSON output schemas based on the defined stage responsibilities. 5) Iterated on prompt wording through several rounds of testing with both Case A (as a known-good baseline) and Case B.",
+    "reference_chunk_ids": [],
+    "note": "Detail/enumeration question over the 'Prompts used' numbered list. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "How did the author verify that Stage 2 correctly distinguishes euglycemic DKA from classic DKA?",
+    "type": "detail",
+    "reference": "By running both Case A and Case B through the pipeline and checking that Stage 2 correctly identifies the euglycemic DKA pathway for Case A (SGLT2 inhibitor use) versus classic DKA for Case B.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the 'How I verified correctness' list. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "How did the author check that the generated HPI narratives don't fabricate facts?",
+    "type": "detail",
+    "reference": "By verifying that every claim in the generated HPI traces back to a value in the Stage 1 extraction.",
+    "reference_chunk_ids": [],
+    "note": "Short detail question, good precision check. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What backend test suites exist, and what does each one cover?",
+    "type": "detail",
+    "reference": "llm.test.ts (LLM service tests) and cases.test.ts (API endpoint tests), used to catch regressions.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the 'How I verified correctness' list. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What edge cases did the author manually test?",
+    "type": "detail",
+    "reference": "Empty notes, single-note input, API rate limiting, and response truncation.",
+    "reference_chunk_ids": [],
+    "note": "Detail/enumeration question. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What future improvement would let the pipeline support multiple MCG guidelines without latency scaling linearly?",
+    "type": "detail",
+    "reference": "Currently the pipeline only handles Diabetes M-130 with three strictly sequential stages. To support multiple guidelines (e.g. pneumonia, CHF, sepsis), Stage 2 could fan out into parallel evaluations, one per guideline, so latency doesn't scale linearly with the number of guidelines being checked -- the pipeline orchestration would need a small refactor, but the per-guideline prompt structure would stay the same.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the 'Parallel MCG matching' future-improvement item. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What robustness problem does the author identify with Stage 1 extraction for real-world clinical notes, and what's the proposed fix?",
+    "type": "cross_paragraph",
+    "reference": "Stage 1 extraction works fine for the two provided cases, but real-world clinical notes (multi-day ICU stays, extensive surgical histories) can be much longer, risking hitting token limits or losing detail in a single pass. The proposed fix is a chunking strategy: split the note into logical sections, extract each chunk independently, then merge and deduplicate.",
+    "reference_chunk_ids": [],
+    "note": "Cross-paragraph in the sense that the 'problem' and 'proposed fix' are two clauses of the same future-improvement paragraph -- checks whether a chunk boundary accidentally splits them. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What automated hallucination-detection mechanism does the author propose adding, and what specific failure mode would it catch?",
+    "type": "detail",
+    "reference": "A post-generation validation step that cross-references every claim in the Stage 3 Revised HPI against the Stage 1 extraction -- if the HPI mentions a lab value or finding that doesn't exist in the extraction, it gets flagged. This would catch the failure mode that matters most in clinical documentation: fabrication.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the 'Hallucination detection' future-improvement item. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "How could Case A's human-optimized Revised HPI be turned into an automated regression test?",
+    "type": "detail",
+    "reference": "After any prompt change, run Case A through the pipeline and compute semantic similarity against the reference HPI -- this would catch quality regressions early without manual review.",
+    "reference_chunk_ids": [],
+    "note": "Detail question over the 'Automated quality scoring' future-improvement item. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What four improvements does the author list under \"What I'd improve with more time\"?",
+    "type": "summary",
+    "reference": "Parallel MCG matching (fan out Stage 2 into one parallel evaluation per guideline instead of only handling Diabetes M-130 sequentially), chunking for long notes (split/extract-per-chunk/merge-and-deduplicate for real-world notes that risk exceeding token limits), hallucination detection (a post-generation step cross-referencing HPI claims against the Stage 1 extraction), and automated quality scoring (a regression test that runs Case A through the pipeline and scores semantic similarity against its reference HPI after prompt changes).",
+    "reference_chunk_ids": [],
+    "note": "Summary-type question over the entire 'What I'd improve with more time' section -- tests whether retrieval surfaces all four sub-items rather than just the first one or two. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What mechanisms does this project use, across both design and testing, to guard against incorrect or fabricated clinical output?",
+    "type": "cross_paragraph",
+    "reference": "At design time: Stage 1 extracts facts only from what's explicitly stated (no inference, empty when undocumented); Stage 2 marks ambiguous or absent criteria as UNABLE_TO_ASSESS and surfaces gaps via dedicated uncertainties/missing_information arrays; Stage 3's HPI prompt allows only facts already present in the extraction (no fabrication, no gap-filling). At verification time: both Case A and Case B were run through the pipeline and compared against the human-optimized reference HPI, Stage 2's euglycemic-vs-classic-DKA distinction was specifically checked, every HPI claim was traced back to the Stage 1 extraction, llm.test.ts/cases.test.ts guard against regressions, and edge cases (empty notes, single-note input, rate limiting, truncation) were manually tested. Proposed future work would add a fourth, automated layer: a post-generation hallucination-detection step cross-referencing HPI claims against the Stage 1 extraction, plus a semantic-similarity regression test against Case A.",
+    "reference_chunk_ids": [],
+    "note": "The hardest cross-paragraph question in this set -- a correct answer needs the 'Handling uncertainty and missing information' chunk, the 'How I verified correctness' chunk, and at least the hallucination-detection and quality-scoring future-improvement chunks combined. Strong stress test of topK/context budget across widely separated sections. Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "How does Stage 1 (Fact Extraction) differ from Stage 2 (MCG Criteria Matching) in terms of what each stage is responsible for?",
+    "type": "cross_paragraph",
+    "reference": "Stage 1 (Fact Extraction) takes the raw ER Note and H&P Note and pulls out every clinical fact into structured JSON, with no interpretation -- just faithful extraction with source tracking. Stage 2 (MCG Criteria Matching) takes Stage 1's output and evaluates it against MCG Diabetes M-130 admission criteria, giving each criterion a MET/NOT_MET/UNABLE_TO_ASSESS verdict with cited evidence, and also produces the disposition recommendation and flags missing information.",
+    "reference_chunk_ids": [],
+    "note": "Comparison-style question added to improve QueryEngine intent-routing coverage (COMPARISON intent was underrepresented in the eval set). Fill in reference_chunk_ids via list_chunks.py."
+  },
+  {
+    "question": "What are the steps to run both the backend and frontend locally for development?",
+    "type": "detail",
+    "reference": "Terminal 1 (backend): cd apps/api, pnpm install, pnpm dev (starts the wrangler dev server on localhost:8787). Terminal 2 (frontend): cd apps/web, bun install (or pnpm install), bun dev (starts the vite dev server on localhost:5173). The frontend dev server proxies /api and /health requests to localhost:8787, so there are no CORS issues in local dev.",
+    "reference_chunk_ids": [],
+    "note": "Procedural-style question added to improve QueryEngine intent-routing coverage (PROCEDURAL intent was underrepresented in the eval set). Fill in reference_chunk_ids via list_chunks.py."
+  }
+]
