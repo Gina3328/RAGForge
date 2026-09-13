@@ -3,8 +3,8 @@
 Configuration is loaded from a YAML file and grows progressively across stages:
 
 - Stage 1: llm, embedding, vector_store, chunker, retriever, evaluation
-- Stage 2 (implemented here): query_engine, reranker, generator
-- Stage 3 (later): strategy (Self-RAG / CRAG / Adaptive)
+- Stage 2: query_engine, reranker, generator
+- Stage 3 (implemented here): strategy (Self-RAG / CRAG / Adaptive)
 - Stage 4 (later): api, cache
 
 Naming note: every dataclass field here uses idiomatic Python snake_case,
@@ -178,6 +178,44 @@ class EvaluationConfig:
 
 
 @dataclass
+class SelfRagConfig:
+    """Self-RAG strategy configuration (Stage 3)."""
+
+    max_retries: int = 2
+
+
+@dataclass
+class CragConfig:
+    """CRAG strategy configuration (Stage 3): the confidence thresholds
+    used to route between direct generation, supplemental retrieval,
+    and declining to answer.
+    """
+
+    high_threshold: float = 0.8
+    low_threshold: float = 0.5
+
+
+@dataclass
+class AdaptiveConfig:
+    """Adaptive RAG strategy configuration (Stage 3)."""
+
+    parallel_sub_queries: bool = True
+    max_sub_queries: int = 5
+
+
+@dataclass
+class StrategyConfig:
+    """Stage 3 strategy configuration: which RAG strategy is used by
+    default, plus each strategy's own tuning knobs.
+    """
+
+    name: str = "adaptive"
+    self_rag: SelfRagConfig = field(default_factory=SelfRagConfig)
+    crag: CragConfig = field(default_factory=CragConfig)
+    adaptive: AdaptiveConfig = field(default_factory=AdaptiveConfig)
+
+
+@dataclass
 class RagForgeConfig:
     """Top-level RagForge configuration, composed of the sub-configs above."""
 
@@ -190,6 +228,7 @@ class RagForgeConfig:
     reranker: RerankerConfig = field(default_factory=RerankerConfig)
     generator: GeneratorConfig = field(default_factory=GeneratorConfig)
     evaluation: EvaluationConfig = field(default_factory=EvaluationConfig)
+    strategy: StrategyConfig = field(default_factory=StrategyConfig)
 
     @classmethod
     def load(cls, path: str | Path) -> "RagForgeConfig":
@@ -288,6 +327,25 @@ class RagForgeConfig:
             report_path=evaluation_raw.get("reportPath", EvaluationConfig.report_path),
         )
 
+        strategy_raw = raw.get("strategy") or {}
+        self_rag_raw = strategy_raw.get("selfRag") or {}
+        crag_raw = strategy_raw.get("crag") or {}
+        adaptive_raw = strategy_raw.get("adaptive") or {}
+        strategy = StrategyConfig(
+            name=strategy_raw.get("name", StrategyConfig.name),
+            self_rag=SelfRagConfig(
+                max_retries=self_rag_raw.get("maxRetries", SelfRagConfig.max_retries),
+            ),
+            crag=CragConfig(
+                high_threshold=crag_raw.get("highThreshold", CragConfig.high_threshold),
+                low_threshold=crag_raw.get("lowThreshold", CragConfig.low_threshold),
+            ),
+            adaptive=AdaptiveConfig(
+                parallel_sub_queries=adaptive_raw.get("parallelSubQueries", AdaptiveConfig.parallel_sub_queries),
+                max_sub_queries=adaptive_raw.get("maxSubQueries", AdaptiveConfig.max_sub_queries),
+            ),
+        )
+
         return cls(
             llm=llm,
             embedding=embedding,
@@ -298,4 +356,5 @@ class RagForgeConfig:
             reranker=reranker,
             generator=generator,
             evaluation=evaluation,
+            strategy=strategy,
         )

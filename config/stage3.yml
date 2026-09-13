@@ -1,0 +1,65 @@
+llm:
+  model: "claude-haiku-4-5"
+
+embedding:
+  baseUrl: "http://localhost:11434"
+  model: "nomic-embed-text"
+  dimension: 768
+  timeout: 30
+
+vectorStore:
+  host: "localhost"
+  port: 19530
+  collectionPrefix: "ragforge_"
+
+chunker:
+  strategy: "parent_child"
+  maxSize: 500
+  overlap: 50
+  childSize: 128
+  childOverlap: 30
+
+retriever:
+  strategy: "hybrid"
+  topK: 20
+  finalTopK: 5
+  scoreThreshold: 0.3
+  denseWeight: 0.5
+  sparseWeight: 0.5
+  dynamicWeight: true
+  rrfK: 60
+
+queryEngine:
+  enabled: true
+  enableRewrite: true
+  enableHyDE: true
+  enableMultiQuery: true
+  enableDecomposition: true
+
+reranker:
+  enabled: true
+  strategy: "llm"
+  baseUrl: "http://localhost:11434"
+  model: "qwen2.5"
+  timeout: 60
+
+generator:
+  enableCitation: true
+  enableHallucinationDetection: true
+  contextCompressionThreshold: 0.3
+  maxContextTokens: 3000
+
+evaluation:
+  datasetPath: "evaluation/eval_set.json"
+  reportPath: "evaluation/reports"
+
+strategy:
+  name: "adaptive"
+  selfRag:
+    maxRetries: 2
+  crag:
+    highThreshold: 0.8
+    lowThreshold: 0.5
+  adaptive:
+    parallelSubQueries: true
+    maxSubQueries: 5
