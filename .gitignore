@@ -30,3 +30,7 @@ evaluation/reports/
 # Evaluation source documents -- deferred decision on whether to publish
 # these (mix of third-party PDFs and one authored file); revisit later.
 evaluation/documents/
+
+# Ad hoc local test fixtures -- created for manual testing during
+# development, not part of the project itself.
+test_doc.md
