@@ -4,8 +4,9 @@ Configuration is loaded from a YAML file and grows progressively across stages:
 
 - Stage 1: llm, embedding, vector_store, chunker, retriever, evaluation
 - Stage 2: query_engine, reranker, generator
-- Stage 3 (implemented here): strategy (Self-RAG / CRAG / Adaptive)
-- Stage 4 (later): api, cache
+- Stage 3: strategy (Self-RAG / CRAG / Adaptive)
+- Stage 4 (implemented here): strategy.agentic (Agentic RAG)
+- Later: api, cache
 
 Naming note: every dataclass field here uses idiomatic Python snake_case,
 even though the underlying YAML files (stage1.yml/stage2.yml) keep their
@@ -204,15 +205,28 @@ class AdaptiveConfig:
 
 
 @dataclass
+class AgenticConfig:
+    """Agentic RAG strategy configuration (Stage 4).
+
+    Just the iteration cap -- the collection prefix Agentic RAG's
+    cross-collection retrieval needs is read from vector_store's own
+    collection_prefix field rather than being duplicated here.
+    """
+
+    max_iterations: int = 5
+
+
+@dataclass
 class StrategyConfig:
-    """Stage 3 strategy configuration: which RAG strategy is used by
-    default, plus each strategy's own tuning knobs.
+    """Strategy configuration: which RAG strategy is used by default,
+    plus each strategy's own tuning knobs.
     """
 
     name: str = "adaptive"
     self_rag: SelfRagConfig = field(default_factory=SelfRagConfig)
     crag: CragConfig = field(default_factory=CragConfig)
     adaptive: AdaptiveConfig = field(default_factory=AdaptiveConfig)
+    agentic: AgenticConfig = field(default_factory=AgenticConfig)
 
 
 @dataclass
@@ -331,6 +345,7 @@ class RagForgeConfig:
         self_rag_raw = strategy_raw.get("selfRag") or {}
         crag_raw = strategy_raw.get("crag") or {}
         adaptive_raw = strategy_raw.get("adaptive") or {}
+        agentic_raw = strategy_raw.get("agentic") or {}
         strategy = StrategyConfig(
             name=strategy_raw.get("name", StrategyConfig.name),
             self_rag=SelfRagConfig(
@@ -343,6 +358,9 @@ class RagForgeConfig:
             adaptive=AdaptiveConfig(
                 parallel_sub_queries=adaptive_raw.get("parallelSubQueries", AdaptiveConfig.parallel_sub_queries),
                 max_sub_queries=adaptive_raw.get("maxSubQueries", AdaptiveConfig.max_sub_queries),
+            ),
+            agentic=AgenticConfig(
+                max_iterations=agentic_raw.get("maxIterations", AgenticConfig.max_iterations),
             ),
         )
 
