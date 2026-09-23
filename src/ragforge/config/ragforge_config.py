@@ -10,9 +10,8 @@ Configuration is loaded from a YAML file and grows progressively across stages:
 
 Naming note: every dataclass field here uses idiomatic Python snake_case,
 even though the underlying YAML files (stage1.yml/stage2.yml) keep their
-camelCase keys (inherited from the Java reference project this is ported
-from -- there's no reason to churn the YAML itself just to match Python
-convention). Because the two naming styles differ, `load()` below can't
+camelCase keys -- there's no reason to churn the YAML itself just to
+match Python convention. Because the two naming styles differ, `load()` below can't
 just unpack a YAML section straight into its dataclass with
 `SomeConfig(**raw.get("section"))` -- each field is instead looked up by
 its YAML (camelCase) key and passed in under its Python (snake_case) name,

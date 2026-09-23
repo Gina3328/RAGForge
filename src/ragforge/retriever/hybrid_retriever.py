@@ -100,12 +100,14 @@ class HybridRetriever(Retriever):
         """Scale the configured dense/sparse weights based on query length.
 
         Word count (splitting on whitespace), not character count, is the
-        length signal here -- this project's queries are primarily
-        English, and Java's original char-count thresholds (tuned for
-        Chinese, where a single character already carries close to a full
-        word's worth of meaning) don't translate well: an English
-        sentence's character count is inflated by word length and spaces,
-        so it doesn't track query complexity the same way word count does.
+        length signal here. Character count works reasonably as a query-
+        length proxy for CJK languages, where a single character already
+        carries close to a full word's worth of meaning, but it doesn't
+        translate well to English: an English sentence's character count
+        is inflated by word length and spaces, so it doesn't track query
+        complexity the same way word count does. Since this project's
+        queries are primarily English, word count is the more reliable
+        signal here.
 
         Short queries (< 4 words, e.g. "What is RAG?") are usually a
         single term/concept lookup, where exact keyword matching tends to
@@ -145,9 +147,8 @@ class HybridRetriever(Retriever):
         keywords appear (as a substring) in each candidate's content.
 
         This is NOT full BM25 sparse retrieval -- deliberately simplified
-        versus the book's original design, to avoid needing a real Milvus
-        sparse vector field/index (see the book's "设计与实现的差异说明"
-        callout in 7.4). Notably, it also does NOT scan the full corpus
+        to avoid needing a real Milvus sparse vector field/index. Notably,
+        it also does NOT scan the full corpus
         for keyword matches: `candidates` here is the SAME over-fetched
         result list the dense search already returned in retrieve(). So
         this re-scores/re-ranks that pool by a different signal, rather

@@ -1,9 +1,7 @@
 """Cross-Encoder based reranking, run locally via sentence-transformers.
 
-Unlike the Java reference's BGEReranker (which calls a nonexistent Ollama
-`/api/rerank` endpoint) or its LLMReranker fallback (a general chat LLM
-prompted to guess relevance scores), this loads a real Cross-Encoder model
-directly in-process -- no external service involved at all.
+Loads a real Cross-Encoder model directly in-process for reranking --
+no external reranking service or API call involved at all.
 """
 
 from __future__ import annotations
@@ -34,9 +32,8 @@ class CrossEncoderReranker(Reranker):
         Falls back to the original candidates (truncated to top_k, order
         unchanged) if scoring fails for any reason -- e.g. the model isn't
         loaded correctly, or a candidate's content trips up inference.
-        This mirrors the Java reference's degrade() pattern: a reranking
-        failure should never break the whole request, just skip the
-        precision boost this step was meant to add.
+        A reranking failure should never break the whole request, just
+        skip the precision boost this step was meant to add.
         """
         if not candidates:
             return []

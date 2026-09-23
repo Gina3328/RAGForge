@@ -110,8 +110,7 @@ class HallucinationDetector:
             # etc.) means detection itself could not complete -- distinct
             # from "ran fine, found nothing wrong". -1.0 signals that to
             # the caller, matching HallucinationResult's documented
-            # sentinel and Java's ConsoleLog.error(...) in this same
-            # outer catch.
+            # sentinel.
             logger.error("Hallucination detection failed", exc_info=True)
             return HallucinationResult(claims=[], hallucination_rate=-1.0, unsupported_claims=[])
 
@@ -147,8 +146,7 @@ class HallucinationDetector:
             # response format, etc.) and fall through to `return []`
             # below, rather than letting it crash the caller. We still
             # log it -- exc_info=True attaches the full traceback -- so
-            # the failure is visible in logs instead of silently vanishing,
-            # matching Java's `ConsoleLog.warn(...)` in splitClaims().
+            # the failure is visible in logs instead of silently vanishing.
             logger.warning("Failed to split claims from the LLM response", exc_info=True)
 
         return []

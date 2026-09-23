@@ -1,7 +1,7 @@
 """Interactive command-line entry point for the RagForge Stage 2 pipeline.
 
-This is the Stage 2 equivalent of cli.py (Stage 1) / Java's Stage2App.main():
-it reads config/stage2.yml, decides which concrete implementation to build
+This is the Stage 2 counterpart to cli.py (Stage 1): it reads
+config/stage2.yml, decides which concrete implementation to build
 for each optional component (query engine, reranker, hallucination
 detector), and wires everything into an AdvancedRAGStrategy. A Stage 1
 RAGPipeline is built alongside it (sharing the same embedding service,
@@ -97,9 +97,9 @@ def build_reranker(config: RagForgeConfig) -> Reranker:
     """Build the reranker selected by config.reranker.
 
     Note: config.reranker.strategy currently offers "llm" as a value (see
-    stage2.yml), but this port only implements CrossEncoderReranker (a
-    local Cross-Encoder model) -- there's no LLM-prompted reranker here
-    yet, unlike the Java reference's LLMReranker/BGEReranker. So for now,
+    stage2.yml), but only CrossEncoderReranker (a local Cross-Encoder
+    model) is implemented so far -- there's no LLM-prompted reranker
+    variant yet. So for now,
     `enabled` is treated as the only real switch: True builds the one
     implementation that exists, False builds NoOpReranker (which exists
     specifically so callers never need an if/else around whether a real
@@ -187,7 +187,7 @@ def main() -> None:
     )
 
     # Stage 2 advanced strategy: components are selected/built based on
-    # config, mirroring Java's Stage2App.main().
+    # config.
     advanced_retriever = build_retriever(config, embedding_service, vector_store)
     advanced_generator = build_generator(config, llm_service)
     advanced_strategy = build_advanced_strategy(config, advanced_retriever, advanced_generator, llm_service)

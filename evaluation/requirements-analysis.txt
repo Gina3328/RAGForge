@@ -1,0 +1,8 @@
+# Isolated environment for evaluation/analyze_decision_traces.py only.
+# Deliberately separate from both the main .venv and evaluation/.ragas_venv --
+# this script never imports `ragforge` or `ragas`, so it doesn't need
+# either of their dependency trees. Safe to delete this file and the venv
+# built from it at any time; nothing else in the project depends on them.
+
+anthropic>=0.120.2
+matplotlib>=3.9.0

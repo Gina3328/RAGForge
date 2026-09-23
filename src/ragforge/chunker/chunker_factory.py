@@ -51,8 +51,8 @@ def create_chunker(config: ChunkerConfig, embedding_service: EmbeddingService) -
             # has no size field of its own, it just reuses these same two.
             return StructureAwareChunker(config.max_size, config.overlap)
         case _:
-            # Unlike the Java reference (which silently falls back to
-            # FixedSizeChunker for an unrecognized strategy), we raise --
-            # a typo'd strategy name in the config should be caught
-            # immediately, not silently swapped for a different strategy.
+            # Fail loudly here rather than silently falling back to a
+            # default chunker -- a typo'd strategy name in the config
+            # should be caught immediately, not silently swapped for a
+            # different strategy.
             raise ValueError(f"Unknown chunker strategy: {config.strategy!r}")

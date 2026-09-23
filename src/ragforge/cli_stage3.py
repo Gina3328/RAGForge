@@ -3,8 +3,7 @@
 This is the Stage 3 equivalent of cli_stage2.py: it reads
 config/stage3.yml and wires up a *registry* of RAG strategies --
 advanced (Stage 2), self_rag, crag, and adaptive (Stage 3) -- keyed by
-name, mirroring the Java reference's Stage3App (a
-`dict[str, RAGStrategy]` registry plus CLI dispatch; there is no
+name (a `dict[str, RAGStrategy]` registry plus CLI dispatch; there is no
 separate orchestrator class). "naive" stays a special case handled
 directly through the Stage 1 RAGPipeline, the same way cli_stage2.py
 already treats it -- RAGPipeline doesn't implement the RAGStrategy
