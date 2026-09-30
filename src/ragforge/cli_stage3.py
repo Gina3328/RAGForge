@@ -106,6 +106,7 @@ def build_crag_strategy(
     hybrid_retriever: Retriever,
     generator: Generator,
     query_engine: QueryEngine | None,
+    confidence_source: str = "dense",
 ) -> CRAGStrategy:
     """Assemble the CRAG strategy from already-built collaborators.
 
@@ -114,6 +115,10 @@ def build_crag_strategy(
     score confidence -- see CRAGStrategy's module docstring for why a
     raw dense (cosine-similarity) score, not a hybrid/RRF-fused one, is
     what a threshold-based confidence check needs.
+
+    confidence_source is a research-only override (see CRAGStrategy's
+    __init__) for empirically comparing that design choice against an
+    RRF-fused confidence signal; defaults to the production behavior.
     """
     return CRAGStrategy(
         dense_retriever,
@@ -122,6 +127,7 @@ def build_crag_strategy(
         query_engine,
         config.strategy.crag.high_threshold,
         config.strategy.crag.low_threshold,
+        confidence_source=confidence_source,
     )
 
 

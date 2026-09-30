@@ -81,6 +81,7 @@ class MilvusVectorStore(VectorStore):
         ]
 
         self.client.insert(collection_name=full_name, data=rows)
+        self.client.flush(collection_name=full_name)
 
     def search_dense(
         self,

@@ -57,17 +57,29 @@ class CRAGStrategy(RAGStrategy):
         query_engine: QueryEngine | None,
         high_threshold: float,
         low_threshold: float,
+        confidence_source: str = "dense",
     ) -> None:
         # dense_retriever: used only to score confidence (raw cosine
         # similarity has a meaningful absolute magnitude).
         # hybrid_retriever: used for the actual retrieval that gets
         # generated from (keyword-aware fusion gives it better recall).
+        #
+        # confidence_source: which retrieval result _evaluate_confidence()
+        # is scored against. "dense" (default) is the current design --
+        # see the module docstring for why. "hybrid" is a research-only
+        # override that feeds it the RRF-fused hybrid result instead, so
+        # the RRF-vs-dense confidence comparison can be run empirically
+        # rather than argued from design rationale alone. Not intended
+        # for production use; deliberately not exposed via config.
+        if confidence_source not in ("dense", "hybrid"):
+            raise ValueError(f"confidence_source must be 'dense' or 'hybrid', got {confidence_source!r}")
         self.dense_retriever = dense_retriever
         self.hybrid_retriever = hybrid_retriever
         self.generator = generator
         self.query_engine = query_engine
         self.high_threshold = high_threshold
         self.low_threshold = low_threshold
+        self.confidence_source = confidence_source
 
     def get_name(self) -> str:
         return "CRAG (Stage 3)"
@@ -86,7 +98,11 @@ class CRAGStrategy(RAGStrategy):
         dense_result = self.dense_retriever.retrieve(query, collection)
 
         # 2. Score confidence (a weighted combination of three signals).
-        confidence = self._evaluate_confidence(dense_result)
+        # confidence_source picks which of the two retrievals above feeds
+        # the score -- see __init__'s comment for why this is normally
+        # "dense" and when "hybrid" gets used instead.
+        confidence_input = retrieval_result if self.confidence_source == "hybrid" else dense_result
+        confidence = self._evaluate_confidence(confidence_input)
         logger.info("Confidence score: %.2f", confidence)
 
         # 3. Route based on confidence.
