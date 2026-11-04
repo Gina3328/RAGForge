@@ -1,0 +1,95 @@
+[
+ {
+  "question": "What price per ton did Tootsie Roll Industries pay for cocoa under its new 2025 supply contracts?",
+  "type": "unanswerable_near",
+  "reference": null,
+  "reference_chunk_ids": [],
+  "note": "Report discusses higher cocoa and chocolate costs in 2025 and new contracts but gives no per-ton price; checked for ton/price terms.",
+  "absent_terms": [
+   "per (metric )?tonne?",
+   "\\btonnes?\\b",
+   "\\btons?\\b",
+   "cocoa.{0,60}\\$\\s?\\d"
+  ]
+ },
+ {
+  "question": "Which retailer is Tootsie Roll Industries' largest customer in Canada, and what share of Canadian sales is it?",
+  "type": "unanswerable_near",
+  "reference": null,
+  "reference_chunk_ids": [],
+  "note": "Customers are discussed (Wal-Mart, Dollar Tree, McLane in the US) but no Canadian customer breakdown; checked Canada-specific customer terms.",
+  "absent_terms": [
+   "canadian (customer|retailer)",
+   "loblaw",
+   "shoppers drug",
+   "canad.{0,80}largest customer",
+   "costco"
+  ]
+ },
+ {
+  "question": "What succession plan has Tootsie Roll Industries' board adopted to replace Ellen R. Gordon as chief executive?",
+  "type": "unanswerable_near",
+  "reference": null,
+  "reference_chunk_ids": [],
+  "note": "Officers and ages are listed, but no succession plan; checked succession terms.",
+  "absent_terms": [
+   "succession",
+   "successor",
+   "succeed",
+   "plan to replace",
+   "replace.{0,40}(chairman|chief executive)"
+  ]
+ },
+ {
+  "question": "How many pounds of sugar does Tootsie Roll Industries buy annually, and from which suppliers?",
+  "type": "unanswerable_near",
+  "reference": null,
+  "reference_chunk_ids": [],
+  "note": "Sugar hedging is discussed but not volumes or named suppliers; checked quantity and supplier terms.",
+  "absent_terms": [
+   "\\bpounds?\\b",
+   "\\blbs?\\b",
+   "sugar.{0,80}suppliers?\\b.{0,40}(such as|including)",
+   "million (tons|pounds)"
+  ]
+ },
+ {
+  "question": "What is the square footage of Tootsie Roll Industries' Chicago plant and its annual production capacity?",
+  "type": "unanswerable_near",
+  "reference": null,
+  "reference_chunk_ids": [],
+  "note": "Properties item lists plant locations but no sizes or capacity numbers; checked area and capacity terms.",
+  "absent_terms": [
+   "square f",
+   "sq\\.? ?f",
+   "\\bacres?\\b",
+   "cases per",
+   "capacity of"
+  ]
+ },
+ {
+  "question": "What percentage of Tootsie Roll Industries' 2024 net product sales came through its e-commerce merchant customers in the United States?",
+  "type": "unanswerable_near",
+  "reference": null,
+  "reference_chunk_ids": [],
+  "note": "E-commerce merchants are named as a customer type but no share is given; checked amazon and e-commerce percentage. Reworded after spot-check: removed 'Amazon' (not named in the source); 'e-commerce merchants' is listed as a customer type, with no share given.",
+  "absent_terms": [
+   "e-?commerce.{0,80}\\d+(\\.\\d+)?\\s?%",
+   "online (sales|channel)",
+   "\\d%.{0,60}e-?commerce"
+  ]
+ },
+ {
+  "question": "Which national team won the 2018 FIFA World Cup final, and what was the score?",
+  "type": "unanswerable_far",
+  "reference": null,
+  "reference_chunk_ids": [],
+  "note": "Unrelated general-knowledge question; checked sports terms.",
+  "absent_terms": [
+   "fifa",
+   "world cup",
+   "croatia",
+   "soccer"
+  ]
+ }
+]

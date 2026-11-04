@@ -1,0 +1,318 @@
+[
+ {
+  "question": "Why did Tootsie Roll Industries' net product sales decline in 2024, according to its annual report?",
+  "type": "detail",
+  "reference": "Net product sales were $716 million in 2024 versus $763 million in 2023, a decrease of $47.7 million or 6%. The chairman attributes this to market challenges, as customers and consumers alike became more resistant to higher prices resulting from the cumulative inflationary pressures of the past few years.",
+  "reference_chunk_ids": [],
+  "note": "Letter 'To Our Shareholders' (first page); single explanation from one paragraph.",
+  "evidence": [
+   "Net product sales in 2024 were $716 million compared to $763 million in 2023, a",
+   "customers and consumers alike became more resistant to higher prices"
+  ]
+ },
+ {
+  "question": "What nonrecurring non-cash charge affected Tootsie Roll Industries' fourth quarter 2024 results, and how large was it?",
+  "type": "detail",
+  "reference": "The Board revoked its prior action preserving full tax deductibility of nonqualified deferred compensation, so the company wrote off $11 million of deferred tax assets in the fourth quarter of 2024, raising income tax expense. Without this charge, 2024 net earnings would have been $97.8 million versus $91.9 million in 2023, an increase of 6%.",
+  "reference_chunk_ids": [],
+  "note": "Letter to Shareholders, third paragraph; one fact from one paragraph.",
+  "evidence": [
+   "the Company wrote off $11 million of deferred tax assets in fourth quar-",
+   "earnings in 2024 would have been $97.8 million compared to $91.9 million in 2023,"
+  ]
+ },
+ {
+  "question": "How did Tootsie Roll Industries change its Child's Play Halloween assortment in 2024?",
+  "type": "detail",
+  "reference": "The mix of Tootsie Roll, Tootsie Fruit Chews, Tootsie Pops and DOTS was fine-tuned to broaden its appeal among everyday buyers. It now emphasizes more fruity and gummy elements trending with young consumers and has more uniform piece sizes for snacking and office candy dishes, along with a package redesign.",
+  "reference_chunk_ids": [],
+  "note": "Letter to Shareholders, discussion of Halloween assortments; single product-change detail.",
+  "evidence": [
+   "to emphasize more of the fruity and gummy elements that are",
+   "nization of the piece sizes to facilitate snacking, office candy dish"
+  ]
+ },
+ {
+  "question": "What packaging refresh did Tootsie Roll Industries give its Andes line in 2024?",
+  "type": "detail",
+  "reference": "The full line of 4.67 ounce Andes packages, including Crème De Menthe, is now offered in a display box presentation. This format acts as a more visible product billboard that accentuates the Andes logo and widens suitable merchandising placements to include the desirable retail checkout space.",
+  "reference_chunk_ids": [],
+  "note": "Letter to Shareholders, Andes paragraph; one detail from one paragraph.",
+  "evidence": [
+   "is now available in an attractive display box presentation. This",
+   "merchandising placements to include the desirable retail check-"
+  ]
+ },
+ {
+  "question": "Which new Blow Pop items did Tootsie Roll Industries introduce in 2024, according to its annual report?",
+  "type": "detail",
+  "reference": "The Blow Pop line added a new eight count bunch pop offering with assorted flavors in a bouquet presentation, packed twelve in a display box. For Valentine's Day it also added heart-shaped Blow Pop minis in four flavors, packed in 3 ounce resealable pouches.",
+  "reference_chunk_ids": [],
+  "note": "Letter to Shareholders, two consecutive Blow Pop paragraphs; list of new items.",
+  "evidence": [
+   "The Blow Pop line was expanded to include a new eight count",
+   "Featuring four luscious flavors packed in 3 ounce resealable"
+  ]
+ },
+ {
+  "question": "Which social media platforms does Tootsie Roll Industries use, and how does it engage fans?",
+  "type": "detail",
+  "reference": "It uses Facebook, Twitter, Instagram, Pinterest, YouTube and TikTok. The company engages fans through numerous video experiences, giveaways, recipes, challenges and crafts, and it also partners with social media influencers to bring its messages to their already engaged fan base.",
+  "reference_chunk_ids": [],
+  "note": "Letter to Shareholders, social media paragraph; list plus short explanation.",
+  "evidence": [
+   "platforms. These include Facebook, Twitter, Instagram, Pinterest, YouTube and",
+   "our fans through numerous video experiences, giveaways, recipes, challenges, and"
+  ]
+ },
+ {
+  "question": "Which trade classes drove Tootsie Roll Industries' Halloween promotions in 2024, and which quarter sells most?",
+  "type": "detail",
+  "reference": "Halloween is traditionally the largest selling season, with third quarter sales surpassing any other quarter, as again in 2024. Promotions were tailored to mass merchandisers, drug chains, warehouse clubs, grocery stores and dollar stores, where packaged goods including mixed assortments of popular items have stayed highly successful.",
+  "reference_chunk_ids": [],
+  "note": "Letter to Shareholders, Halloween paragraph; one cluster of facts in one paragraph.",
+  "evidence": [
+   "Halloween is traditionally the largest selling season for our prod-",
+   "significant classes of trade including mass merchandisers, drug",
+   "chains, warehouse clubs, grocery stores and dollar stores. Pack-"
+  ]
+ },
+ {
+  "question": "How does Tootsie Roll Industries describe its domestic competitive position and main forms of competition?",
+  "type": "detail",
+  "reference": "The company says the domestic confectionery business is highly competitive. Although accurate statistics are not available, it believes it is among the ten largest domestic manufacturers. The main forms of competition are brand recognition, competition for retail shelf space, and a fair price for its products at various retail price points.",
+  "reference_chunk_ids": [],
+  "note": "Form 10-K Item 1 Business (page 3); one paragraph.",
+  "evidence": [
+   "the Company believes it is among the ten largest domestic manufacturers in this industry",
+   "the main forms of competition comprise brand recognition, as well as competition for retail"
+  ]
+ },
+ {
+  "question": "What shares of Tootsie Roll Industries' 2024 net product sales came from Wal-Mart, Dollar Tree and McLane?",
+  "type": "detail",
+  "reference": "Wal-Mart accounted for approximately 23.2% of 2024 net product sales and Dollar Tree, including Family Dollar, for approximately 12.6%. McLane, a large national grocery wholesaler, represented 20.7% of net product sales revenues in 2024; that figure includes the Wal-Mart and Dollar Tree sales it delivers as well as sales to other customers, so the three shares overlap and are not additive.",
+  "reference_chunk_ids": [],
+  "note": "Form 10-K Item 1 Business (pages 4-5), customer concentration paragraph; figures stated in prose.",
+  "evidence": [
+   "(\"Wal-Mart\") aggregated approximately 23.2%,",
+   "aggregated approximately 12.6%, 14.2%, and 12.4% of net product sales during the years ended December 31, 2024, 2023",
+   "were 20.7% in 2024 and 20.1% in 2023 and 20.4% in 2022."
+  ]
+ },
+ {
+  "question": "Why does Tootsie Roll Industries say a single plant disruption would be hard to manage?",
+  "type": "detail",
+  "reference": "The majority of the company's products are manufactured in a single production facility on specialized equipment. After a disaster such as a fire or earthquake, or a disruption such as labor stoppages or shortages, it would be difficult to transfer production to other facilities or a new location in a timely manner, risking loss of market share.",
+  "reference_chunk_ids": [],
+  "note": "Form 10-K Item 1A, 'Risk of production interruptions' (page 8); one risk factor.",
+  "evidence": [
+   "The majority of the Company's products are manufactured in a single",
+   "transfer production to other facilities or a new location in a timely manner, which could result in loss of"
+  ]
+ },
+ {
+  "question": "What status does Tootsie Roll Industries' multi-employer union pension plan carry, and what does it imply?",
+  "type": "detail",
+  "reference": "The plan in which the company participates for certain union employees is in \"critical and declining status\" as defined by applicable law. That designation implies the plan is expected to become insolvent within the next 20 years, and withdrawing would trigger a significant withdrawal liability.",
+  "reference_chunk_ids": [],
+  "note": "Form 10-K Item 1A, multi-employer pension plan risk factor (page 8); one risk factor.",
+  "evidence": [
+   "participates in a multi-employer union pension plan (Plan) which is currently in",
+   "expected to become insolvent within the next 20 years. Should the Company withdraw from the"
+  ]
+ },
+ {
+  "question": "What withdrawal liability would Tootsie Roll Industries have faced in 2024, and how many annual payments?",
+  "type": "detail",
+  "reference": "The company was advised its withdrawal liability would have been $97,500 thousand had it withdrawn from the pension plan during 2024. Management believes the liability would likely be limited to twenty annual payments of $2,664 thousand, with a present value of $31,262 to $37,654 thousand depending on the discount rate used.",
+  "reference_chunk_ids": [],
+  "note": "MD&A, multi-employer pension discussion (pages 17-18); figures stated in prose, in thousands of dollars.",
+  "evidence": [
+   "The Company has been advised that its withdrawal liability would have been $97,500, $102,200 and $96,000 if it had",
+   "withdrawn in 2024 would likely be limited to twenty annual payments of $2,664 which have a present value in the range"
+  ]
+ },
+ {
+  "question": "What plant expansion is Tootsie Roll Industries pursuing, and what will it cost in total?",
+  "type": "detail",
+  "reference": "The company is pursuing a plant expansion adding and replacing certain processing and packaging lines to meet higher forecasted demand. It will take place over the next seven years, with most spending in 2025 and 2026, and total cost of about $100,000 thousand, funded from operating cash flow and internal sources.",
+  "reference_chunk_ids": [],
+  "note": "MD&A, Liquidity and Capital Resources (page 19); one paragraph.",
+  "evidence": [
+   "The Company expects that this will take place over the next seven years, however, most of the",
+   "$100,000. All capital expenditures have been and are expected to be funded from the Company's cash flow from operations"
+  ]
+ },
+ {
+  "question": "How does Tootsie Roll Industries limit its interest rate exposure on available for sale investments?",
+  "type": "detail",
+  "reference": "Its available for sale securities generally mature in three to five years and are generally not sold before maturity. A ladder approach has approximately 20% to 35% of the portfolio maturing each year, limiting interest rate exposure. It also holds variable rate demand notes whose rates reset weekly and can be put back each week.",
+  "reference_chunk_ids": [],
+  "note": "MD&A, Market Risks, 'Interest rates' (pages 22-23); one subsection.",
+  "evidence": [
+   "Approximately 20% to 35% of this investment portfolio matures each",
+   "invests in variable rate demand notes which have interest rates that are reset weekly and can be"
+  ]
+ },
+ {
+  "question": "What revenue recognition model does Tootsie Roll Industries follow, and when is a net product sale recorded?",
+  "type": "detail",
+  "reference": "The company records revenue using the five-step model of ASC Topic 606, treating items such as cash discounts, returns, allowances and promotional costs as variable consideration that reduces sales. A net product sale is recorded when the company delivers the product, or the customer picks it up at a distribution center, and obtains control.",
+  "reference_chunk_ids": [],
+  "note": "Note 1, Significant Accounting Policies - Revenue recognition (page 32); one policy.",
+  "evidence": [
+   "revenue based on a five-step model in accordance with Accounting Standards Codification",
+   "A net product sale is recorded when the Company delivers the product to the customer, or in certain instances, the customer"
+  ]
+ },
+ {
+  "question": "What depreciation method and useful lives does Tootsie Roll Industries use for buildings and machinery?",
+  "type": "detail",
+  "reference": "Tootsie Roll computes depreciation for financial reporting using the straight-line method. Useful lives are 20 to 50 years for buildings and 5 to 20 years for machinery and equipment.",
+  "reference_chunk_ids": [],
+  "note": "Note 1, Property, plant and equipment (page 33); one accounting policy.",
+  "evidence": [
+   "Depreciation is computed for financial reporting purposes by use of the straight-line method based on useful lives of",
+   "20 to 50 years for buildings and 5 to 20 years for machinery and equipment."
+  ]
+ },
+ {
+  "question": "How does Tootsie Roll Industries' Class B common stock differ from its common stock in votes and convertibility?",
+  "type": "detail",
+  "reference": "Class B common stock has essentially the same rights as common stock, except that each share carries ten votes compared with one vote per common share. It is not traded on any exchange and is restricted as to transfer, but is convertible share-for-share, at any time and at no cost, into NYSE-traded common stock.",
+  "reference_chunk_ids": [],
+  "note": "Note 1, Earnings per share (page 35); one explanation.",
+  "evidence": [
+   "The Class B common stock has essentially the same rights as common stock, except that each share of Class B",
+   "common stock has ten votes per share (compared to one vote per share of common stock), is not traded on any exchange,"
+  ]
+ },
+ {
+  "question": "Where is Tootsie Roll Industries' largest operating facility, and which other plants does it own?",
+  "type": "detail",
+  "reference": "The largest operating facility is in Chicago, Illinois, which also serves as corporate headquarters. The company also owns domestic facilities in Covington, Tennessee, Cambridge, Massachusetts and Delavan, Wisconsin, and international manufacturing facilities in Mexico City, Barcelona, Spain, and two in Concord, Ontario, Canada.",
+  "reference_chunk_ids": [],
+  "note": "Form 10-K Item 2 Properties (page 11); list from one paragraph.",
+  "evidence": [
+   "largest operating facility in Chicago, Illinois also serves as the Corporate headquarters.",
+   "(Cambridge), and Wisconsin (Delavan) and international manufacturing facilities in Mexico (Mexico City), Spain"
+  ]
+ },
+ {
+  "question": "Who leads Tootsie Roll Industries' cybersecurity program, and how is the Audit Committee kept informed?",
+  "type": "detail",
+  "reference": "The program is supervised by members of the executive team and led by the Director of Information Technology, who has over ten years in information security leadership, assisted by consultants and a computer security firm. The Audit Committee and Board get periodic reports, and the Audit Committee is promptly informed of potentially material incidents.",
+  "reference_chunk_ids": [],
+  "note": "Form 10-K Item 1C Cybersecurity (page 10); one paragraph.",
+  "evidence": [
+   "program is led and managed by the Director of Information Technology, whose experience includes over ten years in",
+   "The Audit Committee and the Board of Directors receive periodic reports on the Company's actions to"
+  ]
+ },
+ {
+  "question": "How many full-time employees does Tootsie Roll Industries have, and when do its union contracts expire?",
+  "type": "detail",
+  "reference": "The company employs approximately 2,300 full-time persons at all locations. Its Chicago plant union agreement was negotiated and executed in 2023 and expires in September 2027, while the Canadian plant contract concluded in the first quarter of 2024 expires in January 2029.",
+  "reference_chunk_ids": [],
+  "note": "Form 10-K Item 1 Business, employees paragraph (page 4); facts from one paragraph.",
+  "evidence": [
+   "The Company employs approximately 2,300 full-time persons at all locations.",
+   "with the labor union in Canada that expires in January 2029."
+  ]
+ },
+ {
+  "question": "How does Tootsie Roll Industries manage rising input costs through sourcing, hedging and pricing?",
+  "type": "cross_paragraph",
+  "reference": "The letter says it uses competitive bidding, hedging and forward purchase contracts in sourcing. Market risk disclosures add commodity futures contracts and annual supply agreements to hedge purchases such as sugar. Item 1 adds that it plans to raise sales prices to recover higher input costs and may change product size and weight.",
+  "reference_chunk_ids": [],
+  "note": "Letter to Shareholders (sourcing), Item 1 (pricing, page 4) and MD&A Market Risks (page 22); combines three places.",
+  "evidence": [
+   "prudently employ competitive bidding, hedging and",
+   "The Company utilizes commodity futures contracts, as well as annual supply agreements, to hedge and plan for anticipated",
+   "the Company plans to increase its sales prices to recover higher"
+  ]
+ },
+ {
+  "question": "How does Tootsie Roll Industries' reliance on its three largest customers appear in receivables and risk factors?",
+  "type": "cross_paragraph",
+  "reference": "The three largest customers accounted for approximately 41.9% of total accounts receivable at December 31, 2024, compared with 39.6% a year earlier. A risk factor says McLane, Wal-Mart and Dollar Tree made up approximately 37% of 2024 net product sales, and losing any of them could decrease sales and hurt results.",
+  "reference_chunk_ids": [],
+  "note": "Form 10-K Item 1 (page 5) and Item 1A 'Risk of dependence on large customers' (page 8); two separate sections.",
+  "evidence": [
+   "accounted for approximately 41.9% and 39.6% of total accounts receivable, respectively.",
+   "Tree, accounted for approximately 37% of net product sales in 2024, and other large national chains are also"
+  ]
+ },
+ {
+  "question": "What does Tootsie Roll Industries say about its Spanish subsidiary's losses and the outlook beyond 2025?",
+  "type": "cross_paragraph",
+  "reference": "The 97%-owned Spanish subsidiary had an operating loss of $611 thousand in 2024, versus $828 thousand in 2023. Management expects losses to continue beyond 2025, likely requiring additional cash financing. A risk factor adds that the company is exploring programs to increase sales and profitability, but if these efforts are not successful, additional losses and impairments may be reported in the future.",
+  "reference_chunk_ids": [],
+  "note": "MD&A results of operations (page 15) and Item 1A 'Risk of further losses in Spain' (page 9); two sections.",
+  "evidence": [
+   "The Company's Spanish subsidiary (97% owned by the Company) incurred an operating loss of $611 in 2024",
+   "Management believes that operating losses at its Spanish subsidiary are expected to continue beyond 2025 and",
+   "Risk of further losses in Spain - The Company is exploring a variety of programs to increase sales and"
+  ]
+ },
+ {
+  "question": "How did the 2024 deferred tax asset write-off affect Tootsie Roll Industries' effective tax rate and net earnings?",
+  "type": "cross_paragraph",
+  "reference": "The write-off was a non-cash tax charge of $11,010 thousand. It lifted the 2024 effective tax rate to 31.6%, versus 23.4% in 2023, and excluding it the rate was 22.9%. Without the write-off, 2024 net earnings would have been $97,837 thousand instead of $86,827 thousand, a 6% increase over 2023.",
+  "reference_chunk_ids": [],
+  "note": "MD&A (pages 16-17), tax-rate paragraph and net earnings paragraph; two separate paragraphs.",
+  "evidence": [
+   "adjustment to the deferred tax assets resulted in a non-cash tax",
+   "31.6% and 23.4% in twelve months 2024 and 2023, respectively. Excluding the effects of the write-off of deferred tax assets as",
+   "earnings in twelve months 2024 would have been $97,837 compared to $91,912 in 2023, an increase of $5,925 or 6%."
+  ]
+ },
+ {
+  "question": "How did Tootsie Roll Industries fund its 2024 dividends, share repurchases and capital spending?",
+  "type": "cross_paragraph",
+  "reference": "The letter says these actions were accomplished using internally generated funds, and that the company ended 2024 with $429 million of cash and investments, net of interest bearing debt and excluding investments that hedge deferred compensation liabilities. The MD&A reports $25,515 thousand of cash dividends, $13,534 thousand of repurchases and $17,997 thousand of capital expenditures, with total cash, equivalents and investments of $526,968 thousand.",
+  "reference_chunk_ids": [],
+  "note": "Letter to Shareholders and MD&A Financial Condition (page 14); two sources.",
+  "evidence": [
+   "The above actions were accomplished using internally generated",
+   "We ended 2024 with $429 million of cash and investments, net",
+   "During 2024, the Company paid cash dividends of $25,515, purchased and retired $13,534 of its outstanding"
+  ]
+ },
+ {
+  "question": "How does Halloween seasonality shape Tootsie Roll Industries' workforce and inventory planning, and why is it a risk?",
+  "type": "cross_paragraph",
+  "reference": "Sales are fairly consistent except for a third quarter increase reflecting pre-Halloween and back-to-school sales, so the company begins building inventories and its seasonal workforce in the second and third quarters. As a risk, circumstances surrounding Halloween, such as widespread adverse weather or changes in consumer interest, could significantly affect sales.",
+  "reference_chunk_ids": [],
+  "note": "Form 10-K Item 1 employees paragraph (page 4) and Item 1A 'Risk related to seasonality of sales' (page 6); two sections.",
+  "evidence": [
+   "seasonal sales period, the Company generally begins building inventories, and its seasonal workforce, in the second and",
+   "Circumstances surrounding Halloween could significantly affect the Company's sales, such as, widespread adverse"
+  ]
+ },
+ {
+  "question": "Summarize the corporate principles that guide how Tootsie Roll Industries runs its business.",
+  "type": "summary",
+  "reference": "The principles stress attracting and retaining superior people, an open family atmosphere with professional management, and not sacrificing long-term growth for short-term results. They call for a conservative financial posture, a trim operation, investment in the latest equipment, outsourcing where appropriate and vertical integration where financially advantageous, aggressively promoted brands, and high ethical standards.",
+  "reference_chunk_ids": [],
+  "note": "Inside front cover, 'Corporate Principles'; summary of a whole section.",
+  "evidence": [
+   "We believe that the differences among companies are",
+   "We invest in the latest and most productive equipment",
+   "We maintain a conservative financial posture in the"
+  ]
+ },
+ {
+  "question": "Give an overview of Tootsie Roll Industries' 2024 results and outlook from the chairman's letter.",
+  "type": "summary",
+  "reference": "Net product sales fell 6% to $716 million as customers resisted higher prices, and net earnings were $86.8 million, or $1.22 per share, including an $11 million non-cash tax write-off. Cocoa and chocolate costs are expected to rise further in 2025. The company paid dividends for the 82nd consecutive year and ended 2024 with $429 million of cash and investments, net of interest bearing debt and excluding investments that hedge deferred compensation liabilities.",
+  "reference_chunk_ids": [],
+  "note": "Letter 'To Our Shareholders' (whole letter); gist of a multi-paragraph section.",
+  "evidence": [
+   "Net product sales in 2024 were $716 million compared to $763 million in 2023, a",
+   "Cash dividends were paid to shareholders for the 82nd",
+   "cocoa and chocolate costs have moved significantly higher in the markets this year,"
+  ]
+ }
+]

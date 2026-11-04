@@ -1,0 +1,323 @@
+[
+  {
+    "question": "How does the NIST AI Risk Management Framework define risk for AI systems?",
+    "type": "detail",
+    "reference": "In the context of the AI RMF, risk is the composite measure of an event's probability of occurring and the magnitude or degree of the consequences of that event. For negative impacts specifically, risk is a function of the magnitude of harm if the event occurs and the likelihood of its occurrence.",
+    "reference_chunk_ids": [],
+    "note": "Page 4, Section 1.1; a single definition from one paragraph.",
+    "evidence": [
+      "In the context of the AI RMF, risk refers to the composite measure of an event’s probability of",
+      "occurring and the magnitude or degree of the consequences of the corresponding event."
+    ]
+  },
+  {
+    "question": "According to the NIST AI RMF, what should happen when an AI system presents unacceptable negative risk levels?",
+    "type": "detail",
+    "reference": "Where significant negative impacts are imminent, severe harms are actually occurring, or catastrophic risks are present, development and deployment should cease in a safe manner until the risks can be sufficiently managed.",
+    "reference_chunk_ids": [],
+    "note": "Page 8, Section 1.2.3 Risk Prioritization; one fact from one paragraph.",
+    "evidence": [
+      "negative risk levels – such as where significant negative impacts are imminent, severe harms",
+      "should cease in a safe manner until risks can be sufficiently managed."
+    ]
+  },
+  {
+    "question": "Which AI dimensions does the NIST AI RMF display in Figure 2 when describing its audience?",
+    "type": "detail",
+    "reference": "The audience paragraph names the Application Context, Data and Input, AI Model, and Task and Output dimensions as those whose AI actors (who perform or manage design, development, deployment, evaluation, and use of AI systems) are the primary AI RMF audience. The People & Planet dimension at the center of Figure 2 is a separate audience that informs the primary audience.",
+    "reference_chunk_ids": [],
+    "note": "Page 9, Section 2 Audience; a short list from one paragraph. [reference corrected after independent verification]",
+    "evidence": [
+      "AI dimensions displayed in Figure 2 are the Application Context, Data and Input, AI",
+      "Model, and Task and Output. AI actors involved in these dimensions who perform or"
+    ]
+  },
+  {
+    "question": "What examples of tradeoffs between trustworthiness characteristics does the NIST AI Risk Management Framework give?",
+    "type": "detail",
+    "reference": "The framework notes that tradeoffs may emerge between optimizing for interpretability and achieving privacy, and between predictive accuracy and interpretability. Under conditions such as data sparsity, privacy-enhancing techniques can also cause a loss in accuracy, which affects decisions about fairness and other values in certain domains.",
+    "reference_chunk_ids": [],
+    "note": "Pages 12-13, Section 3; examples gathered from a single paragraph.",
+    "evidence": [
+      "example, in certain scenarios tradeoffs may emerge between optimizing for",
+      "interpretability and achieving privacy. In other cases, organizations might face a tradeoff",
+      "between predictive accuracy and interpretability. Or, under certain conditions such as data"
+    ]
+  },
+  {
+    "question": "How does the NIST AI Risk Management Framework distinguish security from resilience for AI systems?",
+    "type": "detail",
+    "reference": "The two are related but distinct. Resilience is the ability to return to normal function after an unexpected adverse event, while security includes resilience but also encompasses protocols to avoid, protect against, respond to, or recover from attacks.",
+    "reference_chunk_ids": [],
+    "note": "Page 15, Section 3.3 Secure and Resilient; one explanation in one paragraph.",
+    "evidence": [
+      "Security and resilience are related but distinct characteristics. While resilience is the abil-",
+      "ity to return to normal function after an unexpected adverse event, security includes re-",
+      "silience but also encompasses protocols to avoid, protect against, respond to, or recover"
+    ]
+  },
+  {
+    "question": "Which common security concerns for AI systems does the NIST AI RMF mention?",
+    "type": "detail",
+    "reference": "Common security concerns relate to adversarial examples, data poisoning, and the exfiltration of models, training data, or other intellectual property through AI system endpoints.",
+    "reference_chunk_ids": [],
+    "note": "Page 15, Section 3.3; a short list stated in one sentence.",
+    "evidence": [
+      "Common security concerns relate to adversarial examples,",
+      "data poisoning, and the exfiltration of models, training data, or other intellectual property"
+    ]
+  },
+  {
+    "question": "In the NIST AI RMF, what questions do transparency, explainability, and interpretability each help answer?",
+    "type": "detail",
+    "reference": "Transparency can answer the question of what happened in the system. Explainability can answer how a decision was made in the system. Interpretability can answer why a decision was made by the system, along with its meaning or context to the user.",
+    "reference_chunk_ids": [],
+    "note": "Page 17, Section 3.5; one passage contrasting three characteristics.",
+    "evidence": [
+      "Transparency can answer the question of “what happened” in the system. Ex-",
+      "plainability can answer the question of “how” a decision was made in the system. Inter-",
+      "pretability can answer the question of “why” a decision was made by the system and its"
+    ]
+  },
+  {
+    "question": "What three major categories of AI bias has NIST identified in the AI Risk Management Framework?",
+    "type": "detail",
+    "reference": "NIST identifies three major categories of AI bias to be considered and managed: systemic, computational and statistical, and human-cognitive. Each of these can occur in the absence of prejudice, partiality, or discriminatory intent.",
+    "reference_chunk_ids": [],
+    "note": "Page 18, Section 3.7; a three-item list from one paragraph.",
+    "evidence": [
+      "three major categories of AI bias to be considered and managed: systemic, computational",
+      "and statistical, and human-cognitive. Each of these can occur in the absence of prejudice,"
+    ]
+  },
+  {
+    "question": "What does the NIST AI RMF say organizations should have in place under subcategory GOVERN 1.7?",
+    "type": "detail",
+    "reference": "GOVERN 1.7 calls for processes and procedures for decommissioning and phasing out AI systems safely, and in a manner that does not increase risks or decrease the organization's trustworthiness.",
+    "reference_chunk_ids": [],
+    "note": "Page 23, Table 1 (GOVERN 1.7); a single subcategory statement.",
+    "evidence": [
+      "GOVERN 1.7: Processes and procedures are in place for decom-",
+      "missioning and phasing out AI systems safely and in a man-"
+    ]
+  },
+  {
+    "question": "What mechanisms does MANAGE 2.4 of the NIST AI RMF require for systems inconsistent with intended use?",
+    "type": "detail",
+    "reference": "MANAGE 2.4 says mechanisms should be in place and applied, with responsibilities assigned and understood, to supersede, disengage, or deactivate AI systems that demonstrate performance or outcomes inconsistent with intended use.",
+    "reference_chunk_ids": [],
+    "note": "Page 32, Table 4 (MANAGE 2.4); one subcategory.",
+    "evidence": [
+      "MANAGE 2.4: Mechanisms are in place and applied, and respon-",
+      "sibilities are assigned and understood, to supersede, disengage, or",
+      "deactivate AI systems that demonstrate performance or outcomes"
+    ]
+  },
+  {
+    "question": "Which risk response options does MANAGE 1.3 of the NIST AI RMF list for high-priority AI risks?",
+    "type": "detail",
+    "reference": "MANAGE 1.3 says responses to AI risks deemed high priority are developed, planned, and documented, and that risk response options can include mitigating, transferring, avoiding, or accepting the risk.",
+    "reference_chunk_ids": [],
+    "note": "Page 32, Table 4 (MANAGE 1.3); one subcategory listing four options.",
+    "evidence": [
+      "Risk response options can include mitigating, transfer-",
+      "ring, avoiding, or accepting."
+    ]
+  },
+  {
+    "question": "In the NIST AI RMF, what is the difference between a Current Profile and a Target Profile?",
+    "type": "detail",
+    "reference": "An AI RMF Current Profile indicates how AI is currently being managed and the related risks in terms of current outcomes. A Target Profile indicates the outcomes needed to achieve the desired or target AI risk management goals.",
+    "reference_chunk_ids": [],
+    "note": "Page 33, Section 6 AI RMF Profiles; one definition pair in one paragraph.",
+    "evidence": [
+      "An AI RMF Current Profile indicates how AI is currently being",
+      "outcomes needed to achieve the desired or target AI risk management goals."
+    ]
+  },
+  {
+    "question": "Which tasks do AI Deployment actors carry out according to Appendix A of the NIST AI RMF?",
+    "type": "detail",
+    "reference": "Related deployment tasks include piloting the system, checking compatibility with legacy systems, ensuring regulatory compliance, managing organizational change, and evaluating user experience. These actors are responsible for contextual decisions about how the AI system is used to assure its deployment into production.",
+    "reference_chunk_ids": [],
+    "note": "Page 35, Appendix A; a list in one paragraph.",
+    "evidence": [
+      "include piloting the system, checking compatibility with legacy systems, ensuring regu-",
+      "latory compliance, managing organizational change, and evaluating user experience. AI"
+    ]
+  },
+  {
+    "question": "According to the NIST AI RMF appendix on traditional software, what AI risks can existing frameworks not adequately address?",
+    "type": "detail",
+    "reference": "Existing frameworks and guidance are unable to adequately manage harmful bias, confront risks related to generative AI, comprehensively address machine learning attacks such as evasion, model extraction and membership inference, account for the complex attack surface of AI systems, and consider risks from third-party AI technologies, transfer learning, and off-label use.",
+    "reference_chunk_ids": [],
+    "note": "Page 39, Appendix B; a five-item list.",
+    "evidence": [
+      "adequately manage the problem of harmful bias in AI systems;",
+      "confront the challenging risks related to generative AI;",
+      "comprehensively address security concerns related to evasion, model extraction, mem-"
+    ]
+  },
+  {
+    "question": "How can AI systems be configured for human decision making, according to the NIST AI RMF human-AI interaction appendix?",
+    "type": "detail",
+    "reference": "Human-AI configurations can span from fully autonomous to fully manual. An AI system can make decisions autonomously, defer decision making to a human expert, or be used by a human decision maker as an additional opinion. Some systems may not require human oversight, while others specifically require it.",
+    "reference_chunk_ids": [],
+    "note": "Page 40, Appendix C item 1; one numbered point.",
+    "evidence": [
+      "Human-AI configurations can span",
+      "autonomously make deci-",
+      "sions, defer decision making to a human expert, or be used by a human decision"
+    ]
+  },
+  {
+    "question": "What does Appendix D of the NIST AI RMF say about the language the framework should use?",
+    "type": "detail",
+    "reference": "It should use clear and plain language understandable by a broad audience, including senior executives, government officials, non-governmental organization leadership, and non-AI professionals, while keeping enough technical depth to be useful to practitioners, so AI risks can be communicated across and between organizations, with customers, and to the public.",
+    "reference_chunk_ids": [],
+    "note": "Page 42, Appendix D attribute 3; a single numbered attribute.",
+    "evidence": [
+      "Use clear and plain language that is understandable by a broad audience, including",
+      "senior executives, government officials, non-governmental organization leadership,"
+    ]
+  },
+  {
+    "question": "How does the NIST AI Risk Management Framework define risk tolerance and what can influence it?",
+    "type": "detail",
+    "reference": "Risk tolerance is the organization's or AI actor's readiness to bear risk in order to achieve its objectives. It can be influenced by legal or regulatory requirements, and by policies and norms set by AI system owners, organizations, industries, communities, or policy makers, and it is likely to change over time.",
+    "reference_chunk_ids": [],
+    "note": "Page 7, Section 1.2.2 Risk Tolerance; definition and influences in one paragraph.",
+    "evidence": [
+      "refers to the organization’s or AI actor’s (see Appendix A) readiness to bear the",
+      "risk in order to achieve its objectives. Risk tolerance can be influenced by legal or regula-"
+    ]
+  },
+  {
+    "question": "How does NIST plan to evaluate whether the AI Risk Management Framework itself is effective?",
+    "type": "detail",
+    "reference": "Evaluations of effectiveness, including ways to measure bottom-line improvements in AI trustworthiness, will be part of future NIST activities with the AI community. Organizations are encouraged to periodically evaluate whether the framework improved their ability to manage AI risks, and NIST intends to develop metrics and methodologies collaboratively.",
+    "reference_chunk_ids": [],
+    "note": "Page 19, Section 4 Effectiveness; one short section.",
+    "evidence": [
+      "Organizations and other users of the Framework are encouraged to periodically evaluate",
+      "NIST intends to work collaboratively with others to develop met-"
+    ]
+  },
+  {
+    "question": "What should the MEASURE function of the NIST AI RMF include, and how can independent review help?",
+    "type": "detail",
+    "reference": "Processes should include rigorous software testing and performance assessment methodologies with associated measures of uncertainty, comparisons to performance benchmarks, and formalized reporting and documentation of results. Processes for independent review can improve testing effectiveness and mitigate internal biases and potential conflicts of interest.",
+    "reference_chunk_ids": [],
+    "note": "Page 28, Section 5.3 Measure; one paragraph.",
+    "evidence": [
+      "should include rigorous software testing and performance assessment methodologies with",
+      "associated measures of uncertainty, comparisons to performance benchmarks, and formal-",
+      "Processes for independent review can improve the effectiveness of testing and can mitigate internal biases"
+    ]
+  },
+  {
+    "question": "Why does the NIST AI Risk Management Framework say a human baseline is difficult to systematize?",
+    "type": "detail",
+    "reference": "For AI systems intended to augment or replace human activity, such as decision making, risk management needs some form of baseline metrics for comparison. This is difficult to systematize because AI systems carry out different tasks, and perform tasks differently, than humans do.",
+    "reference_chunk_ids": [],
+    "note": "Page 6, Section 1.2.1 Risk Measurement; one challenge in one paragraph.",
+    "evidence": [
+      "requires some form of baseline metrics for comparison. This is difficult to systematize since AI systems carry out different tasks – and",
+      "perform tasks differently – than humans."
+    ]
+  },
+  {
+    "question": "How do MAP outcomes in the NIST AI RMF relate to MEASURE and MANAGE, and what role does GOVERN play?",
+    "type": "cross_paragraph",
+    "reference": "MAP outcomes are the basis for the MEASURE and MANAGE functions, since risk management is difficult without contextual knowledge. GOVERN is a cross-cutting function infused throughout AI risk management that enables the other functions, and its compliance and evaluation aspects should be integrated into each of them.",
+    "reference_chunk_ids": [],
+    "note": "Pages 21-25, Sections 5.1 and 5.2; combines the GOVERN description with the MAP description.",
+    "evidence": [
+      "GOVERN is a cross-cutting function that is infused throughout AI risk management and",
+      "MAP function are the basis for the MEASURE and MANAGE functions. Without contex-"
+    ]
+  },
+  {
+    "question": "How does the NIST AI RMF treat residual risk, in both its prioritization discussion and MANAGE 1.4?",
+    "type": "cross_paragraph",
+    "reference": "Section 1.2.3 defines residual risk as risk remaining after risk treatment and says documenting it makes providers fully consider deployment risks and informs end users. MANAGE 1.4 defines negative residual risks as the sum of all unmitigated risks and calls for documenting them for downstream acquirers and end users.",
+    "reference_chunk_ids": [],
+    "note": "Page 8 (Section 1.2.3) and page 32 (Table 4, MANAGE 1.4); two separate places.",
+    "evidence": [
+      "Residual risk – defined as risk remaining after risk treatment (Source: ISO GUIDE 73) –",
+      "MANAGE 1.4: Negative residual risks (defined as the sum of all",
+      "unmitigated risks) to both downstream acquirers of AI systems"
+    ]
+  },
+  {
+    "question": "Which GOVERN, MAP, and MANAGE subcategories of the NIST AI RMF Core address, respectively, third-party IP infringement risks, legal risks of third-party data or software components, and monitoring of pre-trained models?",
+    "type": "cross_paragraph",
+    "reference": "GOVERN 6.1 requires policies and procedures addressing AI risks tied to third-party entities, including intellectual property infringement. MAP 4.1 covers mapping legal risks of components such as third-party data or software. MANAGE 3.2 requires that pre-trained models used for development be monitored as part of regular system monitoring and maintenance.",
+    "reference_chunk_ids": [],
+    "note": "Pages 24, 27 and 32, Tables 1, 2 and 4; three separate functions.",
+    "evidence": [
+      "GOVERN 6.1: Policies and procedures are in place that address",
+      "MAP 4.1: Approaches for mapping AI technology and legal risks",
+      "MANAGE 3.2: Pre-trained models which are used for develop-"
+    ]
+  },
+  {
+    "question": "How does the NIST AI RMF describe test, evaluation, verification, and validation in its audience section and Appendix A?",
+    "type": "cross_paragraph",
+    "reference": "In the audience section, TEVV performed regularly as a regular lifecycle process allows both mid-course remediation and post-hoc risk management. Appendix A adds that TEVV tasks run throughout the lifecycle, ideally with verification and validation actors distinct from test and evaluation actors, and that development TEVV includes model validation and assessment.",
+    "reference_chunk_ids": [],
+    "note": "Page 9 (Section 2) and pages 35-36 (Appendix A); two separate sections.",
+    "evidence": [
+      "assessing and tracking emergent risks. As a regular process within an AI lifecycle, TEVV",
+      "allows for both mid-course remediation and post-hoc risk management.",
+      "and validation tasks are distinct from those who perform test and evaluation actions. Tasks"
+    ]
+  },
+  {
+    "question": "How do the GOVERN and MAP functions of the NIST AI RMF support clear human roles and oversight?",
+    "type": "cross_paragraph",
+    "reference": "GOVERN 3.2 calls for policies and procedures that define and differentiate roles and responsibilities for human-AI configurations and oversight of AI systems. MAP 3.5 says processes for human oversight are defined, assessed, and documented in accordance with organizational policies from the GOVERN function.",
+    "reference_chunk_ids": [],
+    "note": "Pages 23 and 27, Tables 1 and 2 (GOVERN 3.2 and MAP 3.5); two functions.",
+    "evidence": [
+      "differentiate roles and responsibilities for human-AI configura-",
+      "MAP 3.5: Processes for human oversight are defined, assessed,"
+    ]
+  },
+  {
+    "question": "Where does the NIST AI RMF mention go/no-go decisions about developing or deploying an AI system?",
+    "type": "cross_paragraph",
+    "reference": "Section 4 lists explicit processes for go/no-go commissioning and deployment decisions as an expected benefit. In Section 5.2, completing MAP should provide enough contextual knowledge to inform an initial go/no-go decision. MANAGE 1.1 determines whether the system achieves its intended purposes and whether development or deployment should proceed.",
+    "reference_chunk_ids": [],
+    "note": "Page 19 (Section 4), page 25 (Section 5.2), page 32 (Table 4); three separate places.",
+    "evidence": [
+      "explicit processes for making go/no-go system commissioning and deployment deci-",
+      "to design, develop, or deploy an AI system. If a decision is made to proceed, organizations",
+      "whether its development or deployment should proceed."
+    ]
+  },
+  {
+    "question": "Summarize the purpose of the four Core functions, GOVERN, MAP, MEASURE, and MANAGE, in the NIST AI RMF.",
+    "type": "summary",
+    "reference": "GOVERN is a cross-cutting function that builds a risk management culture and applies to all stages. MAP establishes the context to frame risks. MEASURE uses quantitative, qualitative, or mixed-method tools to analyze, assess, benchmark, and monitor risk. MANAGE allocates risk resources to mapped and measured risks and covers response, recovery, and communication.",
+    "reference_chunk_ids": [],
+    "note": "Pages 20-32, Section 5; gist of the Core across all four function descriptions.",
+    "evidence": [
+      "While GOVERN applies to all stages of organizations’ AI risk management pro-",
+      "The MAP function establishes the context to frame risks related to an AI system. The AI",
+      "The MANAGE function entails allocating risk resources to mapped and measured risks on"
+    ]
+  },
+  {
+    "question": "Summarize the characteristics of trustworthy AI and how they should be balanced, according to the NIST AI RMF.",
+    "type": "summary",
+    "reference": "Trustworthy AI systems are valid and reliable, safe, secure and resilient, accountable and transparent, explainable and interpretable, privacy-enhanced, and fair with harmful bias managed. They must be balanced for the context of use, tradeoffs are usually involved, and trustworthiness is a social concept only as strong as its weakest characteristic.",
+    "reference_chunk_ids": [],
+    "note": "Pages 12-18, Section 3; overview of the whole trustworthiness section.",
+    "evidence": [
+      "systems include: valid and reliable, safe, secure and resilient, accountable and trans-",
+      "parent, explainable and interpretable, privacy-enhanced, and fair with harmful bias",
+      "thiness is a social concept that ranges across a spectrum and is only as strong as its weakest"
+    ]
+  }
+]

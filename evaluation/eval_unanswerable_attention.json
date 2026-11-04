@@ -1,0 +1,70 @@
+[
+  {
+    "question": "In the Transformer paper, which attention and residual dropout values were chosen for the English constituency parsing experiments?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Section 6.3 says dropout (attention and residual), learning rates and beam size were tuned on Section 22, but gives no dropout values for parsing; the only dropout values (0.1, 0.3) are for translation. Checked dropout and Pdrop hits.",
+    "absent_terms": [
+      "dropout\\s+(rate\\s+)?of",
+      "P_?drop\\s*=\\s*0\\.[2-9]",
+      "parsing.{0,60}dropout"
+    ]
+  },
+  {
+    "question": "In the Transformer paper, how many milliseconds of inference latency per sentence did the big model need on English-to-German?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Paper reports training step time and FLOPs but no inference latency; checked for latency, milliseconds, per-sentence timing.",
+    "absent_terms": [
+      "latency",
+      "milliseconds?",
+      "\\bms\\b",
+      "sentences? per second",
+      "per sentence"
+    ]
+  },
+  {
+    "question": "In the Transformer paper, how did human evaluators rate the fluency of its translations compared with GNMT + RL?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Only BLEU is reported; checked for human evaluation, raters, fluency, adequacy terms.",
+    "absent_terms": [
+      "human",
+      "evaluator",
+      "rater",
+      "fluency",
+      "adequacy"
+    ]
+  },
+  {
+    "question": "How many training runs with different random seeds underlie the Transformer paper's reported English-to-German BLEU scores?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Table 2 gives single BLEU values with no variance, seeds or run counts; checked seed, runs, standard deviation, confidence, significance.",
+    "absent_terms": [
+      "seeds?\\b",
+      "random seed",
+      "independent runs?",
+      "standard deviation",
+      "confidence interval",
+      "significan"
+    ]
+  },
+  {
+    "question": "In the Transformer paper, how many parameters does the 4-layer English constituency parsing model with dmodel 1024 contain?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Table 3 gives parameter counts only for translation variants; the parsing section gives layers and dmodel but no parameter count or head/ffn sizes. Checked param hits.",
+    "absent_terms": [
+      "parameters?",
+      "params",
+      "million parameters",
+      "parsing.{0,80}\\d+\\s*M\\b"
+    ]
+  }
+]

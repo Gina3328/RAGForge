@@ -1,0 +1,8 @@
+# key	document (glob, relative to the project root)	answerable questions file
+attention	evaluation/documents_new/Attention Is All You Need.pdf	evaluation/eval_questions_attention.json
+nist_ai_rmf	evaluation/documents_new/NIST.AI.100-1.pdf	evaluation/eval_questions_nist_ai_rmf.json
+ipcc_spm	evaluation/documents_new/IPCC_AR6_SYR_SPM.pdf	evaluation/eval_questions_ipcc_spm.json
+alice	evaluation/documents_new/Alice_in_Wonderland.pdf	evaluation/eval_questions_alice.json
+who_handhygiene	evaluation/documents_new/WHO_Hand_Hygiene_Guidelines_excerpt_Parts_II-IV.pdf	evaluation/eval_questions_who_handhygiene.json
+roomba	evaluation/documents_new/Roomba*600*Series*Guide.pdf	evaluation/eval_questions_roomba.json
+tootsie	evaluation/documents_new/Tootsie*2024*Annual*Report.pdf	evaluation/eval_questions_tootsie.json

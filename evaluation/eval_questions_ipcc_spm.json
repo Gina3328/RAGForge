@@ -1,0 +1,325 @@
+[
+ {
+  "question": "In the IPCC AR6 Synthesis Report summary, how did sea level rise rates change between 1901 and 2018?",
+  "type": "detail",
+  "reference": "Global mean sea level increased by 0.20 [0.15 to 0.25] m between 1901 and 2018. The average rate of rise was 1.3 [0.6 to 2.1] mm per year in 1901-1971, increasing to 1.9 [0.8 to 2.9] mm per year in 1971-2006 and 3.7 [3.2 to 4.2] mm per year in 2006-2018 (high confidence). Human influence was very likely the main driver since at least 1971.",
+  "reference_chunk_ids": [],
+  "note": "Section A.2.1 (Observed Changes and Impacts), SPM p.5; detail: one paragraph gives the rates.",
+  "evidence": [
+   "The average rate of sea level rise was 1.3 [0.6 to 2.1] mm yr-1 between 1901",
+   "and 1971, increasing to 1.9 [0.8 to 2.9] mm yr-1 between 1971 and 2006, and further increasing to 3.7 [3.2 to 4.2] mm yr-1",
+   "Human influence was very likely the main driver of these increases since at"
+  ]
+ },
+ {
+  "question": "In the IPCC AR6 Synthesis Report, what were 2019 CO2, methane and nitrous oxide concentrations compared with the past?",
+  "type": "detail",
+  "reference": "In 2019 atmospheric CO2 was 410 parts per million, higher than at any time in at least 2 million years (high confidence). Methane (1866 parts per billion) and nitrous oxide (332 parts per billion) were higher than at any time in at least 800,000 years (very high confidence).",
+  "reference_chunk_ids": [],
+  "note": "Section A.1.3 (Observed Warming and its Causes), SPM p.4; detail: single-paragraph fact with numbers.",
+  "evidence": [
+   "In 2019, atmospheric CO2 concentrations (410 parts per million) were higher than at any time in at least 2",
+   "million years (high confidence), and concentrations of methane (1866 parts per billion) and nitrous oxide (332 parts per",
+   "billion) were higher than at any time in at least 800,000 years (very high confidence)."
+  ]
+ },
+ {
+  "question": "In the IPCC AR6 Synthesis Report, how much warming did greenhouse gases, aerosols, natural drivers and internal variability contribute?",
+  "type": "detail",
+  "reference": "Over 1850-1900 to 2010-2019, it is likely that well-mixed greenhouse gases contributed a warming of 1.0°C to 2.0°C, while other human drivers (principally aerosols) contributed a cooling of 0.0°C to 0.8°C. Natural (solar and volcanic) drivers changed temperature by -0.1°C to +0.1°C and internal variability by -0.2°C to +0.2°C.",
+  "reference_chunk_ids": [],
+  "note": "Section A.1.2, SPM p.4; detail: attribution numbers in one paragraph.",
+  "evidence": [
+   "a warming of 1.0°C to 2.0°C8, and other human drivers (principally aerosols) contributed a cooling of 0.0°C to 0.8°C,",
+   "natural (solar and volcanic) drivers changed global surface temperature by –0.1°C to +0.1°C, and internal variability",
+   "changed it by –0.2°C to +0.2°C."
+  ]
+ },
+ {
+  "question": "In the IPCC AR6 Synthesis Report, how much higher was flood, drought and storm mortality in highly vulnerable regions than in regions with very low vulnerability between 2010 and 2020?",
+  "type": "detail",
+  "reference": "Between 2010 and 2020, human mortality from floods, droughts and storms was 15 times higher in highly vulnerable regions than in regions with very low vulnerability (high confidence).",
+  "reference_chunk_ids": [],
+  "note": "Section A.2.2, SPM p.5; detail: one number from one paragraph. [reference corrected after independent verification]",
+  "evidence": [
+   "Between 2010 and 2020, human mortality",
+   "from floods, droughts and storms was 15 times higher in highly vulnerable regions, compared to regions with very low",
+   "Approximately 3.3 to 3.6 billion people live in contexts that are highly vulnerable to climate change."
+  ]
+ },
+ {
+  "question": "Which key barriers to adaptation does the IPCC AR6 Synthesis Report summary list?",
+  "type": "detail",
+  "reference": "The key barriers are limited resources, lack of private sector and citizen engagement, insufficient mobilization of finance (including for research), low climate literacy, lack of political commitment, limited research and/or slow and low uptake of adaptation science, and a low sense of urgency.",
+  "reference_chunk_ids": [],
+  "note": "Section A.3.6, SPM p.9; detail: a list from one paragraph. [reference corrected after independent verification]",
+  "evidence": [
+   "Key barriers to adaptation are limited resources, lack of private sector and citizen engagement, insufficient mobilization",
+   "of finance (including for research), low climate literacy, lack of political commitment, limited research and/or slow and",
+   "low uptake of adaptation science, and low sense of urgency."
+  ]
+ },
+ {
+  "question": "In the IPCC AR6 Synthesis Report, how far did solar, wind and battery costs fall during 2010-2019?",
+  "type": "detail",
+  "reference": "From 2010 to 2019 unit costs fell by 85% for solar energy, 55% for wind energy and 85% for lithium-ion batteries. Deployment rose by more than 10 times for solar and more than 100 times for electric vehicles, varying widely across regions (high confidence).",
+  "reference_chunk_ids": [],
+  "note": "Section A.4.2, SPM pp.10-11; detail: cost percentages from one paragraph.",
+  "evidence": [
+   "public. From 2010 to 2019 there have been sustained decreases in the unit costs of solar energy (85%), wind energy",
+   "(55%), and lithium-ion batteries (85%), and large increases in their deployment, e.g., >10× for solar and >100× for"
+  ]
+ },
+ {
+  "question": "In the IPCC AR6 Synthesis Report, how did 2018 climate finance flows compare with the USD 100 billion goal?",
+  "type": "detail",
+  "reference": "In 2018, public and publicly mobilised private climate finance flows from developed to developing countries were below the collective goal under the UNFCCC and Paris Agreement to mobilise USD 100 billion per year by 2020, in the context of meaningful mitigation action and transparency on implementation (medium confidence).",
+  "reference_chunk_ids": [],
+  "note": "Section A.4.5, SPM p.11; detail: one sentence-level fact.",
+  "evidence": [
+   "In 2018, public and publicly mobilised private climate finance flows from",
+   "developed to developing countries were below the collective goal under the UNFCCC and Paris Agreement to mobilise",
+   "USD 100 billion per year by 2020 in the context of meaningful mitigation action and transparency on implementation"
+  ]
+ },
+ {
+  "question": "In the IPCC AR6 Synthesis Report, when do the very low and low emissions scenarios reach net zero CO2?",
+  "type": "detail",
+  "reference": "In the very low (SSP1-1.9) and low (SSP1-2.6) GHG emissions scenarios, CO2 emissions decline to net zero around 2050 and 2070, respectively, followed by varying levels of net negative CO2 emissions. In the high (SSP3-7.0) and very high (SSP5-8.5) scenarios, CO2 emissions roughly double from current levels by 2100 and 2050, respectively.",
+  "reference_chunk_ids": [],
+  "note": "Box SPM.1 (scenarios and modelled pathways), SPM p.9; detail: scenario description in one box paragraph.",
+  "evidence": [
+   "CO2 emissions declining to net zero around 2050 and 2070, respectively, followed by varying levels of net negative CO2",
+   "have CO2 emissions that roughly double from current levels"
+  ]
+ },
+ {
+  "question": "What are the best estimates of 2081-2100 warming for each of the five scenarios in the IPCC AR6 Synthesis Report?",
+  "type": "detail",
+  "reference": "Relative to 1850-1900, the best estimates [and very likely ranges] of warming for 2081-2100 are 1.4 [1.0 to 1.8]°C for SSP1-1.9, 1.8 [1.3 to 2.4]°C for SSP1-2.6, 2.7 [2.1 to 3.5]°C for SSP2-4.5, 3.6 [2.8 to 4.6]°C for SSP3-7.0 and 4.4 [3.3 to 5.7]°C for SSP5-8.5.",
+  "reference_chunk_ids": [],
+  "note": "Section B.1.1 footnote 30, SPM p.12; detail: list of numbers in one footnote.",
+  "evidence": [
+   "1.4 [1.0 to 1.8 ]°C (SSP1-1.9); 1.8 [1.3 to 2.4]°C (SSP1-2.6); 2.7 [2.1 to 3.5]°C",
+   "3.6 [2.8 to 4.6]°C (SSP3-7.0); and 4.4 [3.3 to 5.7 ]°C (SSP5-8.5)."
+  ]
+ },
+ {
+  "question": "How often are 1-in-100 year extreme sea level events projected to occur by 2100 in the IPCC AR6 Synthesis Report?",
+  "type": "detail",
+  "reference": "Due to relative sea level rise, current 1-in-100 year extreme sea level events are projected to occur at least annually in more than half of all tide gauge locations by 2100 under all considered scenarios (high confidence).",
+  "reference_chunk_ids": [],
+  "note": "Section B.1.4, SPM p.13; detail: single projection statement.",
+  "evidence": [
+   "Due to relative sea level rise, current 1-in-100 year extreme sea",
+   "level events are projected to occur at least annually in more than half of all tide gauge locations by 2100 under all"
+  ]
+ },
+ {
+  "question": "In the IPCC AR6 Synthesis Report, what is the likely sea level rise by 2100 under SSP1-1.9 and SSP5-8.5?",
+  "type": "detail",
+  "reference": "Relative to 1995-2014, the likely global mean sea level rise under SSP1-1.9 is 0.15-0.23 m by 2050 and 0.28-0.55 m by 2100, while under SSP5-8.5 it is 0.20-0.29 m by 2050 and 0.63-1.01 m by 2100 (medium confidence).",
+  "reference_chunk_ids": [],
+  "note": "Section B.3.1, SPM p.18; detail: numeric projections from one paragraph.",
+  "evidence": [
+   "level rise under the SSP1-1.9 GHG emissions scenario is 0.15–0.23 m by 2050 and 0.28–0.55 m by 2100; while for the",
+   "SSP5-8.5 GHG emissions scenario it is 0.20–0.29 m by 2050 and 0.63–1.01 m by 2100 (medium confidence)."
+  ]
+ },
+ {
+  "question": "What remaining carbon budgets from 2020 limit warming to 1.5°C and 2°C in the IPCC AR6 Synthesis Report?",
+  "type": "detail",
+  "reference": "The best estimates of remaining carbon budgets from the beginning of 2020 are 500 GtCO2 for a 50% likelihood of limiting warming to 1.5°C and 1150 GtCO2 for a 67% likelihood of limiting warming to 2°C. Each 1000 GtCO2 emitted raises global surface temperature by 0.45°C (likely range 0.27°C to 0.63°C).",
+  "reference_chunk_ids": [],
+  "note": "Section B.5.2, SPM p.19; detail: numbers in one paragraph.",
+  "evidence": [
+   "For every 1000 GtCO2 emitted by human activity, global surface temperature rises by 0.45°C (best estimate, with a likely",
+   "The best estimates of the remaining carbon budgets from the beginning of 2020 are",
+   "500 GtCO2 for a 50% likelihood of limiting global warming to 1.5°C and 1150 GtCO2 for a 67% likelihood of limiting"
+  ]
+ },
+ {
+  "question": "In the IPCC AR6 Synthesis Report, when do pathways limiting warming to 1.5°C reach net zero CO2, and when do those that reach net zero GHG emissions do so?",
+  "type": "detail",
+  "reference": "Pathways that limit warming to 1.5°C (>50%) with no or limited overshoot reach net zero CO2 in the early 2050s, followed by net negative CO2 emissions. Those of them that reach net zero GHG emissions do so around the 2070s. Pathways that limit warming to 2°C (>67%) reach net zero CO2 in the early 2070s.",
+  "reference_chunk_ids": [],
+  "note": "Section B.6.1, SPM p.20; detail: timing facts in one paragraph.",
+  "evidence": [
+   "or limited overshoot reach net zero CO2 in the early 2050s, followed by net negative CO2 emissions. Those pathways that",
+   "reach net zero GHG emissions do so around the 2070s. Pathways that limit warming to 2 °C (>67%) reach net zero CO2"
+  ]
+ },
+ {
+  "question": "In IPCC AR6 Synthesis Report 1.5°C pathways, why is net zero CO2 reached before net zero GHG emissions?",
+  "type": "detail",
+  "reference": "Some hard-to-abate residual GHG emissions (e.g., some from agriculture, aviation, shipping and industrial processes) remain and would need to be counterbalanced by deployment of carbon dioxide removal (CDR) methods to achieve net zero CO2 or GHG emissions. As a result, net zero CO2 is reached earlier than net zero GHGs (high confidence).",
+  "reference_chunk_ids": [],
+  "note": "Section B.6.2, SPM pp.21-22; detail: explanation within one paragraph. [reference corrected after independent verification]",
+  "evidence": [
+   "limit warming to 1.5°C (>50%) with no or limited overshoot, global methane emissions are reduced by 34 [21–57] %",
+   "aviation, shipping, and industrial processes) remain and would need to be counterbalanced by deployment of CDR",
+   "methods to achieve net zero CO2 or GHG emissions (high confidence). As a result, net zero CO2 is reached earlier than"
+  ]
+ },
+ {
+  "question": "What adverse effects can afforestation or biomass crops have, according to the IPCC AR6 Synthesis Report?",
+  "type": "detail",
+  "reference": "Afforestation or production of biomass crops can have adverse socio-economic and environmental impacts, including on biodiversity, food and water security, local livelihoods and the rights of Indigenous Peoples, especially if implemented at large scales and where land tenure is insecure (high confidence).",
+  "reference_chunk_ids": [],
+  "note": "Section B.6.4, SPM p.21; detail: single sentence answer.",
+  "evidence": [
+   "biomass crops can have adverse socio-economic and environmental impacts, including on biodiversity, food and water",
+   "security, local livelihoods and the rights of Indigenous Peoples, especially if implemented at large scales and where land"
+  ]
+ },
+ {
+  "question": "What does the IPCC AR6 Synthesis Report say overshooting 1.5°C would do to ecosystems with low resilience?",
+  "type": "detail",
+  "reference": "Overshooting 1.5°C will result in irreversible adverse impacts on certain ecosystems with low resilience, such as polar, mountain and coastal ecosystems, impacted by ice-sheet melt, glacier melt or accelerating and higher committed sea level rise (high confidence). Societies would also face higher risks to infrastructure and low-lying coastal settlements than in pathways without overshoot.",
+  "reference_chunk_ids": [],
+  "note": "Section B.7.2, SPM p.23; detail: one paragraph.",
+  "evidence": [
+   "coastal settlements, and associated livelihoods. Overshooting 1.5°C will result in irreversible adverse impacts on certain",
+   "ecosystems with low resilience, such as polar, mountain, and coastal ecosystems, impacted by ice-sheet melt, glacier"
+  ]
+ },
+ {
+  "question": "In the IPCC AR6 Synthesis Report, how do air quality health benefits of mitigation compare with mitigation costs?",
+  "type": "detail",
+  "reference": "The economic benefits for human health from air quality improvement arising from mitigation action can be of the same order of magnitude as mitigation costs, and potentially even larger (medium confidence). Separately, the global economic and social benefit of limiting warming to 2°C exceeds the cost of mitigation in most of the assessed literature (medium confidence).",
+  "reference_chunk_ids": [],
+  "note": "Section C.2.4, SPM p.26; detail: fact from one paragraph.",
+  "evidence": [
+   "The economic benefits for human health from air quality improvement arising from mitigation action can",
+   "be of the same order of magnitude as mitigation costs, and potentially even larger (medium confidence). Even without",
+   "warming to 2°C exceeds the cost of mitigation in most of the assessed literature (medium confidence)50."
+  ]
+ },
+ {
+  "question": "Which energy options deliver large emissions cuts below USD 20 per tCO2-eq in the IPCC AR6 Synthesis Report?",
+  "type": "detail",
+  "reference": "Large contributions to emissions reductions with costs less than USD 20 per tCO2-eq come from solar and wind energy, energy efficiency improvements, and methane emissions reductions (coal mining, oil and gas, waste) (medium confidence).",
+  "reference_chunk_ids": [],
+  "note": "Section C.3.2 (Energy Systems), SPM p.28; detail: list within one sentence.",
+  "evidence": [
+   "Large contributions to emissions reductions with costs less than USD 20 tCO2-eq-1 come from solar and wind energy, energy efficiency",
+   "improvements, and methane emissions reductions (coal mining, oil and gas, waste) (medium confidence)."
+  ]
+ },
+ {
+  "question": "How much of Earth's land, freshwater and ocean should be conserved, according to the IPCC AR6 Synthesis Report?",
+  "type": "detail",
+  "reference": "Maintaining the resilience of biodiversity and ecosystem services at a global scale depends on effective and equitable conservation of approximately 30% to 50% of Earth's land, freshwater and ocean areas, including currently near-natural ecosystems (high confidence).",
+  "reference_chunk_ids": [],
+  "note": "Section C.3.6, SPM pp.29-30; detail: one number range.",
+  "evidence": [
+   "Maintaining the resilience of biodiversity and ecosystem services at a global scale depends on effective and equitable",
+   "conservation of approximately 30% to 50%"
+  ]
+ },
+ {
+  "question": "In the IPCC AR6 Synthesis Report, how much could removing fossil fuel subsidies cut emissions by 2030?",
+  "type": "detail",
+  "reference": "Fossil fuel subsidy removal is projected by various studies to reduce global CO2 emissions by 1 to 4%, and GHG emissions by up to 10%, by 2030, varying across regions (medium confidence). It would also yield benefits such as improved public revenue, but subsidy removal can have adverse distributional impacts, especially on the most economically vulnerable groups, which in some cases can be mitigated by measures such as redistributing revenue saved, all of which depend on national circumstances (high confidence).",
+  "reference_chunk_ids": [],
+  "note": "Section C.6.4 and footnote 54, SPM p.32; detail: footnote number plus paragraph context.",
+  "evidence": [
+   "reduce global CO2 emission by 1 to 4%, and GHG emissions by up to 10% by 2030",
+   "Removing fossil fuel subsidies would reduce emissions54 and yield benefits such as improved public revenue,",
+   "subsidy removal can have adverse distributional impacts, especially on the most economically vulnerable groups which, in some cases can be mitigated"
+  ]
+ },
+ {
+  "question": "In the IPCC AR6 Synthesis Report, what 2100 warming follows from pre-COP26 NDCs versus policies implemented by 2020?",
+  "type": "cross_paragraph",
+  "reference": "Modelled pathways consistent with NDCs announced before COP26 until 2030, with no increase in ambition thereafter, lead to a median global warming of 2.8 [2.1 to 3.4]°C by 2100 (medium confidence). Without a strengthening of policies, policies implemented by the end of 2020 imply global warming of 3.2 [2.2 to 3.5]°C by 2100 (medium confidence).",
+  "reference_chunk_ids": [],
+  "note": "Sections A.4.3 and A.4.4, SPM pp.10-11; cross_paragraph: two numbered paragraphs must be combined.",
+  "evidence": [
+   "ambition thereafter have higher emissions, leading to a median global warming of 2.8 [2.1 to 3.4] °C by 2100 (medium",
+   "Without a strengthening of policies, global warming of 3.2 [2.2 to 3.5] °C is projected by 2100"
+  ]
+ },
+ {
+  "question": "In the IPCC AR6 Synthesis Report, what probability does 'very likely' denote, and what do the ranges given throughout represent?",
+  "type": "cross_paragraph",
+  "reference": "In the IPCC calibrated language, very likely denotes a 90-100% probability (virtually certain is 99-100% and likely is 66-100%). Ranges given throughout the Summary for Policymakers represent very likely ranges, that is the 5-95% range, unless otherwise stated.",
+  "reference_chunk_ids": [],
+  "note": "Introduction footnote 4 (SPM p.3) and footnote 5 (SPM p.4); cross_paragraph: two separate footnotes on different pages.",
+  "evidence": [
+   "virtually certain 99–100% probability, very likely 90–100%, likely 66–100%",
+   "Ranges given throughout the SPM represent very likely ranges (5–95% range) unless otherwise stated."
+  ]
+ },
+ {
+  "question": "In the IPCC AR6 Synthesis Report, what fraction of the total carbon budget for a 50% probability of limiting warming to 1.5°C is cumulative net CO2 since 1850?",
+  "type": "cross_paragraph",
+  "reference": "Historical cumulative net CO2 emissions from 1850 to 2019 were 2400 ± 240 GtCO2 (high confidence). Based on central estimates only, this amounts to about four fifths of the total carbon budget for a 50% probability of limiting warming to 1.5°C, which has a central estimate of about 2900 GtCO2. Uncertainties for total carbon budgets have not been assessed and could affect the specific calculated fractions.",
+  "reference_chunk_ids": [],
+  "note": "Sections A.1.3 (SPM p.4) and B.5.4 (SPM p.20); cross_paragraph: the historical total and the budget fraction are in separate sections.",
+  "evidence": [
+   "Historical cumulative net CO2 emissions from 1850 to 2019 were 2400 ± 240 GtCO2",
+   "four fifths45 of the total carbon budget for a 50% probability of limiting global warming to 1.5°C (central estimate about",
+   "Uncertainties for total carbon budgets have not been assessed and could affect the specific calculated fractions."
+  ]
+ },
+ {
+  "question": "In the IPCC AR6 Synthesis Report, which ecosystems have reached hard adaptation limits, and which will above 1.5°C?",
+  "type": "cross_paragraph",
+  "reference": "Some tropical, coastal, polar and mountain ecosystems have already reached hard adaptation limits (high confidence). Above 1.5°C of global warming, ecosystems such as some warm-water coral reefs, coastal wetlands, rainforests, and polar and mountain ecosystems will have reached or surpassed hard adaptation limits (high confidence), and some Ecosystem-based Adaptation measures will lose effectiveness.",
+  "reference_chunk_ids": [],
+  "note": "Sections A.3.5 (SPM p.8) and B.4.2 (SPM p.19); cross_paragraph: present limits and future limits are in different sections.",
+  "evidence": [
+   "Some tropical, coastal, polar and mountain ecosystems have reached hard adaptation limits (high",
+   "wetlands, rainforests, and polar and mountain ecosystems will have reached or surpassed hard adaptation limits and as"
+  ]
+ },
+ {
+  "question": "In the IPCC AR6 Synthesis Report, how is tracked climate finance split between adaptation and mitigation, and how much must finance grow?",
+  "type": "cross_paragraph",
+  "reference": "A small proportion of global tracked climate finance was targeted to adaptation and an overwhelming majority to mitigation (very high confidence); adaptation finance has come predominantly from public sources. If climate goals are to be achieved, both adaptation and mitigation finance would need to increase many-fold (high confidence). For mitigation, average annual modelled investment requirements for 2020-2030 in scenarios limiting warming to 2°C or 1.5°C are a factor of three to six greater than current levels (medium confidence), an estimate that relies on scenario assumptions.",
+  "reference_chunk_ids": [],
+  "note": "Sections A.3.6 (SPM p.9) and C.7.1 (SPM pp.33-34); cross_paragraph: current split and required increase come from separate sections. [reference corrected after independent verification]",
+  "evidence": [
+   "from public sources, and a small proportion of global tracked climate finance was targeted to adaptation and an",
+   "overwhelming majority to mitigation (very high confidence).",
+   "investments in emissions reductions, both adaptation and mitigation finance would need to increase many-fold (high",
+   "These estimates rely on scenario assumptions."
+  ]
+ },
+ {
+  "question": "In the IPCC AR6 Synthesis Report, how much do the highest-emitting 10% of households contribute, and which group has the highest potential for emissions reductions?",
+  "type": "cross_paragraph",
+  "reference": "The 10% of households with the highest per capita emissions contribute 34-45% of global consumption-based household GHG emissions, while the bottom 50% contribute 13-15% (high confidence). Individuals with high socio-economic status contribute disproportionately to emissions and have the highest potential for emissions reductions (high confidence).",
+  "reference_chunk_ids": [],
+  "note": "Sections A.1.5 (SPM p.5) and C.5.4 (SPM p.31); cross_paragraph: the contribution figure and the reduction potential are in separate sections.",
+  "evidence": [
+   "The 10% of households with the highest per capita emissions contribute 34–45% of global",
+   "Individuals with high socio-economic status contribute disproportionately to emissions, and have the highest potential"
+  ]
+ },
+ {
+  "question": "What are the main findings of the IPCC AR6 Synthesis Report summary on current status, risks and responses?",
+  "type": "summary",
+  "reference": "Human activities have unequivocally caused global warming, with global surface temperature 1.1°C above 1850-1900 in 2011-2020, and adverse impacts and losses and damages are already widespread (high confidence). Continued emissions will increase warming, with the best estimate of reaching 1.5°C in the near term in considered scenarios and modelled pathways, and risks escalate with every increment. There is a rapidly closing window of opportunity: deep, rapid and sustained mitigation and accelerated implementation of adaptation in this decade would reduce projected losses and damages for humans and ecosystems (very high confidence).",
+  "reference_chunk_ids": [],
+  "note": "Whole summary: Sections A.1, B.1 and C.1 (SPM pp.4, 12, 24); summary: asks for the gist of the three parts.",
+  "evidence": [
+   "Human activities, principally through emissions of greenhouse gases, have unequivocally",
+   "Continued greenhouse gas emissions will lead to increasing global warming, with the best",
+   "There is a rapidly closing window of opportunity to secure a liveable and sustainable future for"
+  ]
+ },
+ {
+  "question": "Summarise the mitigation and adaptation options the IPCC AR6 Synthesis Report describes across energy, industry, cities, land, health and society.",
+  "type": "summary",
+  "reference": "Rapid and far-reaching transitions across all sectors are needed, and feasible, effective and low-cost options are already available, differing across systems and regions (high confidence). Net zero CO2 energy systems need much less fossil fuel use, electrification and efficiency; industry needs coordinated action across value chains; cities need compact planning, public transport and green infrastructure; on land, conservation, improved management and restoration of forests and other ecosystems offer the largest share of economic mitigation potential, while demand-side measures such as sustainable healthy diets can reduce ecosystem conversion and free up land, though restoration, reforestation and afforestation can involve trade-offs due to competing demands on land; health and society benefit from early warning, social protection and insurance.",
+  "reference_chunk_ids": [],
+  "note": "Section C.3 and subsections C.3.1-C.3.8 (SPM pp.28-30); summary: gist of a whole section covering several systems.",
+  "evidence": [
+   "Rapid and far-reaching transitions across all sectors and systems are necessary to achieve",
+   "Urban systems are critical for achieving deep emissions reductions and advancing climate resilient development (high",
+   "Human health will benefit from integrated mitigation and adaptation options that mainstream health into food,"
+  ]
+ }
+]

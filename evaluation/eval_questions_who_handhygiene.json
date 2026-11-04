@@ -1,0 +1,323 @@
+[
+ {
+  "question": "Until when are the recommendations in the WHO Guidelines on Hand Hygiene in Health Care expected to remain valid?",
+  "type": "detail",
+  "reference": "The Guidelines anticipate that their recommendations will remain valid until 2011. The WHO Patient Safety Department (Information, Evidence and Research Cluster) is committed to ensuring that the Guidelines are updated every two to three years.",
+  "reference_chunk_ids": [],
+  "note": "Introduction, p. V; detail because both facts sit in one paragraph.",
+  "evidence": [
+   "will remain valid until 2011. The Patient Safety Department",
+   "are updated every two to three"
+  ]
+ },
+ {
+  "question": "When did development of the WHO Guidelines on Hand Hygiene in Health Care begin, and how many experts contributed?",
+  "type": "detail",
+  "reference": "Development began in autumn 2004. The present document updates and finalizes the Advanced Draft issued in April 2006, using the literature review and lessons from pilot testing. More than 100 international experts contributed, with a Core Group of experts coordinating the work.",
+  "reference_chunk_ids": [],
+  "note": "Introduction, p. V; detail because it is a fact from one paragraph.",
+  "evidence": [
+   "The development of the Guidelines began in autumn 2004",
+   "than 100 international experts contributed to preparing the"
+  ]
+ },
+ {
+  "question": "In the WHO Guidelines on Hand Hygiene in Health Care, what does evidence Category IC mean?",
+  "type": "detail",
+  "reference": "Category IC recommendations are required for implementation, as mandated by federal and/or state regulation or standard. This differs from IA and IB, which are strongly recommended on the basis of study evidence, and from Category II, which is only suggested for implementation.",
+  "reference_chunk_ids": [],
+  "note": "Part II, ranking system for evidence, p. 152; detail because it is a single definition.",
+  "evidence": [
+   "Required for implementation, as mandated by federal and/or state regulation or standard."
+  ]
+ },
+ {
+  "question": "In the WHO Guidelines on Hand Hygiene in Health Care, which method is preferred when exposure to spore-forming pathogens, including Clostridium difficile outbreaks, is strongly suspected or proven?",
+  "type": "detail",
+  "reference": "Washing hands with soap and water is the preferred means when exposure to potential spore-forming pathogens is strongly suspected or proven, including outbreaks of Clostridium difficile. This recommendation is graded IB.",
+  "reference_chunk_ids": [],
+  "note": "Part II, Section 1B (Indications for hand hygiene), p. 152; detail because it is one recommendation.",
+  "evidence": [
+   "B. If exposure to potential spore-forming pathogens is strongly",
+   "difficile, hand washing with soap and water is the preferred"
+  ]
+ },
+ {
+  "question": "In the WHO Guidelines on Hand Hygiene in Health Care, which situations are listed under the recommendation to perform hand hygiene, starting with before and after touching the patient?",
+  "type": "detail",
+  "reference": "The list under 'Perform hand hygiene' is: before and after touching the patient (IB); before handling an invasive device, regardless of glove use (IB); after contact with body fluids or excretions, mucous membranes, non-intact skin or wound dressings (IA); when moving from a contaminated body site to another body site during care of the same patient (IB); after contact with inanimate surfaces and objects, including medical equipment, in the immediate vicinity of the patient (IB); and after removing sterile (II) or non-sterile (IB) gloves.",
+  "reference_chunk_ids": [],
+  "note": "Part II, Section 1D, p. 152; detail because it is one list in one place. [reference corrected after independent verification]",
+  "evidence": [
+   "before and after touching the patient (IB);",
+   "before handling an invasive device for patient care,",
+   "after removing sterile (II) or non-sterile gloves"
+  ]
+ },
+ {
+  "question": "How long should surgical hand antisepsis with antimicrobial soap last, per the WHO Guidelines on Hand Hygiene in Health Care?",
+  "type": "detail",
+  "reference": "HCWs should scrub hands and forearms for the length of time recommended by the manufacturer, typically 2 to 5 minutes. Long scrub times, such as 10 minutes, are not necessary. This recommendation is graded IB.",
+  "reference_chunk_ids": [],
+  "note": "Part II, Section 3G (Surgical hand preparation), p. 153; detail because it is one recommendation.",
+  "evidence": [
+   "length of time recommended by the manufacturer, typically",
+   "2–5 minutes. Long scrub times (e.g. 10 minutes) are not"
+  ]
+ },
+ {
+  "question": "What do the WHO Guidelines on Hand Hygiene in Health Care recommend about reusing gloves, and with what grade?",
+  "type": "detail",
+  "reference": "The reuse of gloves is not recommended (IB). If gloves are nevertheless reused, the safest reprocessing method should be implemented (II).",
+  "reference_chunk_ids": [],
+  "note": "Part II, Section 6E (Use of gloves), p. 153; detail because it is one recommendation.",
+  "evidence": [
+   "The reuse of gloves is not recommended (IB).",
+   "of glove reuse, implement the safest reprocessing method"
+  ]
+ },
+ {
+  "question": "According to the WHO Guidelines on Hand Hygiene in Health Care, what should national governments do to promote hand hygiene?",
+  "type": "detail",
+  "reference": "Governments should make improved adherence a national priority and consider a funded, coordinated programme with monitoring and long-term sustainability; support infection control capacities in health-care settings; promote hand hygiene at community level; and encourage using hand hygiene as a quality indicator, as in Australia, Belgium, France, Scotland and the USA. All are graded II.",
+  "reference_chunk_ids": [],
+  "note": "Part II, Section 9.2 (For national governments), p. 154; detail because it is one list.",
+  "evidence": [
+   "Make improved hand hygiene adherence a national",
+   "Support strengthening of infection control capacities within",
+   "Encourage health-care settings to use hand hygiene as a"
+  ]
+ },
+ {
+  "question": "What do the WHO Guidelines on Hand Hygiene in Health Care recommend about artificial nails and natural nail length?",
+  "type": "detail",
+  "reference": "Artificial fingernails or extenders must not be worn when having direct contact with patients (IA), and artificial nails are also prohibited for surgical hand preparation (IB). Natural nails should be kept short, with tips less than 0.5 cm (approximately a quarter inch) long (II).",
+  "reference_chunk_ids": [],
+  "note": "Part II, Section 7 (Other aspects of hand hygiene), pp. 153-154; detail because the two items are adjacent.",
+  "evidence": [
+   "Do not wear artificial fingernails or extenders when having",
+   "Keep natural nails short (tips less than 0.5 cm long or"
+  ]
+ },
+ {
+  "question": "In the WHO Guidelines on Hand Hygiene in Health Care, how many observation hours yield 500 hand hygiene opportunities at a typical density of 10 opportunities per hour?",
+  "type": "detail",
+  "reference": "With a typical average density of 10 hand hygiene opportunities per hour, a total observation time of 80 hours is required to obtain 500 opportunities. This large effort is a major drawback of direct observation.",
+  "reference_chunk_ids": [],
+  "note": "Part III, Section 1.1, p. 158; detail because it is a single calculation.",
+  "evidence": [
+   "10 hand hygiene opportunities per hour, a total observation time",
+   "of 80 hours is required to obtain 500 opportunities."
+  ]
+ },
+ {
+  "question": "In the WHO Guidelines on Hand Hygiene in Health Care, what compliance was found with overt versus covert observations?",
+  "type": "detail",
+  "reference": "In the recent study cited, compliance found to be 45% with overt observations was in reality only 29% when observations were covert, illustrating observation bias caused by the presence of an observer.",
+  "reference_chunk_ids": [],
+  "note": "Part III, Section 1.1, p. 158; detail because it is one cited result.",
+  "evidence": [
+   "study, compliance found to be 45% with overt observations",
+   "was in reality only 29% when observations were covert."
+  ]
+ },
+ {
+  "question": "In the WHO Guidelines on Hand Hygiene in Health Care, how many opportunities detect a difference between 40% and 60% compliance?",
+  "type": "detail",
+  "reference": "To show a difference between 40% and 60% compliance with a power of 90% and an alpha error of 5%, twice 140 (140x2) opportunities have to be observed. Detecting a difference between 40% and 50% requires twice 538 (538x2).",
+  "reference_chunk_ids": [],
+  "note": "Part III, Section 1.1, p. 159; detail because it is one worked example.",
+  "evidence": [
+   "a power of 90% and an alpha error of 5%, twice 140 (140x2)",
+   "twice 538 (538x2) opportunities when a difference between 40%"
+  ]
+ },
+ {
+  "question": "How must observers be validated under the WHO-recommended observation method in the WHO Guidelines on Hand Hygiene in Health Care?",
+  "type": "detail",
+  "reference": "Observers must be validated either by parallel observation with a confirmed observer, where both complete forms separately on the same HCW and care sequence and discuss discordant notifications until concordance is reached, or by being tested with the WHO Training Film in the Implementation Toolkit.",
+  "reference_chunk_ids": [],
+  "note": "Part III, Section 1.2.3, pp. 159-160; detail because it is one procedure.",
+  "evidence": [
+   "and process, observers must be validated either by parallel",
+   "observation jointly with a confirmed observer, or by being tested",
+   "through the use of the WHO Training Film included in the WHO"
+  ]
+ },
+ {
+  "question": "In the WHO hand hygiene observation form, how many HCWs can one form include, and how many blocks per column?",
+  "type": "detail",
+  "reference": "The form has four columns, each usually dedicated to one HCW, so it can include up to four HCWs. Alternatively, in low-activity situations each column can be dedicated to a professional category, which is practical when the observer wants to observe more than four HCWs in one session, but then per-person density of opportunities and individual feedback cannot be calculated. Each column consists of equal blocks incrementally numbered from 1 to 8, each representing one sequentially occurring hand hygiene opportunity.",
+  "reference_chunk_ids": [],
+  "note": "Part III, Section 1.2.5, p. 160; detail because it describes one form.",
+  "evidence": [
+   "to four HCWs. Alternatively, in situations with low activity, each",
+   "numbered from 1 to 8 from top to bottom. Each block"
+  ]
+ },
+ {
+  "question": "In the WHO Guidelines on Hand Hygiene in Health Care, what 95% confidence interval applies to 50% compliance with 30 opportunities?",
+  "type": "detail",
+  "reference": "For 30 opportunities with 50% compliance, the 95% confidence interval stretches from 31% to 69%. With 100 opportunities it shrinks to 40-60%, and with 200 opportunities to 43-57%, showing why low numbers need careful interpretation.",
+  "reference_chunk_ids": [],
+  "note": "Part III, Section 1.2.8, p. 161; detail because it is one example.",
+  "evidence": [
+   "stretch from 31% to 69% compliance. With 100 opportunities",
+   "43–57%. Finally, observations can be reported to HCWs directly"
+  ]
+ },
+ {
+  "question": "According to the WHO Guidelines on Hand Hygiene in Health Care, what defect rate should basic hand hygiene achieve in constrained settings?",
+  "type": "detail",
+  "reference": "Even in a setting with severely constrained resources, basic hand hygiene can and should be performed very reliably, with a defect rate of less than 5-10%. By contrast, most institutions currently have hand hygiene defect rates of six per ten opportunities or greater.",
+  "reference_chunk_ids": [],
+  "note": "Part III, Section 2, p. 164; detail because it is one fact from one paragraph.",
+  "evidence": [
+   "rate of less than 5–10%.",
+   "have hand hygiene defect rates of six per ten opportunities"
+  ]
+ },
+ {
+  "question": "In the WHO Guidelines on Hand Hygiene in Health Care, how is the incremental cost–effectiveness ratio illustrated with kidney transplantation?",
+  "type": "detail",
+  "reference": "If kidney transplantation costs US$ 50 000 and extends life by 10 years, this generates an incremental cost-effectiveness ratio (ICER) of US$ 5000 for each life year gained. The ICERs of dialysis and transplantation could then be compared to reach a decision.",
+  "reference_chunk_ids": [],
+  "note": "Part III, Section 3.2.2, p. 168; detail because it is one worked example.",
+  "evidence": [
+   "(ICER). If kidney transplantation costs US$ 50 000 and extends",
+   "life by 10 years, this would generate an ICER of US$ 5000 for"
+  ]
+ },
+ {
+  "question": "According to the WHO Guidelines on Hand Hygiene in Health Care, since 2004 how many countries beyond England and Wales were identified as running or preparing national hand hygiene programmes?",
+  "type": "detail",
+  "reference": "Since 2004, a further 25 countries have been identified as running or preparing to embark on national programmes. A network of hand hygiene campaigning nations is at an embryonic stage, coordinated through the WHO World Alliance for Patient Safety.",
+  "reference_chunk_ids": [],
+  "note": "Part IV, Section 8, p. 181; detail because it is a single figure from one paragraph.",
+  "evidence": [
+   "Since 2004, a further 25 countries have been identified as",
+   "running or preparing to embark on national programmes."
+  ]
+ },
+ {
+  "question": "In the WHO Guidelines on Hand Hygiene in Health Care, who should head and join the national task force?",
+  "type": "detail",
+  "reference": "A national task force should be headed by an influential, technically competent national lead and deputy in infection control or patient safety. Membership should comprise national safety and infection control professionals and national bodies for infection control, and include ministry of health officials concerned with infection control or safety.",
+  "reference_chunk_ids": [],
+  "note": "Part IV, Table IV.9.1, Step 2, p. 186; detail because it is one step of the table.",
+  "evidence": [
+   "1. Establish a national task force, headed by an",
+   "influential, technically competent (in infection",
+   "Task force membership should comprise",
+   "Task force membership should include ministry"
+  ]
+ },
+ {
+  "question": "What significant results are listed for the cleanyourhands campaign in the WHO Guidelines on Hand Hygiene in Health Care?",
+  "type": "detail",
+  "reference": "Significant results were that 100% of all acute trusts in England and Wales signed up to the campaign, 80% of trusts said hand hygiene is a top priority, and use of alcohol handrub and soap rose threefold. A patient empowerment pilot was initiated and the programme expanded to the non-acute sector.",
+  "reference_chunk_ids": [],
+  "note": "Part IV, Table IV.8.1, p. 183; detail because it is one table cell.",
+  "evidence": [
+   "100% of all acute",
+   "80% of trusts say hand",
+   "Use of alcohol handrub"
+  ]
+ },
+ {
+  "question": "According to the WHO Guidelines on Hand Hygiene in Health Care, how do handrubbing and handwashing durations compare?",
+  "type": "cross_paragraph",
+  "reference": "The handrubbing technique with an alcohol-based formulation takes 20-30 seconds for the entire procedure, whereas handwashing with soap and water takes 40-60 seconds, so handwashing takes about twice as long.",
+  "reference_chunk_ids": [],
+  "note": "Part II, Figures II.1 and II.2, pp. 155-156; cross-paragraph because it combines two separate figures.",
+  "evidence": [
+   "Duration of the entire procedure: 20-30 seconds",
+   "Duration of the entire procedure: 40-60 seconds"
+  ]
+ },
+ {
+  "question": "What indirect monitoring methods does the WHO Guidelines on Hand Hygiene in Health Care describe, and what limits consumption-based ones?",
+  "type": "cross_paragraph",
+  "reference": "Indirect methods include monitoring consumption of products such as soap or handrub, and automated monitoring of the use of sinks and handrub dispensers. Methods based on product consumption cannot determine whether hand hygiene actions are performed at the right moment during care or whether the technique is correct.",
+  "reference_chunk_ids": [],
+  "note": "Part III, Section 1 introduction and Section 1.3, pp. 158 and 161; cross-paragraph because it joins the classification with a later limitation.",
+  "evidence": [
+   "include monitoring consumption of products, such as soap or",
+   "Methods based on product consumption cannot determine if",
+   "hand hygiene actions are performed at the right moment during"
+  ]
+ },
+ {
+  "question": "How do the WHO Guidelines on Hand Hygiene in Health Care address handrub placement near patients, in recommendations and indicators?",
+  "type": "cross_paragraph",
+  "reference": "Part II recommends that administrators provide HCWs with readily accessible alcohol-based handrub at the point of patient care (IA). Part III's quality indicators check beds with handrub dispensers within arm's reach, and ask whether dispensers are conveniently placed near every bed space rather than hiding behind the ventilator.",
+  "reference_chunk_ids": [],
+  "note": "Part II Section 9.1C (p. 154) and Part III Section 2 and Table III.2.1 (pp. 165-166); cross-paragraph because it links recommendation and indicators.",
+  "evidence": [
+   "handrub at the point of patient care (IA).",
+   "conveniently placed near every bed space (or are they hiding",
+   "Beds with alcohol-based handrub"
+  ]
+ },
+ {
+  "question": "In the WHO Guidelines on Hand Hygiene in Health Care, how are England and Wales' campaign materials funded after the first year, and what did Hong Kong SAR's centralized handrub system achieve?",
+  "type": "cross_paragraph",
+  "reference": "In England and Wales, the NPSA campaign is funded centrally for its first year; after that, all campaign materials are produced and funded by commercial companies on the national alcohol-based handrub contract, which pay a licence fee in proportion to their turnover. Hong Kong SAR adopted a centralized system for producing and distributing alcohol-based handrub to all its hospitals, which brought economies of scale by lowering the product cost, fostered competition, achieved standardization across health entities and provided a foundation for evaluating its success in the future.",
+  "reference_chunk_ids": [],
+  "note": "Part III, Section 3.6 and the England and Wales case study, pp. 171-172; cross-paragraph because it combines two separate examples.",
+  "evidence": [
+   "The NPSA campaign is funded centrally for its first year",
+   "paying a licence fee in proportion to their turnover on the",
+   "SAR has adopted a centralized system for the production and",
+   "strategy has not only resulted in economies of scale by lowering"
+  ]
+ },
+ {
+  "question": "What do the WHO Guidelines on Hand Hygiene in Health Care say about the launch and MRSA target of cleanyourhands?",
+  "type": "cross_paragraph",
+  "reference": "Cleanyourhands was the first documented national campaign, launched in England and Wales in 2004, and is centrally coordinated and funded with political backing. It gained considerable leverage from a parallel national target to reduce MRSA rates by 50%.",
+  "reference_chunk_ids": [],
+  "note": "Part IV, Sections 4.1 and 8, pp. 177 and 181; cross-paragraph because details come from two sections.",
+  "evidence": [
+   "was launched in England and Wales in 2004. It is centrally",
+   "coordinated and funded, has political backing, and involves the",
+   "leverage with a parallel national target to reduce MRSA rates by"
+  ]
+ },
+ {
+  "question": "What limitations of national programmes, including in developing countries, does the WHO Guidelines on Hand Hygiene in Health Care note?",
+  "type": "cross_paragraph",
+  "reference": "Hand hygiene is not the sole measure needed to reduce infection, so single-intervention vertical programmes face scrutiny in favour of horizontal ones. Developing countries face extra hurdles in technical and human resource capacities and in limited public health infrastructure, including access to basic sanitation.",
+  "reference_chunk_ids": [],
+  "note": "Part IV, Section 6, p. 179; cross-paragraph because it combines two paragraphs.",
+  "evidence": [
+   "National hand hygiene improvements must acknowledge that hand hygiene is not the sole measure necessary",
+   "countries in terms of technical and human resource capacities",
+   "existent public health infrastructure, including access to basic"
+  ]
+ },
+ {
+  "question": "Summarize the approaches to monitoring hand hygiene in the WHO Guidelines on Hand Hygiene in Health Care and their trade-offs.",
+  "type": "summary",
+  "reference": "Direct observation by validated observers is the gold standard and captures all opportunities, but is time-consuming and prone to bias. Self-report is inexpensive but overestimates compliance, and patient observation is unproven. Product consumption is inexpensive but lacks a denominator and timing information. Automated monitoring may reduce observation bias but has scarce real-world experience so far, potential ethical issues with tracking individual activity, and systems may be costly and failure-prone.",
+  "reference_chunk_ids": [],
+  "note": "Part III, Section 1 and Table III.1.1, pp. 158-162; summary because it spans the whole section.",
+  "evidence": [
+   "Only way to reliably capture all hand",
+   "Does not reliably measure the need for hand hygiene",
+   "Scarce real world experience so far"
+  ]
+ },
+ {
+  "question": "Summarize the case for national hand hygiene improvement programmes and the blueprint proposed in the WHO Guidelines on Hand Hygiene in Health Care.",
+  "type": "summary",
+  "reference": "Guidelines do not implement themselves, so nationally coordinated programmes or campaigns, with monitoring and evaluation, targets and regulation, add powerful impetus to local implementation and raise the issue's prominence. The blueprint is a five-step framework: readiness for action, roles and responsibilities, monitoring and evaluation, partnerships and media, and national then local implementation.",
+  "reference_chunk_ids": [],
+  "note": "Part IV, Sections 1, 9 and 10 and Table IV.9.1, pp. 175-188; summary because it covers the whole part.",
+  "evidence": [
+   "Guidelines do not implement themselves,1057 and simple dissemination strategies have been described as",
+   "a nationally coordinated campaign or programme, with some form of monitoring and evaluation, targets and",
+   "detailed framework for action, summarized in Figure IV.1."
+  ]
+ }
+]

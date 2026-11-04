@@ -1,0 +1,107 @@
+[
+  {
+    "question": "Which country's laws govern disputes that arise under this license?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "What is the mailing address of Creative Commons?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "Who is the current chief executive officer of Creative Commons?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "Which versions of the Creative Commons license released before 4.0 are still supported?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "How does the license treat material that was created by artificial intelligence systems?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "What insurance must a licensee carry when exercising the Licensed Rights?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "What fine or prison sentence applies if a licensee fails to give attribution?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "May the Licensed Material be uploaded to GitHub or similar software repositories?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "Is there an official Spanish translation of this license, and where can it be found?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "What metadata standard does the license recommend for embedding attribution in digital files?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "What is the boiling point of water at sea level?",
+    "type": "unanswerable_far",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Unrelated to the document (general-knowledge question)."
+  },
+  {
+    "question": "Who won the 2018 FIFA World Cup?",
+    "type": "unanswerable_far",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Unrelated to the document (general-knowledge question)."
+  },
+  {
+    "question": "How do I bake a loaf of sourdough bread?",
+    "type": "unanswerable_far",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Unrelated to the document (general-knowledge question)."
+  },
+  {
+    "question": "What is the capital city of Australia?",
+    "type": "unanswerable_far",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Unrelated to the document (general-knowledge question)."
+  },
+  {
+    "question": "How many moons does Mars have?",
+    "type": "unanswerable_far",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Unrelated to the document (general-knowledge question)."
+  }
+]

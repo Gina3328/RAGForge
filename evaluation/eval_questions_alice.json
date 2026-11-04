@@ -1,0 +1,331 @@
+[
+  {
+    "question": "In Alice's Adventures in Wonderland, which flavours does the drink in the bottle labelled “DRINK ME” combine?",
+    "type": "detail",
+    "reference": "Alice found the drink very nice, with a sort of mixed flavour of cherry-tart, custard, pine-apple, roast turkey, toffy, and hot buttered toast. She very soon finished it off, and it made her shrink to ten inches high.",
+    "reference_chunk_ids": [],
+    "note": "Chapter I, Down the Rabbit-Hole (pp. 10-11); detail: a single list of flavours in one passage.",
+    "evidence": [
+      "(it had, in fact, a sort of mixed",
+      "flavour of cherry-tart, custard, pine-apple, roast",
+      "turkey, toffy, and hot buttered toast,) she very"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, what makes Alice shrink after she picks up the White Rabbit's fan and gloves?",
+    "type": "detail",
+    "reference": "Alice found that the cause of her shrinking was the fan she was holding. She dropped it hastily, just in time to save herself from shrinking away altogether, which she called a narrow escape.",
+    "reference_chunk_ids": [],
+    "note": "Chapter II, The Pool of Tears (p. 23); detail: one cause stated in a single passage.",
+    "evidence": [
+      "soon found out that the cause of this was the",
+      "fan she was holding, and she dropped it hastily,"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, how does Alice describe the farmer's little dog to the Mouse?",
+    "type": "detail",
+    "reference": "Alice describes a little bright-eyed terrier with long curly brown hair that fetches things, sits up and begs for its dinner, belongs to a farmer who says it is worth a hundred pounds, and kills all the rats.",
+    "reference_chunk_ids": [],
+    "note": "Chapter II, The Pool of Tears (pp. 26-27); detail: description gathered from one speech.",
+    "evidence": [
+      "eyed terrier, you know, with oh ! such long",
+      "curly brown hair ! And it ’ll fetch things when",
+      "it ’s worth a hundred pounds ! He says it kills"
+    ]
+  },
+  {
+    "question": "In the Caucus-race of Alice's Adventures in Wonderland, what prizes does Alice hand round, and what does she get?",
+    "type": "detail",
+    "reference": "Alice pulls a box of comfits out of her pocket and hands them round as prizes, exactly one apiece. For her own prize she has only a thimble, which the Dodo solemnly presents back to her to general cheering.",
+    "reference_chunk_ids": [],
+    "note": "Chapter III, A Caucus-race and a Long Tale (pp. 34-35); detail: two facts in one scene.",
+    "evidence": [
+      "out a box of comfits, (luckily the salt water had",
+      "There was exactly one a-piece, all round.",
+      "“ Only a thimble,” said Alice sadly."
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, what do the pebbles thrown through the window turn into, and what does Alice do?",
+    "type": "detail",
+    "reference": "Alice notices the pebbles turning into little cakes as they lie on the floor. She reasons that a cake must make her smaller, since it cannot make her larger, so she swallows one and begins shrinking, then runs out of the house.",
+    "reference_chunk_ids": [],
+    "note": "Chapter IV, The Rabbit Sends in a Little Bill (p. 53); detail: one event and its consequence.",
+    "evidence": [
+      "pebbles were all turning into little cakes as they",
+      "So she swallowed one of the cakes, and was"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, what size does Alice want to be, and how tall is the Caterpillar?",
+    "type": "detail",
+    "reference": "Alice says she would like to be a little larger, since three inches is a wretched height to be. The Caterpillar, offended, rears itself upright and replies that it is a very good height; it is exactly three inches high.",
+    "reference_chunk_ids": [],
+    "note": "Chapter V, Advice from a Caterpillar (p. 67); detail: two linked facts in a short exchange.",
+    "evidence": [
+      "“ Well, I should like to be a little larger, sir,",
+      "if you wouldn’t mind,” said Alice : “ three inches",
+      "spoke (it was exactly three inches high)."
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, what message does the Fish-Footman deliver to the Frog-Footman at the Duchess's door?",
+    "type": "detail",
+    "reference": "The Fish-Footman hands over a great letter and says solemnly, \"For the Duchess. An invitation from the Queen to play croquet.\" The Frog-Footman repeats it in the same tone with the words slightly reordered: from the Queen, an invitation for the Duchess to play croquet.",
+    "reference_chunk_ids": [],
+    "note": "Chapter VI, Pig and Pepper (pp. 77-78); detail: one short message in a single scene.",
+    "evidence": [
+      "Duchess. An invitation from the Queen to play",
+      "same solemn tone, only changing the order of"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, how does the Cheshire Cat use a dog's behaviour to argue that it is mad?",
+    "type": "detail",
+    "reference": "The Cat says a dog is not mad: it growls when angry and wags its tail when pleased. The Cat does the opposite, growling when it is pleased and wagging its tail when it is angry, and therefore concludes that it is mad.",
+    "reference_chunk_ids": [],
+    "note": "Chapter VI, Pig and Pepper (p. 91); detail: one argument in a single exchange.",
+    "evidence": [
+      "growls when it ’s angry,",
+      "pleased. Now I growl when",
+      "tail when I’m angry. There-"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, what does the Hatter blame for his watch being two days wrong?",
+    "type": "detail",
+    "reference": "The Hatter blames butter. He says he told the March Hare that butter would not suit the works, and that some crumbs must have got in as well, because the March Hare should not have put it in with the bread-knife. The March Hare insists it was the best butter.",
+    "reference_chunk_ids": [],
+    "note": "Chapter VII, A Mad Tea-Party (p. 99); detail: one specific explanation.",
+    "evidence": [
+      "“ Two days wrong !” sighed the Hatter. “ I",
+      "“ Yes, but some crumbs must have got in",
+      "have put it in with the bread-knife.”"
+    ]
+  },
+  {
+    "question": "In the Dormouse's story in Alice's Adventures in Wonderland, what are the three little sisters called, and where do they live?",
+    "type": "detail",
+    "reference": "The three little sisters are named Elsie, Lacie, and Tillie. According to the Dormouse, they lived at the bottom of a well.",
+    "reference_chunk_ids": [],
+    "note": "Chapter VII, A Mad Tea-Party (pp. 105-107); detail: names and a place from one passage.",
+    "evidence": [
+      "“ and their names were Elsie, Lacie, and Tillie ;",
+      "and they lived at the bottom of a well——”"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, why are the three gardeners painting the white roses red?",
+    "type": "detail",
+    "reference": "Two explains that the tree was supposed to be a red rose-tree but a white one was put in by mistake. If the Queen found out, they would all have their heads cut off, so they are painting the roses red before she arrives.",
+    "reference_chunk_ids": [],
+    "note": "Chapter VIII, The Queen's Croquet-Ground (p. 114); detail: one reason given by a gardener.",
+    "evidence": [
+      "been a red rose-tree, and we put a white one",
+      "in by mistake, and if the Queen was to find it",
+      "out, we should all have our heads cut off, you"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, which live creatures serve as croquet-balls, mallets and arches on the Queen's ground?",
+    "type": "detail",
+    "reference": "The croquet-balls are live hedgehogs, the mallets are live flamingoes, and the arches are made by soldiers who double themselves up and stand on their hands and feet.",
+    "reference_chunk_ids": [],
+    "note": "Chapter VIII, The Queen's Croquet-Ground (p. 121); detail: a list of three items in one passage.",
+    "evidence": [
+      "ridges and furrows ; the croquet-balls were live",
+      "hedgehogs, the mallets live flamingoes, and",
+      "the soldiers had to"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, which branches of Arithmetic did the Mock Turtle study at school?",
+    "type": "detail",
+    "reference": "The Mock Turtle says the different branches of Arithmetic were Ambition, Distraction, Uglification, and Derision. He had taken only the regular course, which began with Reeling and Writhing.",
+    "reference_chunk_ids": [],
+    "note": "Chapter IX, The Mock Turtle's Story (pp. 143-144); detail: a list from one reply.",
+    "evidence": [
+      "different branches of Arithmetic—Ambition, Dis-",
+      "traction, Uglification, and Derision.”"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, how does the Gryphon explain why lessons are called lessons?",
+    "type": "detail",
+    "reference": "The Mock Turtle did ten hours of lessons the first day, nine the next, and so on. The Gryphon says that is the reason they are called lessons: because they lessen from day to day.",
+    "reference_chunk_ids": [],
+    "note": "Chapter IX, The Mock Turtle's Story (p. 145); detail: one pun-based explanation.",
+    "evidence": [
+      "“ Ten hours the first day,” said the Mock",
+      "“ That ’s the reason they ’re called lessons,”",
+      "the Gryphon remarked : “ because they lessen"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, what are boots and shoes under the sea done with and made of?",
+    "type": "detail",
+    "reference": "The Gryphon says that boots and shoes under the sea are done with whiting, and that they are made of soles and eels. He adds impatiently that any shrimp could have told Alice that.",
+    "reference_chunk_ids": [],
+    "note": "Chapter X, The Lobster Quadrille (p. 154); detail: two facts in one exchange.",
+    "evidence": [
+      "“ Boots and shoes under the sea,” the Gry-",
+      "“ Soles and eels, of course,” the Gryphon"
+    ]
+  },
+  {
+    "question": "In the Mock Turtle's song in Alice's Adventures in Wonderland, how does the snail answer the whiting's invitation?",
+    "type": "detail",
+    "reference": "The snail replies \"Too far, too far!\" and gives a look askance. He says he thanks the whiting kindly, but he would not and could not join the dance.",
+    "reference_chunk_ids": [],
+    "note": "Chapter X, The Lobster Quadrille (p. 150); detail: a single response within the song.",
+    "evidence": [
+      "But the snail replied “ Too far, too far !” and gave a look",
+      "Said he thanked the whiting kindly, but he would not join"
+    ]
+  },
+  {
+    "question": "At the trial in Alice's Adventures in Wonderland, what three dates do the Hatter, March Hare and Dormouse give?",
+    "type": "detail",
+    "reference": "The Hatter thinks it was the Fourteenth of March, the March Hare says the Fifteenth, and the Dormouse says the Sixteenth. The King tells the jury to write that down, and they write all three dates on their slates.",
+    "reference_chunk_ids": [],
+    "note": "Chapter XI, Who Stole the Tarts? (pp. 167-168); detail: three dates in one scene.",
+    "evidence": [
+      "with the Dormouse. “ Fourteenth of March, I",
+      "“ Fifteenth,” said the March Hare.",
+      "“ Sixteenth,” added the Dormouse."
+    ]
+  },
+  {
+    "question": "At the trial in Alice's Adventures in Wonderland, what does Alice do to the juror with the squeaking pencil?",
+    "type": "detail",
+    "reference": "Alice cannot stand the squeaking pencil, so she goes round the court, gets behind the juror, and quickly takes it away. The juror is Bill, the Lizard, who then has to write with one finger, which leaves no mark on the slate.",
+    "reference_chunk_ids": [],
+    "note": "Chapter XI, Who Stole the Tarts? (p. 165); detail: one action with a named character.",
+    "evidence": [
+      "This of course, Alice could not stand, and she",
+      "little juror (it was Bill, the Lizard) could not",
+      "to write with one finger for the rest of the"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, what is Rule Forty-two, and how does Alice object to it?",
+    "type": "detail",
+    "reference": "The King reads Rule Forty-two: all persons more than a mile high must leave the court. Alice says she is not a mile high and that it is not a regular rule because the King invented it just now; when he claims it is the oldest rule in the book, she replies that then it ought to be Number One.",
+    "reference_chunk_ids": [],
+    "note": "Chapter XII, Alice's Evidence (p. 180); detail: one rule and the reply to it. [reference corrected after independent verification]",
+    "evidence": [
+      "“ Rule Forty-two. All persons more than a",
+      "mile high to leave the court.”",
+      "“ Then it ought to be Number One,” said Alice."
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, what does the Queen demand about sentence and verdict, and how does Alice react?",
+    "type": "detail",
+    "reference": "The Queen declares \"Sentence first, verdict afterwards.\" Alice loudly protests that this is stuff and nonsense and that the idea of having the sentence first is absurd, and she refuses to hold her tongue when the Queen orders her to.",
+    "reference_chunk_ids": [],
+    "note": "Chapter XII, Alice's Evidence (p. 187); detail: one demand and the reaction in a single scene.",
+    "evidence": [
+      "“ No, no !” said the Queen. “ Sentence first—",
+      "“ Stuff and nonsense !” said Alice loudly. “ The",
+      "idea of having the sentence first !”"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, which girl does Alice fear she has become, and what does she tell the Caterpillar?",
+    "type": "cross_paragraph",
+    "reference": "After growing huge, Alice wonders whether she was changed in the night and goes through children she knows. She is sure she is not Ada because of the ringlets, but after botching her lessons concludes she must have been changed for Mabel. Later she tells the Caterpillar she knows who she was that morning but has been changed several times since.",
+    "reference_chunk_ids": [],
+    "note": "Chapter II (pp. 19-21) and Chapter V (p. 60); cross_paragraph: needs two scenes in different chapters.",
+    "evidence": [
+      "certain ! I must have been changed for Mabel !",
+      "know who I was when I got up this morning,"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, how does the Cheshire Cat vanish in the wood, and what dispute does its head cause?",
+    "type": "cross_paragraph",
+    "reference": "In the wood the Cat vanishes quite slowly, beginning with the end of its tail and ending with its grin, which remains some time after the rest has gone. At the croquet game its head appears alone, and the executioner argues that a head cannot be cut off without a body while the King argues that anything with a head can be beheaded.",
+    "reference_chunk_ids": [],
+    "note": "Chapter VI (p. 93) and Chapter VIII (pp. 127-128); cross_paragraph: combines two appearances of the Cat.",
+    "evidence": [
+      "vanished quite slowly, beginning with the end of",
+      "mained some time after the rest of it had gone.",
+      "couldn ’t cut off a head unless there was a body",
+      "that had a head could be beheaded, and that"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, what do the Dormouse's sisters live on, and what does a sleepy voice say about tarts?",
+    "type": "cross_paragraph",
+    "reference": "At the tea-party the Dormouse says the sisters lived on treacle. At the trial, when the King asks the cook what tarts are made of, she answers \"Pepper, mostly,\" and a sleepy voice behind her says \"Treacle.\"",
+    "reference_chunk_ids": [],
+    "note": "Chapter VII (p. 107) and Chapter XI (p. 175); cross_paragraph: links the Dormouse's treacle across two scenes.",
+    "evidence": [
+      "“ They lived on treacle,” said the Dormouse,",
+      "“ Pepper, mostly,” said the cook.",
+      "“ Treacle,” said a sleepy voice behind her."
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, how does mentioning Dinah scare the birds, and how does Alice later threaten the Rabbit's crowd?",
+    "type": "cross_paragraph",
+    "reference": "When Alice boasts that Dinah is a capital mouser who would eat a little bird as soon as look at it, the birds hurry off with various excuses. Later, trapped in the Rabbit's house, she shouts that if they burn it down she will set Dinah at them.",
+    "reference_chunk_ids": [],
+    "note": "Chapter III (p. 39) and Chapter IV (p. 52); cross_paragraph: two different uses of Dinah's name.",
+    "evidence": [
+      "could see her after the birds ! Why, she ’ll eat",
+      "a little bird as soon as look at it !”",
+      "she could, “ If you do, I ’ll set Dinah at you !”"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, how does Alice link pepper to the Duchess's temper, and what rule does she propose?",
+    "type": "cross_paragraph",
+    "reference": "In the kitchen the air was full of pepper and the Duchess was savage. Later Alice thinks it was only the pepper that had made her savage, and she proposes a rule: pepper makes people hot-tempered, vinegar makes them sour, camomile makes them bitter, and barley-sugar makes children sweet-tempered.",
+    "reference_chunk_ids": [],
+    "note": "Chapter VI (pp. 81-83) and Chapter IX (pp. 130-131); cross_paragraph: kitchen scene plus later reflection.",
+    "evidence": [
+      "“ There ’s certainly too much pepper in that",
+      "perhaps it was only the pepper that had made",
+      "sour—and camomile that makes them bitter—"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, what do the bottle and cake labels say, and what does the Caterpillar say about the mushroom?",
+    "type": "cross_paragraph",
+    "reference": "The bottle has a paper label reading \"DRINK ME\" and the small cake is marked \"EAT ME\" in currants. The Caterpillar later tells Alice that one side of the mushroom will make her grow taller and the other side will make her grow shorter.",
+    "reference_chunk_ids": [],
+    "note": "Chapter I (pp. 9-13) and Chapter V (p. 69); cross_paragraph: size-changing items from two chapters.",
+    "evidence": [
+      "words “ DRINK ME” beautifully printed on",
+      "words “ EAT ME” were beautifully marked in",
+      "and the other side will make you grow shorter.”"
+    ]
+  },
+  {
+    "question": "Summarize what happens at the Mad Tea-Party in Alice's Adventures in Wonderland, including the riddle and why it is always tea-time.",
+    "type": "summary",
+    "reference": "Alice joins the March Hare, the Hatter and a sleeping Dormouse at a crowded table. The Hatter poses the riddle 'Why is a raven like a writing-desk?'; Alice gives it up and neither the Hatter nor the March Hare knows the answer. The talk turns to Time, with whom the Hatter quarrelled, so it is always six o'clock and always tea-time. After the Dormouse's story Alice leaves, calling it the stupidest tea-party she was ever at.",
+    "reference_chunk_ids": [],
+    "note": "Chapter VII, A Mad Tea-Party (pp. 95-111); summary: gist of a whole chapter. [reference corrected after independent verification]",
+    "evidence": [
+      "raven like a writing-desk ?”",
+      "“ it ’s always tea-time, and we ’ve no time to",
+      "“ It ’s the stupidest tea-party I ever was at in"
+    ]
+  },
+  {
+    "question": "Summarize how the trial of the Knave of Hearts unfolds and ends in Alice's Adventures in Wonderland.",
+    "type": "summary",
+    "reference": "The Knave of Hearts is tried for stealing the Queen's tarts before the King, with witnesses such as the Hatter and the cook, and Alice, growing larger, is called as a witness. The White Rabbit reads out confusing verses as evidence, which the King claims to find meaning in, and the Queen demands sentence first. Alice calls them only a pack of cards, they fly at her, and she wakes on the bank with her sister.",
+    "reference_chunk_ids": [],
+    "note": "Chapters XI-XII (pp. 162-189); summary: gist of the trial through the ending.",
+    "evidence": [
+      "The Knave of Hearts, he stole those tarts,",
+      "“ No, no !” said the Queen. “ Sentence first—",
+      "“ Wake up, Alice dear !” said her sister ;"
+    ]
+  }
+]

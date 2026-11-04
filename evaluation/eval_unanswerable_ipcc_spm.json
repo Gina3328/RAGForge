@@ -1,0 +1,89 @@
+[
+  {
+    "question": "In the IPCC AR6 Synthesis Report, how many climate refugees are projected worldwide by 2050 under high emissions?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Report discusses displacement and migration qualitatively (A.2.5, Figure SPM.7) but gives no projected refugee/migrant count for 2050; grep for refugee terms.",
+    "absent_terms": [
+      "refugee",
+      "climate migrants?",
+      "million (people )?(displaced|migrat)"
+    ]
+  },
+  {
+    "question": "In the IPCC AR6 Synthesis Report, in which year does the Arctic Ocean first become ice-free in September?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Arctic sea ice is only listed among cryospheric elements (footnote 34); no ice-free year is stated.",
+    "absent_terms": [
+      "ice[- ]free",
+      "sea[- ]ice.{0,60}(disappear|vanish|free)",
+      "first ice"
+    ]
+  },
+  {
+    "question": "What share of global GDP is lost to climate damages at 3°C warming in the IPCC AR6 Synthesis Report?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Report mentions economic damages qualitatively (A.2.6) and cost-benefit limits (C.2.4) but gives no GDP loss percentage; GDP appears only in energy-intensity context.",
+    "absent_terms": [
+      "GDP loss",
+      "% of (global )?GDP",
+      "(loss|lost|damage).{0,40}GDP",
+      "GDP.{0,40}(loss|lost|damage)"
+    ]
+  },
+  {
+    "question": "How many gigatonnes of CO2 must direct air capture remove by 2050 in the IPCC AR6 Synthesis Report?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "CDR and DACCS are discussed qualitatively (B.5.1, B.6.2, footnote 47) with a storage capacity of about 1000 GtCO2, but no annual removal quantity for 2050 is given.",
+    "absent_terms": [
+      "direct air capture",
+      "DACCS",
+      "GtCO2.{0,40}remov",
+      "remov.{0,40}GtCO2"
+    ]
+  },
+  {
+    "question": "What annual adaptation finance, in trillions of US dollars, do developing countries need according to the IPCC AR6 Synthesis Report?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Report says adaptation finance is insufficient and must increase many-fold (A.3.6, C.7.1) but gives no dollar estimate of needs; only the USD 100 billion goal is quoted.",
+    "absent_terms": [
+      "trillion",
+      "adaptation (finance|costs?|needs?).{0,40}(USD|US\\$|\\$)",
+      "(USD|\\$)\\s?\\d+.{0,20}adaptation"
+    ]
+  },
+  {
+    "question": "By how many zettajoules has global ocean heat content increased since 1971 according to the IPCC AR6 Synthesis Report?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Ocean warming is mentioned (A.2) but no ocean heat content figure is given in the extracted text.",
+    "absent_terms": [
+      "zettajoule",
+      "\\bZJ\\b",
+      "heat content",
+      "ocean heat"
+    ]
+  },
+  {
+    "question": "What is the boiling point of liquid nitrogen at standard atmospheric pressure, measured in degrees Celsius?",
+    "type": "unanswerable_far",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Unrelated general-knowledge question; grep for boiling and nitrogen terms.",
+    "absent_terms": [
+      "boiling",
+      "liquid nitrogen",
+      "cryogen"
+    ]
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "question": "How many dollars did CDC spend developing the 2024 framework update?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "What sample size does the framework recommend for a program evaluation survey?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "Which statistical test does the framework recommend for comparing outcomes between two groups?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "Who chaired the CDC Evaluation Framework Work Group?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "What hourly rate does the report suggest for hiring an external evaluator?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "How should programs outside the United States adapt this framework?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "What does the framework say about using large language models or artificial intelligence in evaluation?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "Which European evaluation standards does the report compare itself against?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "What percentage of a program's budget does the report recommend setting aside for evaluation?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "Which U.S. states have made this framework a legal requirement for the programs they fund?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "Who painted the Mona Lisa?",
+    "type": "unanswerable_far",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Unrelated to the document (general-knowledge question)."
+  },
+  {
+    "question": "What is the speed of light in a vacuum?",
+    "type": "unanswerable_far",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Unrelated to the document (general-knowledge question)."
+  },
+  {
+    "question": "What is the tallest mountain in Africa?",
+    "type": "unanswerable_far",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Unrelated to the document (general-knowledge question)."
+  },
+  {
+    "question": "How does a lithium-ion battery store energy?",
+    "type": "unanswerable_far",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Unrelated to the document (general-knowledge question)."
+  },
+  {
+    "question": "What is the plot of Shakespeare's Hamlet?",
+    "type": "unanswerable_far",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Unrelated to the document (general-knowledge question)."
+  }
+]

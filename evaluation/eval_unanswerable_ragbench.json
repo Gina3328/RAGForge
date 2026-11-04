@@ -1,0 +1,107 @@
+[
+  {
+    "question": "What was the total dollar cost of annotating the RAGBench examples with the LLM annotator?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "Which open-source license is the RAGBench dataset released under?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "What inference latency does the fine-tuned DeBERTa judge achieve per example?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "Which languages other than English does RAGBench include?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "What is the peak GPU memory used when running the LLM judge?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "Which prompt-injection attacks did the authors test against the RAGBench judges?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "How does RAGBench handle multi-turn conversational questions?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "What inter-annotator agreement was measured between the two human experts on the test set?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "Which Llama models did the authors fine-tune as RAG judges?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "How much did the authors pay crowd workers per annotation task?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "On-topic but not in the document. Verified absent by keyword search of the document text (2026-10-08)."
+  },
+  {
+    "question": "How many players are on a basketball team on the court?",
+    "type": "unanswerable_far",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Unrelated to the document (general-knowledge question)."
+  },
+  {
+    "question": "What is the chemical formula of table salt?",
+    "type": "unanswerable_far",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Unrelated to the document (general-knowledge question)."
+  },
+  {
+    "question": "Which planet in the solar system has the shortest day?",
+    "type": "unanswerable_far",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Unrelated to the document (general-knowledge question)."
+  },
+  {
+    "question": "How do I change a flat bicycle tire?",
+    "type": "unanswerable_far",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Unrelated to the document (general-knowledge question)."
+  },
+  {
+    "question": "What is the population of Tokyo?",
+    "type": "unanswerable_far",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Unrelated to the document (general-knowledge question)."
+  }
+]

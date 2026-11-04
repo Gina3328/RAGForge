@@ -1,0 +1,97 @@
+[
+  {
+    "question": "What numeric thresholds does the NIST AI RMF set for acceptable false positive and false negative rates?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Accuracy and false positive/negative rates are discussed in Section 3.1 but no numeric thresholds are given; the text says human judgment sets threshold values. Grepped for percentages.",
+    "absent_terms": [
+      "\\d\\s?%",
+      "percent",
+      "numeric(al)? threshold",
+      "acceptable (false|error) rate"
+    ]
+  },
+  {
+    "question": "How much does it cost an organization to implement the NIST AI RMF, in dollars or staffing levels?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Resources needed are mentioned generally in Section 6 but no monetary or staffing figures are given. Grepped for currency terms.",
+    "absent_terms": [
+      "\\$",
+      "dollar",
+      "USD",
+      "budget of",
+      "full-time"
+    ]
+  },
+  {
+    "question": "Which companies or agencies have officially adopted version 1.0 of the NIST AI RMF, and when?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "The framework describes intended use and voluntary adoption in general but names no adopters or dates. Grepped for adoption wording.",
+    "absent_terms": [
+      "adopted by",
+      "adopters?",
+      "adoption",
+      "implemented by",
+      "began using"
+    ]
+  },
+  {
+    "question": "What procedure does the NIST AI RMF prescribe for filing an AI incident report, including required form fields?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Incident communication and tracking appear in MANAGE 4.3 and GOVERN 4.3 at a high level, with no filing procedure or forms. Grepped for form/filing wording.",
+    "absent_terms": [
+      "filing",
+      "form fields?",
+      "reporting form",
+      "submit(ted)? (a|an) (report|incident)"
+    ]
+  },
+  {
+    "question": "According to the NIST AI RMF, which specific metric should measure fairness across demographic groups in a hiring system?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Fairness and bias are discussed in Section 3.7 and MEASURE 2.11 but no specific fairness metric is named. Grepped for metric names.",
+    "absent_terms": [
+      "demographic parity",
+      "equal(ized)? odds",
+      "disparate impact",
+      "statistical parity",
+      "equal opportunity"
+    ]
+  },
+  {
+    "question": "How many public comments did NIST receive on the two drafts of the AI Risk Management Framework?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "The Executive Summary lists the engagement activities (RFI, workshops, comments on drafts) but gives no counts of comments. Grepped for counts.",
+    "absent_terms": [
+      "\\d+ (public )?comments",
+      "received",
+      "respondents",
+      "submissions",
+      "thousand"
+    ]
+  },
+  {
+    "question": "What is the boiling point of water at the summit of Mount Everest, in degrees Celsius?",
+    "type": "unanswerable_far",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Unrelated general-knowledge question; grepped for subject terms.",
+    "absent_terms": [
+      "boiling",
+      "Everest",
+      "Celsius",
+      "summit"
+    ]
+  }
+]

@@ -1,0 +1,164 @@
+[
+  {
+    "question": "In the Roomba 600 series owner's guide, how far from stairs and Virtual Wall Barriers should Home Base sit?",
+    "type": "detail",
+    "reference": "The Home Base should be placed in an open, uncluttered area. It needs to be at least 4 feet (1.2 meters) away from stairs and at least 8 feet (2.4 meters) from Virtual Wall Barriers.",
+    "reference_chunk_ids": [],
+    "note": "Page 3, 'Positioning the Home Base'; detail because it is one list of placement distances.",
+    "evidence": [
+      "Place the Home Base in an open, uncluttered area leaving the following",
+      "4 feet (1.2 meters) away from stairs",
+      "At least 8 feet (2.4 meters) from Virtual Wall Barriers"
+    ]
+  },
+  {
+    "question": "Per the Roomba 600 series owner's guide, how do you check charging status and what do the indicator colors mean?",
+    "type": "detail",
+    "reference": "Press the CLEAN button to illuminate the Battery Indicator, since the indicator lights turn off after 60 seconds to conserve energy while Roomba charges on the Home Base. The indicator is amber while the battery is charging and solid green when fully charged.",
+    "reference_chunk_ids": [],
+    "note": "Page 3, 'Battery and Charging'; detail because a single short passage gives the answer.",
+    "evidence": [
+      "Indicator lights will turn off after 60 seconds to",
+      "CLEAN button to illuminate the Battery Indicator. Indicator will appear amber while the",
+      "battery is charging and solid green when fully charged."
+    ]
+  },
+  {
+    "question": "How does SPOT Cleaning work on the Roomba 600 series, and how large an area does it clean?",
+    "type": "detail",
+    "reference": "To use SPOT Cleaning, place Roomba on top of the localized debris and press the SPOT button on the robot. Roomba intensely cleans the area by spiraling outward about 3 feet (1 meter) in diameter, then spiraling inward back to where it started.",
+    "reference_chunk_ids": [],
+    "note": "Page 3, 'Using your Roomba' cleaning bullets; detail because one bullet describes the feature.",
+    "evidence": [
+      "To use SPOT Cleaning, place Roomba on top of the localized debris and press",
+      "about 3 feet (1meter) in diameter and then spiraling inward to where it started."
+    ]
+  },
+  {
+    "question": "Which battery types may be charged according to the Roomba 600 series owner's guide, and what risk do others pose?",
+    "type": "detail",
+    "reference": "Only charge one of the following iRobot batteries: a maximum 14.8V, max 3000mAh Ni-MH battery or a maximum 3300mAh Li-ion battery. Other types of batteries may burst and cause injury, so contact Customer Care for the correct replacement battery.",
+    "reference_chunk_ids": [],
+    "note": "Page ii, Important Safety Instructions (cont.), CAUTION bullet; detail because it is a single safety item.",
+    "evidence": [
+      "Only charge one of the following iRobot batteries: maximum 14.8V, max",
+      "3000mAh Ni-MH or maximum 3300mAh Li-ion battery. Other type of batteries may burst"
+    ]
+  },
+  {
+    "question": "What does the Roomba 600 series owner's guide say about using power converters with the Home Base, and what is the consequence?",
+    "type": "detail",
+    "reference": "The product is designed to be plugged into a standard outlet only and may not be used with any type of power converter. Using power converters will immediately void the warranty, and the guide labels this a shock and fire hazard.",
+    "reference_chunk_ids": [],
+    "note": "Page ii, Important Safety Instructions (cont.), Shock and Fire Hazard bullet; detail because one bullet covers it.",
+    "evidence": [
+      "into a standard outlet only. Product may not be used with any type of power converter.",
+      "Use of power converters will immediately void the warranty."
+    ]
+  },
+  {
+    "question": "How do you reboot a Roomba 600 series robot, and what signals that the reboot was successful?",
+    "type": "detail",
+    "reference": "Press and hold the DOCK and SPOT buttons for 10 seconds until all indicators shut off, then release them. When you release the buttons you will hear an audible tone signifying a successful reboot. If you use scheduling, open the iRobot HOME App to confirm the schedule remains intact.",
+    "reference_chunk_ids": [],
+    "note": "Page 8, Troubleshooting, 'Rebooting Instructions'; detail because it is one procedure.",
+    "evidence": [
+      "buttons for 10 seconds until all indicators shut off, then release.",
+      "When you release the buttons, you will hear an audible tone"
+    ]
+  },
+  {
+    "question": "In the Roomba 600 series owner's guide, how are the brushes cleaned and how often should they be replaced?",
+    "type": "detail",
+    "reference": "Open the brush guard by lifting both tabs, then remove and clean any hair and debris from the brushes and brush bearings. Reinstall the brush bearings and brushes and close the brush guard. The brushes should be replaced every 6-12 months.",
+    "reference_chunk_ids": [],
+    "note": "Page 6, 'Cleaning the Brushes'; detail because the steps come from one illustrated procedure.",
+    "evidence": [
+      "Open the brush guard by lifting both tabs.",
+      "Reinstall brush bearings and brushes,",
+      "Replace the brushes every 6-12 months"
+    ]
+  },
+  {
+    "question": "How should the front caster wheel be cleaned on the Roomba 600 series if its rotation is restricted?",
+    "type": "detail",
+    "reference": "Pull firmly on the front wheel to remove it from the front caster assembly and remove debris from the wheel cavity. Spin the wheel by hand; if rotation is restricted, remove the wheel from its housing, push firmly to remove the axle and clear any debris or hair, then reinstall until the wheel clicks into place.",
+    "reference_chunk_ids": [],
+    "note": "Page 7, 'Cleaning the Front Caster Wheel'; detail because it is one numbered procedure.",
+    "evidence": [
+      "Pull firmly on the front wheel to remove from the front caster",
+      "Spin the wheel by hand. If the rotation is restricted, remove the",
+      "Make sure the wheel clicks back"
+    ]
+  },
+  {
+    "question": "According to the Roomba 600 series owner's guide, what tool and steps are needed to clean the side brush?",
+    "type": "detail",
+    "reference": "Use a small screwdriver to remove the screw, then pull the side brush to remove it from the robot. Remove any hair and/or debris from the side brush and reinstall it.",
+    "reference_chunk_ids": [],
+    "note": "Page 7, 'Cleaning the Side Brush'; detail because one short paragraph gives the answer.",
+    "evidence": [
+      "Use a small screwdriver to remove the screw. Pull the side brush to",
+      "remove it from the robot. Remove any hair and/or debris and reinstall"
+    ]
+  },
+  {
+    "question": "What phone number and hours does iRobot list for Roomba 600 series Customer Care in the USA and Canada?",
+    "type": "detail",
+    "reference": "US and Canada customers can call the iRobot Customer Care team at (877) 855-8593. Hours are Monday to Friday, 9AM to 7PM Eastern Time, and Saturday, 9AM to 6PM Eastern Time.",
+    "reference_chunk_ids": [],
+    "note": "Page 9, 'iRobot Customer Care'; detail because contact number and hours sit together in one block.",
+    "evidence": [
+      "Customer Care team at (877) 855-8593.",
+      "Monday to Friday, 9AM – 7PM Eastern Time",
+      "Saturday, 9AM – 6PM Eastern Time"
+    ]
+  },
+  {
+    "question": "How do Halo mode and Virtual Wall mode differ on the Roomba 600 series Dual Mode Virtual Wall Barrier?",
+    "type": "cross_paragraph",
+    "reference": "In Halo Mode (switch down) the device makes an invisible protective zone reaching about 24 inches (60 centimeters) from its center that Roomba will not enter. In Virtual Wall Mode (switch up) it blocks openings of up to 10 feet (3 meters) with an invisible cone-shaped barrier only Roomba can see.",
+    "reference_chunk_ids": [],
+    "note": "Page 4, 'Accessories'; cross_paragraph because the two modes are described in separate paragraphs.",
+    "evidence": [
+      "The Halo is invisible and reaches approximately 24 inches (60",
+      "as a Virtual Wall. This means that you can set it to block openings of up to 10 feet"
+    ]
+  },
+  {
+    "question": "How should the Roomba 600 series filter be cleaned, and how often should it be cleaned and replaced?",
+    "type": "cross_paragraph",
+    "reference": "Empty the bin first, then pull the filter out, tap it against the rubbish container to clear debris, and reinstall it. According to the care table, the filter is cleaned once per week (twice per week in homes with pets) and replaced every 2 months.",
+    "reference_chunk_ids": [],
+    "note": "Page 5 care table and page 6 'Cleaning The Filter'; cross_paragraph because procedure and schedule are on different pages.",
+    "evidence": [
+      "Important: Empty the bin before cleaning",
+      "Pull the filter to remove. Tap the filter against the",
+      "Filter                    Once per week            Every 2 months"
+    ]
+  },
+  {
+    "question": "Per the Roomba 600 series guide, what happens to the battery before long-term storage, and where is Roomba normally stored?",
+    "type": "cross_paragraph",
+    "reference": "Before long-term storage or transportation, always charge and remove the battery from the robot and accessories. Normally Roomba should be stored on the Home Base so it is charged and ready; if stored off the Home Base, remove the battery first and keep Roomba and battery in a cool, dry place.",
+    "reference_chunk_ids": [],
+    "note": "Page ii safety bullets and page 3 'Using your Roomba'; cross_paragraph because storage guidance appears in two sections.",
+    "evidence": [
+      "lways charge and remove the battery from your robot and accessories before",
+      "you need it. If storing off of the Home Base, remove the battery first and then store",
+      "Roomba and the battery in a cool, dry place."
+    ]
+  },
+  {
+    "question": "Summarize what the Roomba 600 series owner's guide says about safely disposing of batteries and electrical appliances.",
+    "type": "summary",
+    "reference": "The battery pack must be removed from the robot before disposal. A leaking battery should go in a sealed plastic bag and be disposed of per local regulations or returned to an authorized iRobot Service Center. Contact the local waste authority for recycling rules; do not dispose of electrical appliances or batteries as unsorted municipal waste, since hazardous substances can leak into groundwater and the food chain.",
+    "reference_chunk_ids": [],
+    "note": "Page ii, safety bullets on battery disposal and the disposal symbol notice; summary because it condenses several statements.",
+    "evidence": [
+      "The battery pack must be removed from the robot before disposal.",
+      "Contact your local waste management authority for battery recycling and disposal",
+      "Do not dispose of electrical appliances or batteries as unsorted municipal waste,"
+    ]
+  }
+]

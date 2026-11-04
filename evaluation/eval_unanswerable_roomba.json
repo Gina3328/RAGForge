@@ -1,0 +1,55 @@
+[
+  {
+    "question": "In the Roomba 600 series owner's guide, how many minutes of runtime does a fully charged battery provide?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Battery and charging are covered (3 hours initial charge, amber/green indicator) so runtime seems answerable; grepped for runtime, minutes - no runtime figure given.",
+    "absent_terms": [
+      "run ?time",
+      "\\bminutes?\\b",
+      "battery life",
+      "per charge"
+    ]
+  },
+  {
+    "question": "According to the Roomba 600 series owner's guide, what is the dust bin capacity measured in liters or ounces?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Bin emptying and care are covered, so capacity seems plausible; grepped for capacity, liters, ounces - none for the bin.",
+    "absent_terms": [
+      "capacity",
+      "\\bliters?\\b|\\blitres?\\b",
+      "ounces?|\\boz\\b",
+      "\\bml\\b|cubic"
+    ]
+  },
+  {
+    "question": "How long is the limited warranty period for the Roomba 600 series, according to its owner's guide?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Warranty is mentioned only as being voided by power converters; no duration or coverage terms. Grepped warranty, year terms.",
+    "absent_terms": [
+      "warranty period",
+      "limited warranty",
+      "\\b(one|two|1|2) ?years?\\b",
+      "coverage"
+    ]
+  },
+  {
+    "question": "What Wi-Fi frequency band and network security type does the Roomba 600 series owner's guide say the robot requires?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Wi-Fi coverage and the HOME App are mentioned, so network requirements seem plausible; grepped GHz, band, WPA - none.",
+    "absent_terms": [
+      "GHz",
+      "2\\.4",
+      "frequency band",
+      "WPA|WEP|WPA2",
+      "\\bband\\b"
+    ]
+  }
+]

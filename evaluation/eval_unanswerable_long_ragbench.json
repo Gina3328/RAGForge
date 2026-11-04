@@ -1,0 +1,58 @@
+[
+  {
+    "question": "How much did it cost in US dollars to generate and annotate all RAGBench examples with the language model?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Set B (written after seeing the first results, to match the length of the answerable questions). On-topic but not in the document; verified absent by keyword search (2026-10-08)."
+  },
+  {
+    "question": "Under which open-source license may researchers freely redistribute the RAGBench dataset, and where is that license published?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Set B (written after seeing the first results, to match the length of the answerable questions). On-topic but not in the document; verified absent by keyword search (2026-10-08)."
+  },
+  {
+    "question": "What was the average latency in milliseconds for the fine-tuned DeBERTa model to score a single example?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Set B (written after seeing the first results, to match the length of the answerable questions). On-topic but not in the document; verified absent by keyword search (2026-10-08)."
+  },
+  {
+    "question": "Which non-English languages are covered by the RAGBench subsets, and how were translations validated by native speakers?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Set B (written after seeing the first results, to match the length of the answerable questions). On-topic but not in the document; verified absent by keyword search (2026-10-08)."
+  },
+  {
+    "question": "How much GPU memory in gigabytes was needed to run the fine-tuned judge model on the test split?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Set B (written after seeing the first results, to match the length of the answerable questions). On-topic but not in the document; verified absent by keyword search (2026-10-08)."
+  },
+  {
+    "question": "Which prompt-injection attacks did the authors apply to the retrieved context to test the robustness of the judges?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Set B (written after seeing the first results, to match the length of the answerable questions). On-topic but not in the document; verified absent by keyword search (2026-10-08)."
+  },
+  {
+    "question": "What level of agreement did two independent human experts reach when labeling the RAGBench test examples, measured by kappa?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Set B (written after seeing the first results, to match the length of the answerable questions). On-topic but not in the document; verified absent by keyword search (2026-10-08)."
+  },
+  {
+    "question": "How much were crowd workers paid per hour for labeling the relevance of retrieved passages in this benchmark?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Set B (written after seeing the first results, to match the length of the answerable questions). On-topic but not in the document; verified absent by keyword search (2026-10-08)."
+  }
+]

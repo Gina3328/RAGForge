@@ -1,0 +1,58 @@
+[
+  {
+    "question": "What dollar amount did CDC budget for developing and publishing the 2024 update of the program evaluation framework?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Set B (written after seeing the first results, to match the length of the answerable questions). On-topic but not in the document; verified absent by keyword search (2026-10-08)."
+  },
+  {
+    "question": "Which online learning modules does CDC offer for teaching the six steps of the framework to new evaluation staff?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Set B (written after seeing the first results, to match the length of the answerable questions). On-topic but not in the document; verified absent by keyword search (2026-10-08)."
+  },
+  {
+    "question": "What salary range does the report give for full-time program evaluators working inside a state health department?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Set B (written after seeing the first results, to match the length of the answerable questions). On-topic but not in the document; verified absent by keyword search (2026-10-08)."
+  },
+  {
+    "question": "Which training courses or certification programs does the report recommend for staff who want to become qualified evaluators?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Set B (written after seeing the first results, to match the length of the answerable questions). On-topic but not in the document; verified absent by keyword search (2026-10-08)."
+  },
+  {
+    "question": "How should evaluators handle programs that are delivered mainly through artificial intelligence tools or automated chatbots?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Set B (written after seeing the first results, to match the length of the answerable questions). On-topic but not in the document; verified absent by keyword search (2026-10-08)."
+  },
+  {
+    "question": "Which national governments outside the United States have formally adopted this framework for their own public health programs?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Set B (written after seeing the first results, to match the length of the answerable questions). On-topic but not in the document; verified absent by keyword search (2026-10-08)."
+  },
+  {
+    "question": "What minimum number of interviews does the framework require before qualitative findings can be considered valid or reliable?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Set B (written after seeing the first results, to match the length of the answerable questions). On-topic but not in the document; verified absent by keyword search (2026-10-08)."
+  },
+  {
+    "question": "What does the report say about the carbon footprint or environmental impact of conducting program evaluations?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Set B (written after seeing the first results, to match the length of the answerable questions). On-topic but not in the document; verified absent by keyword search (2026-10-08)."
+  }
+]

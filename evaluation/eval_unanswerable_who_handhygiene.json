@@ -1,0 +1,89 @@
+[
+ {
+  "question": "In the WHO Guidelines on Hand Hygiene in Health Care, what kappa value is acceptable between observers?",
+  "type": "unanswerable_near",
+  "reference": null,
+  "reference_chunk_ids": [],
+  "note": "Section 1.2.3 mentions kappa statistics to quantify agreement between two observers, but gives no threshold; grep for kappa shows one hit with no value.",
+  "absent_terms": [
+   "kappa",
+   "acceptable (agreement|level)",
+   "threshold"
+  ]
+ },
+ {
+  "question": "In the WHO Guidelines on Hand Hygiene in Health Care, how many months can locally produced alcohol-based handrub be stored before it expires?",
+  "type": "unanswerable_near",
+  "reference": null,
+  "reference_chunk_ids": [],
+  "note": "Replaced after spot-check: the per-litre cost question is answerable from the full 270-page guidelines. No shelf-life/storage-duration figure in the excerpt or the full text (checked with pdftotext).",
+  "absent_terms": [
+   "shelf[- ]life",
+   "stored for",
+   "storage time",
+   "stability of"
+  ]
+ },
+ {
+  "question": "In the WHO Guidelines on Hand Hygiene in Health Care, how often must validated observers be revalidated?",
+  "type": "unanswerable_near",
+  "reference": null,
+  "reference_chunk_ids": [],
+  "note": "Section 1.2.3 covers validation of observers but gives no revalidation interval; grep found no re-validation terms.",
+  "absent_terms": [
+   "revalid",
+   "re-valid",
+   "re-test",
+   "every [0-9a-z]+ (months|years)"
+  ]
+ },
+ {
+  "question": "In the WHO Guidelines on Hand Hygiene in Health Care, what amount did the NPSA centrally fund for cleanyourhands?",
+  "type": "unanswerable_near",
+  "reference": null,
+  "reference_chunk_ids": [],
+  "note": "The case study says the campaign is funded centrally for its first year but gives no total; checked the text for amounts.",
+  "absent_terms": [
+   "NPSA",
+   "funded centrally",
+   "UK£ ?[0-9]"
+  ]
+ },
+ {
+  "question": "In the WHO Guidelines on Hand Hygiene in Health Care, which smartphone application is recommended for recording hand hygiene compliance observations?",
+  "type": "unanswerable_near",
+  "reference": null,
+  "reference_chunk_ids": [],
+  "note": "Replaced after review against the full guidelines: the minimum-alcohol-percentage question has many percentage hits (WHO formulations, efficacy discussion). No software/app mentioned in the excerpt or the full text.",
+  "absent_terms": [
+   "smartphone",
+   "mobile (phone|app)",
+   "\\bapp\\b",
+   "software"
+  ]
+ },
+ {
+  "question": "In the WHO Guidelines on Hand Hygiene in Health Care, what was the annual volume of handrub produced by Hong Kong SAR's centralized system?",
+  "type": "unanswerable_near",
+  "reference": null,
+  "reference_chunk_ids": [],
+  "note": "Section 3.6 says Hong Kong SAR adopted a centralized system for all its hospitals but gives no number; checked the text.",
+  "absent_terms": [
+   "Hong Kong",
+   "[0-9]+ hospitals",
+   "hospitals (receive|supplied)"
+  ]
+ },
+ {
+  "question": "Which river flows through Vienna before emptying into the Black Sea, and roughly how long is it?",
+  "type": "unanswerable_far",
+  "reference": null,
+  "reference_chunk_ids": [],
+  "note": "Unrelated geography question.",
+  "absent_terms": [
+   "Danube",
+   "Vienna",
+   "Black Sea"
+  ]
+ }
+]

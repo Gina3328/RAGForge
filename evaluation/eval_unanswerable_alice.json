@@ -1,0 +1,93 @@
+[
+  {
+    "question": "In Alice's Adventures in Wonderland, what is the name of the farmer who owns the terrier Alice describes?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Alice tells the Mouse about a little terrier that belongs to a farmer and is worth a hundred pounds, so a reader may expect the farmer to be named. He is only called 'a farmer'.",
+    "absent_terms": [
+      "farmer\\s+[A-Z]\\w+",
+      "farmer\\W+(named|called)",
+      "\\bMr\\.?\\s+\\w+",
+      "terrier"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, how old is Alice when she follows the White Rabbit down the rabbit-hole?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Alice is the main character and her size is mentioned in feet and inches, so an age seems plausible, but no age is given. Grepped age words and numbers: only unrelated hits (how old the Lory was, 'managed', birthday presents).",
+    "absent_terms": [
+      "years?\\s+old",
+      "\\baged?\\s+(\\w+\\s+)?(years|\\d)",
+      "\\b(six|seven|eight|nine|ten|eleven|twelve)\\s+years",
+      "how old (is|was) Alice"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, what is the name of the Duchess's cook who carries the pepper-box into court?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "The cook appears in the kitchen and as the trial's second witness, so a name might be expected; she is always just 'the cook'. Searched for naming phrases and for the cook's lines.",
+    "absent_terms": [
+      "cook\\W+(named|called)",
+      "name of the cook",
+      "cook,? (whose|who) name",
+      "Mrs\\.?\\s+\\w+"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, what sentence is finally pronounced on the Knave of Hearts?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "The trial of the Knave is a central plot line, so a reader expects a sentence, but the trial is interrupted by Alice's waking and no verdict or punishment for the Knave is stated. Searched Knave near execution, beheading, pardon or sentence words: no hits.",
+    "absent_terms": [
+      "knave.{0,60}(execut|behead|punish|sentence|prison|pardon|guilty)",
+      "(execut|behead|punish|sentence|pardon).{0,60}knave",
+      "verdict (was|is) (guilty|given)",
+      "jury (found|returned)"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, how many tarts are piled on the large dish in the middle of the court?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "The text mentions a large dish of tarts on a table in the court but gives no count. Searched for a number before 'tarts' and for dozen: the hits are only chapter titles, the nursery rhyme and the cook's line.",
+    "absent_terms": [
+      "\\b(\\d+|one|two|three|four|five|six|seven|eight|nine|ten|twelve)\\s+tarts",
+      "dozen",
+      "tarts\\s+(on|upon)\\s+the\\s+dish",
+      "\\bplateful"
+    ]
+  },
+  {
+    "question": "In Alice's Adventures in Wonderland, in what year did the Hatter quarrel with Time at the Queen of Hearts' concert?",
+    "type": "unanswerable_near",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "The Hatter says he quarrelled with Time 'last March' at the Queen's great concert, so a year seems answerable, but no year is given. Year hits are only front matter (1865, 1998, 1994) and Alice's remark about 'the same year'.",
+    "absent_terms": [
+      "\\b1[0-9]{3}\\b",
+      "\\byear\\s+(of|in)\\b",
+      "last year",
+      "\\bin\\s+(18|17)\\d\\d"
+    ]
+  },
+  {
+    "question": "Which river flows through the French city of Paris, and what is the approximate length of that river?",
+    "type": "unanswerable_far",
+    "reference": null,
+    "reference_chunk_ids": [],
+    "note": "Unrelated general-knowledge question (far). Paris is mentioned only in Alice's garbled geography ('Paris is the capital of Rome'); no river is named.",
+    "absent_terms": [
+      "Seine",
+      "Thames",
+      "kilomet",
+      "\\bmiles?\\s+long"
+    ]
+  }
+]

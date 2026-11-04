@@ -1,0 +1,239 @@
+[
+  {
+    "question": "In the Transformer paper, how many identical layers does the encoder stack contain, and what two sub-layers does each layer have?",
+    "type": "detail",
+    "reference": "The encoder is a stack of N = 6 identical layers. Each layer has two sub-layers: the first is a multi-head self-attention mechanism, and the second is a simple, position-wise fully connected feed-forward network. A residual connection followed by layer normalization surrounds each of the two sub-layers.",
+    "reference_chunk_ids": [],
+    "note": "Page 3, Section 3.1 Encoder and Decoder Stacks; detail: one fact set stated in a single paragraph.",
+    "evidence": [
+      "The encoder is composed of a stack of N = 6 identical layers. Each layer has two",
+      "sub-layers. The first is a multi-head self-attention mechanism, and the second is a simple, position-"
+    ]
+  },
+  {
+    "question": "Why are dot products divided by the square root of the key dimension in the Transformer's scaled dot-product attention?",
+    "type": "detail",
+    "reference": "The authors suspect that for large values of dk the dot products grow large in magnitude, pushing the softmax function into regions where it has extremely small gradients. To counteract this effect, they scale the dot products by 1/sqrt(dk). Additive attention outperforms unscaled dot-product attention for larger dk.",
+    "reference_chunk_ids": [],
+    "note": "Page 4, Section 3.2.1 Scaled Dot-Product Attention; detail: single explanation from one paragraph.",
+    "evidence": [
+      "While for small values of dk the two mechanisms perform similarly, additive attention outperforms",
+      "dk , the dot products grow large in magnitude, pushing the softmax function into regions where it has",
+      "To counteract this effect, we scale the dot products by"
+    ]
+  },
+  {
+    "question": "How many parallel attention heads does the Transformer use, and what key and value dimensions does each head have?",
+    "type": "detail",
+    "reference": "The Transformer employs h = 8 parallel attention layers, or heads. For each head, dk = dv = dmodel/h = 64. Because of the reduced dimension of each head, the total computational cost is similar to that of single-head attention with full dimensionality.",
+    "reference_chunk_ids": [],
+    "note": "Page 5, Section 3.2.2 Multi-Head Attention; detail: specific hyperparameter values from one paragraph.",
+    "evidence": [
+      "In this work we employ h = 8 parallel attention layers, or heads. For each of these we use",
+      "dk = dv = dmodel /h = 64. Due to the reduced dimension of each head, the total computational cost"
+    ]
+  },
+  {
+    "question": "What three roles does multi-head attention play in the Transformer, and where do queries, keys and values come from?",
+    "type": "detail",
+    "reference": "It is used in encoder-decoder attention layers, where queries come from the previous decoder layer and the memory keys and values come from the encoder output; in encoder self-attention layers, where keys, values and queries all come from the output of the previous encoder layer; and in decoder self-attention layers, where each position attends to all decoder positions up to and including itself (leftward information flow is blocked by masking illegal connections to -inf in the softmax input).",
+    "reference_chunk_ids": [],
+    "note": "Page 5, Section 3.2.3 Applications of Attention in our Model; detail: a three-item list from one section. [reference corrected after independent verification]",
+    "evidence": [
+      "In \"encoder-decoder attention\" layers, the queries come from the previous decoder layer,",
+      "The encoder contains self-attention layers. In a self-attention layer all of the keys, values",
+      "Similarly, self-attention layers in the decoder allow each position in the decoder to attend to"
+    ]
+  },
+  {
+    "question": "What dimensions and activation function does the Transformer's position-wise feed-forward network use for input, output and the inner layer?",
+    "type": "detail",
+    "reference": "The feed-forward network consists of two linear transformations with a ReLU activation in between, applied to each position separately and identically. The input and output dimensionality is dmodel = 512, and the inner layer has dimensionality dff = 2048.",
+    "reference_chunk_ids": [],
+    "note": "Page 5, Section 3.3 Position-wise Feed-Forward Networks; detail: specific values from one paragraph.",
+    "evidence": [
+      "consists of two linear transformations with a ReLU activation in between.",
+      "The dimensionality of input and output is dmodel = 512, and the inner-layer has dimensionality"
+    ]
+  },
+  {
+    "question": "Why did the Transformer authors choose sinusoidal positional encodings rather than learned positional embeddings, given how the two performed?",
+    "type": "detail",
+    "reference": "The two versions produced nearly identical results, so performance did not decide the choice. The authors chose the sinusoidal version because it may allow the model to extrapolate to sequence lengths longer than the ones encountered during training.",
+    "reference_chunk_ids": [],
+    "note": "Page 6, Section 3.5 Positional Encoding; detail: one explanation from one paragraph.",
+    "evidence": [
+      "We also experimented with using learned positional embeddings [9] instead, and found that the two",
+      "versions produced nearly identical results (see Table 3 row (E)). We chose the sinusoidal version",
+      "because it may allow the model to extrapolate to sequence lengths longer than the ones encountered"
+    ]
+  },
+  {
+    "question": "What datasets, sizes and vocabularies did the Transformer authors use to train their English-German and English-French translation models?",
+    "type": "detail",
+    "reference": "For English-German they used the standard WMT 2014 dataset of about 4.5 million sentence pairs, encoded with byte-pair encoding and a shared source-target vocabulary of about 37000 tokens. For English-French they used the significantly larger WMT 2014 dataset of 36M sentences, split into a 32000 word-piece vocabulary.",
+    "reference_chunk_ids": [],
+    "note": "Page 7, Section 5.1 Training Data and Batching; detail: facts from one paragraph.",
+    "evidence": [
+      "We trained on the standard WMT 2014 English-German dataset consisting of about 4.5 million",
+      "target vocabulary of about 37000 tokens. For English-French, we used the significantly larger WMT",
+      "2014 English-French dataset consisting of 36M sentences and split tokens into a 32000 word-piece"
+    ]
+  },
+  {
+    "question": "What step time and total training duration did the Transformer base and big models have on eight P100 GPUs?",
+    "type": "detail",
+    "reference": "On one machine with 8 NVIDIA P100 GPUs, each training step of the base models took about 0.4 seconds, and they were trained for 100,000 steps or 12 hours. The big models had a step time of 1.0 seconds and were trained for 300,000 steps, which took 3.5 days.",
+    "reference_chunk_ids": [],
+    "note": "Page 7, Section 5.2 Hardware and Schedule; detail: numbers from one paragraph.",
+    "evidence": [
+      "the hyperparameters described throughout the paper, each training step took about 0.4 seconds. We",
+      "trained the base models for a total of 100,000 steps or 12 hours. For our big models,(described on the",
+      "bottom line of table 3), step time was 1.0 seconds. The big models were trained for 300,000 steps"
+    ]
+  },
+  {
+    "question": "What Adam settings and warmup steps did the Transformer use, and how did the learning rate change over training?",
+    "type": "detail",
+    "reference": "The Transformer used the Adam optimizer with β1 = 0.9, β2 = 0.98 and ϵ = 10^-9. The learning rate increased linearly for the first warmup_steps = 4000 training steps and then decreased proportionally to the inverse square root of the step number.",
+    "reference_chunk_ids": [],
+    "note": "Page 7, Section 5.3 Optimizer; detail: hyperparameters and schedule from one section.",
+    "evidence": [
+      "We used the Adam optimizer [20] with β1 = 0.9, β2 = 0.98 and ϵ = 10−9 . We varied the learning",
+      "This corresponds to increasing the learning rate linearly for the first warmup_steps training steps,",
+      "and decreasing it thereafter proportionally to the inverse square root of the step number. We used"
+    ]
+  },
+  {
+    "question": "What checkpoint averaging, beam size and length penalty did the Transformer use at inference for translation?",
+    "type": "detail",
+    "reference": "Base models used a single model obtained by averaging the last 5 checkpoints, written at 10-minute intervals, while big models averaged the last 20 checkpoints. Decoding used beam search with a beam size of 4 and length penalty α = 0.6, with maximum output length set to input length + 50, terminating early when possible.",
+    "reference_chunk_ids": [],
+    "note": "Page 8, Section 6.1 Machine Translation; detail: settings from one paragraph.",
+    "evidence": [
+      "For the base models, we used a single model obtained by averaging the last 5 checkpoints, which",
+      "were written at 10-minute intervals. For the big models, we averaged the last 20 checkpoints. We",
+      "used beam search with a beam size of 4 and length penalty α = 0.6 [38]. These hyperparameters"
+    ]
+  },
+  {
+    "question": "What BLEU did the big Transformer set on WMT 2014 English-to-German, and by what margin did it beat earlier models?",
+    "type": "detail",
+    "reference": "The big Transformer outperformed the best previously reported models, including ensembles, by more than 2.0 BLEU, establishing a new state-of-the-art BLEU score of 28.4 on WMT 2014 English-to-German translation.",
+    "reference_chunk_ids": [],
+    "note": "Page 8, Section 6.1 Machine Translation; detail: one result from one paragraph.",
+    "evidence": [
+      "On the WMT 2014 English-to-German translation task, the big transformer model (Transformer (big)",
+      "in Table 2) outperforms the best previously reported models (including ensembles) by more than 2.0",
+      "BLEU, establishing a new state-of-the-art BLEU score of 28.4."
+    ]
+  },
+  {
+    "question": "How did varying the number of attention heads affect Transformer quality when computation was held constant?",
+    "type": "detail",
+    "reference": "Keeping the amount of computation constant while varying the number of heads and the key and value dimensions, single-head attention was 0.9 BLEU worse than the best setting, and quality also dropped off with too many heads.",
+    "reference_chunk_ids": [],
+    "note": "Page 9, Section 6.2 Model Variations (Table 3 rows A); detail: one finding from one paragraph.",
+    "evidence": [
+      "In Table 3 rows (A), we vary the number of attention heads and the attention key and value dimensions,",
+      "keeping the amount of computation constant, as described in Section 3.2.2. While single-head",
+      "attention is 0.9 BLEU worse than the best setting, quality also drops off with too many heads."
+    ]
+  },
+  {
+    "question": "How was the Transformer configured for English constituency parsing, including layers, model dimension, WSJ training sentences and vocabulary sizes?",
+    "type": "detail",
+    "reference": "The authors trained a 4-layer transformer with dmodel = 1024 on the Wall Street Journal portion of the Penn Treebank, about 40K training sentences, and also in a semi-supervised setting. They used a vocabulary of 16K tokens for the WSJ-only setting and 32K tokens for the semi-supervised setting.",
+    "reference_chunk_ids": [],
+    "note": "Page 9, Section 6.3 English Constituency Parsing; detail: setup facts from one paragraph.",
+    "evidence": [
+      "We trained a 4-layer transformer with dmodel = 1024 on the Wall Street Journal (WSJ) portion of the",
+      "Penn Treebank [25], about 40K training sentences. We also trained it in a semi-supervised setting,",
+      "[37]. We used a vocabulary of 16K tokens for the WSJ only setting and a vocabulary of 32K tokens"
+    ]
+  },
+  {
+    "question": "What future research directions do the Transformer authors say they plan to pursue in their conclusion?",
+    "type": "detail",
+    "reference": "They plan to apply attention-based models to other tasks, extend the Transformer to input and output modalities other than text, and investigate local, restricted attention mechanisms to handle large inputs and outputs such as images, audio and video. They also want to make generation less sequential.",
+    "reference_chunk_ids": [],
+    "note": "Page 10, Section 7 Conclusion; detail: a short list from one paragraph.",
+    "evidence": [
+      "We plan to extend the Transformer to problems involving input and output modalities other than text and",
+      "to investigate local, restricted attention mechanisms to efficiently handle large inputs and outputs",
+      "such as images, audio and video. Making generation less sequential is another research goals of ours."
+    ]
+  },
+  {
+    "question": "How does the Transformer stop decoder positions from seeing later positions, and how is that done inside attention?",
+    "type": "cross_paragraph",
+    "reference": "The decoder's self-attention sub-layer is modified to prevent positions from attending to subsequent positions; with output embeddings offset by one position, predictions for position i depend only on known outputs at positions less than i. Inside scaled dot-product attention this is implemented by masking out (setting to −∞) softmax inputs that correspond to illegal connections.",
+    "reference_chunk_ids": [],
+    "note": "Page 3 (Section 3.1 Decoder) and page 5 (Section 3.2.3 third bullet); cross_paragraph: needs the architectural rationale and the implementation from two sections.",
+    "evidence": [
+      "sub-layer in the decoder stack to prevent positions from attending to subsequent positions. This",
+      "masking, combined with fact that the output embeddings are offset by one position, ensures that the",
+      "inside of scaled dot-product attention by masking out (setting to"
+    ]
+  },
+  {
+    "question": "What drawback does the Transformer incur from averaging attention-weighted positions, and how does multi-head attention counteract it?",
+    "type": "cross_paragraph",
+    "reference": "Relating distant positions takes a constant number of operations in the Transformer, but at the cost of reduced effective resolution due to averaging attention-weighted positions. Multi-head attention counteracts this by letting the model jointly attend to information from different representation subspaces at different positions, which averaging in a single attention head inhibits.",
+    "reference_chunk_ids": [],
+    "note": "Page 2 (Section 2 Background) and page 5 (Section 3.2.2); cross_paragraph: drawback stated in Background, remedy explained in the multi-head section.",
+    "evidence": [
+      "reduced to a constant number of operations, albeit at the cost of reduced effective resolution due",
+      "Multi-head attention allows the model to jointly attend to information from different representation",
+      "subspaces at different positions. With a single attention head, averaging inhibits this."
+    ]
+  },
+  {
+    "question": "What dropout placement and rate did the base Transformer use, and what rate did the big English-to-French model use?",
+    "type": "cross_paragraph",
+    "reference": "For the base model, dropout is applied to the output of each sub-layer before it is added to the sub-layer input and normalized, and to the sums of embeddings and positional encodings in both stacks, with Pdrop = 0.1. The big model trained for English-to-French used a dropout rate of 0.1 instead of 0.3.",
+    "reference_chunk_ids": [],
+    "note": "Page 8, Section 5.4 Regularization and Section 6.1 Machine Translation; cross_paragraph: dropout placement/base rate and the big-model exception are in different sections.",
+    "evidence": [
+      "Residual Dropout We apply dropout [33] to the output of each sub-layer, before it is added to the",
+      "positional encodings in both the encoder and decoder stacks. For the base model, we use a rate of",
+      "dropout rate Pdrop = 0.1, instead of 0.3."
+    ]
+  },
+  {
+    "question": "What interpretability benefit do the Transformer authors see in self-attention, and what did attention heads show for 'making'?",
+    "type": "cross_paragraph",
+    "reference": "Self-attention could yield more interpretable models: individual attention heads clearly learn to perform different tasks, and many appear to exhibit behavior related to the syntactic and semantic structure of sentences. In an encoder self-attention example at layer 5 of 6, many heads attend to a distant dependency of the verb 'making', completing the phrase 'making...more difficult'.",
+    "reference_chunk_ids": [],
+    "note": "Page 7 (Section 4) and page 13 (Figure 3 caption in the appendix); cross_paragraph: the claim and the supporting example are in separate places.",
+    "evidence": [
+      "As side benefit, self-attention could yield more interpretable models. We inspect attention distributions",
+      "heads clearly learn to perform different tasks, many appear to exhibit behavior related to the syntactic",
+      "encoder self-attention in layer 5 of 6. Many of the attention heads attend to a distant dependency of"
+    ]
+  },
+  {
+    "question": "Summarize the main idea, results and claimed advantages of the Transformer model proposed in 'Attention Is All You Need'.",
+    "type": "summary",
+    "reference": "The Transformer is a sequence transduction model based solely on attention mechanisms, dispensing with recurrence and convolutions and replacing recurrent layers with multi-headed self-attention. It trains significantly faster and is more parallelizable, achieves new state-of-the-art results on WMT 2014 English-to-German and English-to-French translation, and generalizes to English constituency parsing.",
+    "reference_chunk_ids": [],
+    "note": "Abstract (page 1) and Section 7 Conclusion (page 10); summary: gist of the whole paper.",
+    "evidence": [
+      "based solely on attention mechanisms, dispensing with recurrence and convolutions",
+      "For translation tasks, the Transformer can be trained significantly faster than architectures based",
+      "English-to-French translation tasks, we achieve a new state of the art. In the former task our best"
+    ]
+  },
+  {
+    "question": "Summarize why the Transformer authors favor self-attention over recurrent and convolutional layers, covering the three desiderata they compare.",
+    "type": "summary",
+    "reference": "They compare layer types on three desiderata: computational complexity per layer, the amount of computation that can be parallelized (minimum sequential operations), and the path length between long-range dependencies. A self-attention layer connects all positions with a constant number of sequential operations, whereas a recurrent layer requires O(n), and convolutional layers need stacks of layers to connect all positions.",
+    "reference_chunk_ids": [],
+    "note": "Page 6-7, Section 4 Why Self-Attention; summary: gist of a whole section.",
+    "evidence": [
+      "One is the total computational complexity per layer. Another is the amount of computation that can",
+      "The third is the path length between long-range dependencies in the network. Learning long-range",
+      "executed operations, whereas a recurrent layer requires O(n) sequential operations. In terms of"
+    ]
+  }
+]
