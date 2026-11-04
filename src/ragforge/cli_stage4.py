@@ -117,6 +117,12 @@ def build_agentic_strategy(
     llm_service: LlmService,
     query_engine: QueryEngine | None,
     vector_store: VectorStore | None,
+    merge_score_source: str = "rrf",
+    dense_min_score: float = 0.0,
+    window_order: str = "score",
+    window_chunks: int = 10,
+    window_chars: int = 200,
+    window_show_score: str = "none",
 ) -> AgenticRAGStrategy:
     """Assemble the Agentic RAG strategy from already-built collaborators.
 
@@ -133,6 +139,12 @@ def build_agentic_strategy(
         vector_store,
         config.vector_store.collection_prefix,
         config.strategy.agentic.max_iterations,
+        merge_score_source=merge_score_source,
+        dense_min_score=dense_min_score,
+        window_order=window_order,
+        window_chunks=window_chunks,
+        window_chars=window_chars,
+        window_show_score=window_show_score,
     )
 
 

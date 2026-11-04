@@ -79,7 +79,58 @@ class AgenticRAGStrategy(RAGStrategy):
         vector_store: VectorStore | None,
         collection_prefix: str,
         max_iterations: int,
+        merge_score_source: str = "rrf",
+        dense_min_score: float = 0.0,
+        window_order: str = "score",
+        window_chunks: int = 10,
+        window_chars: int = 200,
+        window_show_score: str = "none",
     ) -> None:
+        # merge_score_source: which score drives the cross-collection
+        # selection/merge in _retrieve_all_collections.
+        #   "rrf"   (default, original behavior): each collection's own
+        #           top MAX_RESULTS_PER_COLLECTION by RRF score, merged and
+        #           sorted by RRF score.
+        #   "dense" (research-only): same hybrid retrieval supplies the
+        #           candidates and their content, but each candidate is
+        #           scored by its raw dense cosine similarity
+        #           (metadata["dense_score"]); candidates below
+        #           dense_min_score are dropped, and the per-collection cap
+        #           and the final merge/sort use cosine instead of RRF.
+        # This is the same idea as CRAGStrategy's confidence_source: RRF is
+        # rank-only, so anything that needs an absolute relevance judgment
+        # should use the raw similarity instead.
+        if merge_score_source not in ("rrf", "dense"):
+            raise ValueError(f"merge_score_source must be 'rrf' or 'dense', got {merge_score_source!r}")
+        self.merge_score_source = merge_score_source
+        self.dense_min_score = dense_min_score
+        # The window of already-collected chunks that _decide_action shows
+        # the LLM when it decides GENERATE vs RETRIEVE (research-only knobs;
+        # the defaults reproduce the original behavior exactly).
+        #   window_order   "score" (default): ordered by .score -- RRF in
+        #                  "rrf" merge mode. "dense": ordered by raw dense
+        #                  cosine (metadata["dense_score"]), same candidates.
+        #   window_chunks  how many chunks the prompt shows (default 10).
+        #   window_chars   how many leading characters of each chunk (default 200).
+        #   window_show_score  "none" (default): chunk text only, original prompt.
+        #                  "rrf": prefix each chunk with [score=<.score, 4 dp>] (RRF under the
+        #                  default rrf merge). "dense": prefix with the raw cosine
+        #                  [score=<metadata dense_score, 2 dp>]. Only the shown number changes.
+        if window_order not in ("score", "dense"):
+            raise ValueError(f"window_order must be 'score' or 'dense', got {window_order!r}")
+        if window_show_score not in ("none", "rrf", "dense"):
+            raise ValueError(f"window_show_score must be 'none', 'rrf' or 'dense', got {window_show_score!r}")
+        self.window_show_score = window_show_score
+        self.window_order = window_order
+        self.window_chunks = window_chunks
+        self.window_chars = window_chars
+        # What the most recent _decide_action prompt window contained
+        # (size + how many chunks came from which collection); read by
+        # evaluation/collect_decision_traces.py.
+        self.last_window: dict = {}
+        # One entry per _retrieve_all_collections() call, cleared at the
+        # start of every execute(); read by evaluation/collect_decision_traces.py.
+        self.retrieval_log: list[dict] = []
         self.dense_retriever = dense_retriever
         self.hybrid_retriever = hybrid_retriever
         self.generator = generator
@@ -97,6 +148,7 @@ class AgenticRAGStrategy(RAGStrategy):
         final answer or retrieve again, up to max_iterations rounds.
         """
         logger.info("Agentic RAG executing query: %s", query)
+        self.retrieval_log = []
 
         # Accumulated context: chunks collected across every round so far.
         all_chunks: list[SearchResult] = []
@@ -207,11 +259,42 @@ class AgenticRAGStrategy(RAGStrategy):
         recent_chunks = recent_chunks or []
         recent_ids = {id(c) for c in recent_chunks}
         older_chunks = [c for c in chunks if id(c) not in recent_ids]
-        summary_chunks = (recent_chunks + older_chunks)[:10]
+        if self.window_order == "dense":
+            # Research-only: same chunks, ordered by raw dense cosine
+            # instead of .score (recent chunks still come first).
+            def _by_cosine(c: SearchResult) -> float:
+                return c.metadata.get("dense_score", -1.0)
+
+            recent_chunks = sorted(recent_chunks, key=_by_cosine, reverse=True)
+            older_chunks = sorted(older_chunks, key=_by_cosine, reverse=True)
+        summary_chunks = (recent_chunks + older_chunks)[: self.window_chunks]
+
+        by_collection: dict[str, int] = {}
+        for c in summary_chunks:
+            name = c.metadata.get("source_collection") or "unknown"
+            by_collection[name] = by_collection.get(name, 0) + 1
+        self.last_window = {
+            "size": len(summary_chunks),
+            "by_collection": by_collection,
+            "order": self.window_order,
+            "chunks": self.window_chunks,
+            "chars": self.window_chars,
+            "show_score": self.window_show_score,
+            "missing_score": sum(
+                1 for c in summary_chunks
+                if self.window_show_score == "dense" and c.metadata.get("dense_score") is None
+            ),
+        }
 
         context_summary = "\n---\n".join(
-            c.content[:200] + "..." if len(c.content) > 200 else c.content
+            self._score_label(c)
+            + (c.content[: self.window_chars] + "..." if len(c.content) > self.window_chars else c.content)
             for c in summary_chunks
+        )
+        score_note = (
+            " (each passage is prefixed with its retrieval score in square brackets)"
+            if self.window_show_score != "none"
+            else ""
         )
 
         tried_queries = "\n".join(f"- {q}" for q in used_queries) if used_queries else "(none yet)"
@@ -224,7 +307,7 @@ Current iteration: {iteration}
 Queries already tried (do not repeat any of these; if you choose RETRIEVE, new_query must target information genuinely missing from what's below, not restate a query already on this list):
 {tried_queries}
 
-Summary of information collected so far:
+Summary of information collected so far:{score_note}
 {context_summary}
 
 Choose one of the following actions:
@@ -244,6 +327,16 @@ Reply using exactly the following JSON format (no other content):
         except Exception as e:
             logger.warning("Agent decision failed: %s, defaulting to GENERATE", e)
             return AgentDecision(Action.GENERATE, None)
+
+    def _score_label(self, chunk: SearchResult) -> str:
+        """Research-only: the score prefix shown before a chunk in the decision
+        prompt (empty by default, so the original prompt is unchanged)."""
+        if self.window_show_score == "rrf":
+            return f"[score={chunk.score:.4f}] "
+        if self.window_show_score == "dense":
+            d = chunk.metadata.get("dense_score")
+            return f"[score={d:.2f}] " if d is not None else "[score=n/a] "
+        return ""
 
     def _parse_decision(self, response: str) -> AgentDecision:
         """Parse the LLM's JSON reply into an AgentDecision. Falls back
@@ -367,6 +460,13 @@ Reply using exactly the following JSON format (no other content):
         10 accumulated chunks is at least biased toward the
         highest-scoring candidates rather than whatever order
         list_collections() happened to return collections in.
+
+        With merge_score_source="dense" (research-only, see __init__),
+        the "score" above is the raw dense cosine similarity instead of
+        the RRF score, and candidates under dense_min_score are dropped
+        before the per-collection cap is applied -- the rank-only RRF
+        score can't tell a collection's best-of-a-bad-lot top result
+        from a genuinely relevant one, cosine can.
         """
         if self.vector_store is None:
             return self.hybrid_retriever.retrieve(query, collection).results
@@ -379,6 +479,7 @@ Reply using exactly the following JSON format (no other content):
 
         all_results: list[SearchResult] = []
         seen: set[str] = set()
+        call_log: dict = {"query": query, "mode": self.merge_score_source, "collections": []}
         for col in cols:
             short_name = (
                 col[len(self.collection_prefix) :]
@@ -386,18 +487,58 @@ Reply using exactly the following JSON format (no other content):
                 else col
             )
             try:
-                collection_results = sorted(
-                    self.hybrid_retriever.retrieve(query, short_name).results,
-                    key=lambda r: r.score,
-                    reverse=True,
-                )[: self.MAX_RESULTS_PER_COLLECTION]
+                candidates = self.hybrid_retriever.retrieve(query, short_name).results
+                if self.merge_score_source == "dense":
+                    # Re-score by raw dense cosine, drop weak candidates,
+                    # then apply the per-collection cap by cosine.
+                    rescored: list[SearchResult] = []
+                    for r in candidates:
+                        dense_score = r.metadata.get("dense_score")
+                        if dense_score is None or dense_score < self.dense_min_score:
+                            continue
+                        rescored.append(
+                            SearchResult(
+                                chunk_id=r.chunk_id,
+                                content=r.content,
+                                score=dense_score,
+                                metadata=r.metadata,
+                            )
+                        )
+                    collection_results = sorted(rescored, key=lambda r: r.score, reverse=True)[
+                        : self.MAX_RESULTS_PER_COLLECTION
+                    ]
+                else:
+                    collection_results = sorted(
+                        candidates,
+                        key=lambda r: r.score,
+                        reverse=True,
+                    )[: self.MAX_RESULTS_PER_COLLECTION]
+                call_log["collections"].append(
+                    {
+                        "collection": col,
+                        "candidates": len(candidates),
+                        "kept": len(collection_results),
+                        "top_score": round(collection_results[0].score, 4) if collection_results else None,
+                    }
+                )
                 for s in collection_results:
                     key = s.content.strip()
                     if key not in seen:
                         seen.add(key)
-                        all_results.append(s)
+                        # Tag where the chunk came from (for the window
+                        # composition log); scoring is unchanged.
+                        all_results.append(
+                            SearchResult(
+                                chunk_id=s.chunk_id,
+                                content=s.content,
+                                score=s.score,
+                                metadata={**s.metadata, "source_collection": short_name},
+                            )
+                        )
             except Exception:
                 logger.debug("Collection %s failed to retrieve, skipping", col, exc_info=True)
 
         all_results.sort(key=lambda s: s.score, reverse=True)
+        call_log["returned"] = len(all_results)
+        self.retrieval_log.append(call_log)
         return all_results

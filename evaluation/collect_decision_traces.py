@@ -79,10 +79,28 @@ from ragforge.store.milvus_vector_store import MilvusVectorStore  # noqa: E402
 STRATEGY_CHOICES = ["self_rag", "crag", "adaptive", "agentic"]
 
 
-def build_everything(config: RagForgeConfig):
+def build_everything(
+    config: RagForgeConfig,
+    crag_confidence_source: str = "dense",
+    agentic_merge_source: str = "rrf",
+    agentic_dense_min_score: float = 0.0,
+    agentic_window_order: str = "score",
+    agentic_window_chunks: int = 10,
+    agentic_window_chars: int = 200,
+    agentic_window_show_score: str = "none",
+):
     """Build every collaborator + every Stage 3/4 strategy, exactly the
     way cli_stage3.py / cli_stage4.py's main() does. Returns a dict with
     everything a run_<strategy>() function below might need.
+
+    crag_confidence_source: research-only override threaded through to
+    build_crag_strategy() -- "dense" (default, matches production) or
+    "hybrid" (RRF-fused, for the RRF-vs-dense confidence comparison).
+
+    agentic_merge_source / agentic_dense_min_score: research-only overrides
+    threaded through to build_agentic_strategy() -- "rrf" (default, the
+    original cross-collection merge) or "dense" (raw cosine score + a
+    minimum-score filter), for the RRF-vs-dense cross-collection comparison.
     """
     embedding_service = EmbeddingService(config.embedding)
     vector_store = MilvusVectorStore(config.vector_store)
@@ -108,13 +126,20 @@ def build_everything(config: RagForgeConfig):
         config, hybrid_retriever, shared_generator, llm_service, query_engine
     )
     crag_strategy = build_crag_strategy(
-        config, dense_retriever, hybrid_retriever, shared_generator, query_engine
+        config, dense_retriever, hybrid_retriever, shared_generator, query_engine,
+        confidence_source=crag_confidence_source,
     )
     adaptive_strategy = build_adaptive_strategy(
         config, llm_service, dense_retriever, hybrid_retriever, shared_generator, query_engine, self_rag_strategy
     )
     agentic_strategy = build_agentic_strategy(
-        config, dense_retriever, hybrid_retriever, shared_generator, llm_service, query_engine, vector_store
+        config, dense_retriever, hybrid_retriever, shared_generator, llm_service, query_engine, vector_store,
+        merge_score_source=agentic_merge_source,
+        dense_min_score=agentic_dense_min_score,
+        window_order=agentic_window_order,
+        window_chunks=agentic_window_chunks,
+        window_chars=agentic_window_chars,
+        window_show_score=agentic_window_show_score,
     )
 
     return {
@@ -123,6 +148,7 @@ def build_everything(config: RagForgeConfig):
         "crag": crag_strategy,
         "adaptive": adaptive_strategy,
         "agentic": agentic_strategy,
+        "vector_store": vector_store,
     }
 
 
@@ -212,6 +238,9 @@ def run_agentic(strategy, query: str, collection: str) -> tuple[object, dict]:
                 "action": decision.action.value,
                 "new_query": decision.new_query,
                 "chunks_seen": len(chunks),
+                # What the decision prompt's chunk window contained
+                # (size, per-collection counts, ordering, chunk/char limits).
+                "window": dict(getattr(strategy, "last_window", {}) or {}),
             }
         )
         return decision
@@ -220,6 +249,10 @@ def run_agentic(strategy, query: str, collection: str) -> tuple[object, dict]:
         gen_result = strategy.execute(query, collection)
 
     trace["num_rounds"] = len(trace["rounds"])
+    # Per-retrieval-call, per-collection candidate/kept counts (see
+    # AgenticRAGStrategy.retrieval_log) -- shows how much of each round's
+    # pool came from which collection.
+    trace["retrieval_log"] = list(getattr(strategy, "retrieval_log", []))
     return gen_result, trace
 
 
@@ -245,6 +278,43 @@ def main() -> None:
         "for every strategy except agentic).",
     )
     parser.add_argument("--label", default=None, help="Optional suffix for the output filename, e.g. 'post_fix'.")
+    parser.add_argument(
+        "--crag-confidence-source",
+        choices=["dense", "hybrid"],
+        default="dense",
+        help="Research-only override for CRAG's confidence signal: 'dense' (default, current production "
+        "design) or 'hybrid' (RRF-fused score, matching an earlier/Java design) -- for the RRF-vs-dense "
+        "confidence comparison. Only affects --strategy crag; ignored for every other strategy.",
+    )
+    parser.add_argument(
+        "--agentic-merge-source",
+        choices=["rrf", "dense"],
+        default="rrf",
+        help="Research-only override for Agentic RAG's cross-collection merge: 'rrf' (default, original "
+        "behavior: per-collection top-5 by RRF score) or 'dense' (raw cosine score, with "
+        "--agentic-dense-min-score as a minimum). Only affects --strategy agentic.",
+    )
+    parser.add_argument(
+        "--agentic-dense-min-score",
+        type=float,
+        default=0.0,
+        help="Minimum raw dense cosine score a chunk needs to survive the cross-collection merge when "
+        "--agentic-merge-source dense. Ignored in rrf mode. Pick it with evaluation/calibrate_dense_threshold.py.",
+    )
+    parser.add_argument(
+        "--agentic-window-order",
+        choices=["score", "dense"],
+        default="score",
+        help="Research-only: how the chunk window shown to the Agent's GENERATE/RETRIEVE decision is "
+        "ordered. 'score' (default, original): by .score (RRF in rrf merge mode); 'dense': by raw dense cosine.",
+    )
+    parser.add_argument("--agentic-window-chunks", type=int, default=10,
+                        help="Research-only: how many chunks the decision prompt shows (default 10, original).")
+    parser.add_argument("--agentic-window-chars", type=int, default=200,
+                        help="Research-only: leading characters shown per chunk in the decision prompt (default 200, original).")
+    parser.add_argument("--agentic-window-show-score", choices=["none", "rrf", "dense"], default="none",
+                        help="Research-only: prefix each chunk in the decision prompt with its score "
+                        "(rrf = .score at 4 dp, dense = raw cosine at 2 dp; default none, original).")
     parser.add_argument("--out", default=None, help="Defaults to evaluation/reports/decision_traces_<strategy>[_<label>].json.")
     args = parser.parse_args()
 
@@ -257,7 +327,16 @@ def main() -> None:
         out_path = PROJECT_ROOT / "evaluation" / "reports" / f"decision_traces_{args.strategy}{suffix}.json"
 
     config = RagForgeConfig.load(args.config)
-    built = build_everything(config)
+    built = build_everything(
+        config,
+        crag_confidence_source=args.crag_confidence_source,
+        agentic_merge_source=args.agentic_merge_source,
+        agentic_dense_min_score=args.agentic_dense_min_score,
+        agentic_window_order=args.agentic_window_order,
+        agentic_window_chunks=args.agentic_window_chunks,
+        agentic_window_chars=args.agentic_window_chars,
+        agentic_window_show_score=args.agentic_window_show_score,
+    )
     strategy = built[args.strategy]
     run_fn = RUNNERS[args.strategy]
 
@@ -265,6 +344,12 @@ def main() -> None:
     print(f"Indexing {args.document} ...")
     collection = built["naive_pipeline"].index_document(args.document)
     print(f"Indexed. Collection: {collection}")
+
+    try:
+        store_collections = built["vector_store"].list_collections()
+    except Exception:
+        store_collections = None
+    print(f"Collections in the vector store: {store_collections}")
 
     with open(args.questions, "r", encoding="utf-8") as f:
         eval_items = json.load(f)
@@ -284,6 +369,12 @@ def main() -> None:
                 # declining/abstaining, not producing any specific text.
                 "answerable": "reference" in item and item["reference"] is not None,
                 "answer": gen_result.answer,
+                # Captured the same way collect_predictions.py does it, so
+                # convert_traces_to_predictions.py can turn this record into
+                # a RAGAS-scorable prediction (RAGAS's faithfulness /
+                # answer_relevancy / context_precision / context_recall all
+                # need the actual retrieved text, not just the final answer).
+                "retrieved_contexts": [c.content for c in gen_result.retrieved_chunks],
                 "trace": trace,
             }
         )
@@ -291,7 +382,25 @@ def main() -> None:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with out_path.open("w", encoding="utf-8") as f:
         json.dump(
-            {"strategy": args.strategy, "document": args.document, "collection": collection, "records": records},
+            {
+                "strategy": args.strategy,
+                "document": args.document,
+                "collection": collection,
+                # Provenance: what was in the vector store and which
+                # research-only settings were active for this run.
+                "vector_store_collections": store_collections,
+                "settings": {
+                    "agentic_merge_source": args.agentic_merge_source,
+                    "agentic_dense_min_score": args.agentic_dense_min_score,
+                    "agentic_window_order": args.agentic_window_order,
+                    "agentic_window_chunks": args.agentic_window_chunks,
+                    "agentic_window_chars": args.agentic_window_chars,
+                    "agentic_window_show_score": args.agentic_window_show_score,
+                    "crag_confidence_source": args.crag_confidence_source,
+                    "score_threshold": config.retriever.score_threshold,
+                },
+                "records": records,
+            },
             f,
             ensure_ascii=False,
             indent=2,

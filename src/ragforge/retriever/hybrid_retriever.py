@@ -244,12 +244,24 @@ class HybridRetriever(Retriever):
             if sparse_rank is not None:
                 rrf_score += sparse_weight * (1 / (self.rrf_k + sparse_rank))
 
+            # RRF overwrites .score with a rank-only value, so the raw
+            # dense cosine similarity would otherwise be lost. Keep a copy
+            # in metadata["dense_score"] for callers that need an
+            # absolute-relevance signal (e.g. AgenticRAGStrategy's
+            # merge_score_source="dense" mode). by_chunk_id is filled from
+            # dense_results first, so when dense_rank is not None,
+            # original.score IS the dense cosine score. Nothing that only
+            # reads .score / .content is affected.
+            metadata = original.metadata
+            if dense_rank is not None:
+                metadata = {**original.metadata, "dense_score": original.score}
+
             fused.append(
                 SearchResult(
                     chunk_id=original.chunk_id,
                     content=original.content,
                     score=rrf_score,
-                    metadata=original.metadata,
+                    metadata=metadata,
                 )
             )
 

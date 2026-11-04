@@ -66,8 +66,31 @@ def expand_parent_child(
 
         existing = expanded_by_key.get(key)
         if existing is None or r.score > existing.score:
-            expanded_by_key[key] = SearchResult(
+            merged = SearchResult(
                 chunk_id=chunk_id, content=content, score=r.score, metadata=r.metadata
             )
+        else:
+            merged = existing
+
+        # If HybridRetriever stashed raw dense cosine scores in metadata
+        # ("dense_score"), keep the best one among the collapsed children,
+        # not just the one belonging to the highest-RRF child. A no-op
+        # when no child carries "dense_score".
+        dense_vals = [
+            v
+            for v in (
+                r.metadata.get("dense_score"),
+                existing.metadata.get("dense_score") if existing is not None else None,
+            )
+            if v is not None
+        ]
+        if dense_vals and merged.metadata.get("dense_score") != max(dense_vals):
+            merged = SearchResult(
+                chunk_id=merged.chunk_id,
+                content=merged.content,
+                score=merged.score,
+                metadata={**merged.metadata, "dense_score": max(dense_vals)},
+            )
+        expanded_by_key[key] = merged
 
     return sorted(expanded_by_key.values(), key=lambda r: r.score, reverse=True)

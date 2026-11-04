@@ -34,3 +34,7 @@ evaluation/documents/
 # Ad hoc local test fixtures -- created for manual testing during
 # development, not part of the project itself.
 test_doc.md
+
+# Local-only: AI-assistant working files and third-party source PDFs
+Claude outputs/
+evaluation/documents_new/
