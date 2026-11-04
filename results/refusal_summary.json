@@ -1,0 +1,238 @@
+{
+  "labels": "anthropic_claude-haiku-4-5",
+  "rates": {
+    "baseline": {
+      "answerable": [
+        18,
+        50
+      ],
+      "near": [
+        54,
+        54
+      ],
+      "near_A": [
+        30,
+        30
+      ],
+      "near_B": [
+        24,
+        24
+      ],
+      "far": [
+        12,
+        15
+      ],
+      "J": [
+        0.64,
+        0.5,
+        0.76
+      ]
+    },
+    "generation_v2": {
+      "answerable": [
+        11,
+        50
+      ],
+      "near": [
+        54,
+        54
+      ],
+      "near_A": [
+        30,
+        30
+      ],
+      "near_B": [
+        24,
+        24
+      ],
+      "far": [
+        11,
+        15
+      ],
+      "J": [
+        0.78,
+        0.6599999999999999,
+        0.88
+      ]
+    },
+    "self_rag": {
+      "answerable": [
+        6,
+        50
+      ],
+      "near": [
+        54,
+        54
+      ],
+      "near_A": [
+        30,
+        30
+      ],
+      "near_B": [
+        24,
+        24
+      ],
+      "far": [
+        11,
+        15
+      ],
+      "J": [
+        0.88,
+        0.78,
+        0.96
+      ]
+    },
+    "crag": {
+      "answerable": [
+        6,
+        50
+      ],
+      "near": [
+        54,
+        54
+      ],
+      "near_A": [
+        30,
+        30
+      ],
+      "near_B": [
+        24,
+        24
+      ],
+      "far": [
+        13,
+        15
+      ],
+      "J": [
+        0.88,
+        0.78,
+        0.96
+      ]
+    },
+    "adaptive": {
+      "answerable": [
+        3,
+        50
+      ],
+      "near": [
+        53,
+        54
+      ],
+      "near_A": [
+        29,
+        30
+      ],
+      "near_B": [
+        24,
+        24
+      ],
+      "far": [
+        13,
+        15
+      ],
+      "J": [
+        0.9214814814814816,
+        0.8429629629629629,
+        0.9814814814814815
+      ]
+    },
+    "agentic_rrf": {
+      "answerable": [
+        6,
+        50
+      ],
+      "near": [
+        54,
+        54
+      ],
+      "near_A": [
+        30,
+        30
+      ],
+      "near_B": [
+        24,
+        24
+      ],
+      "far": [
+        13,
+        15
+      ],
+      "J": [
+        0.88,
+        0.78,
+        0.96
+      ]
+    },
+    "agentic_dense": {
+      "answerable": [
+        4,
+        50
+      ],
+      "near": [
+        53,
+        54
+      ],
+      "near_A": [
+        30,
+        30
+      ],
+      "near_B": [
+        23,
+        24
+      ],
+      "far": [
+        9,
+        15
+      ],
+      "J": [
+        0.9014814814814816,
+        0.8044444444444444,
+        0.98
+      ]
+    }
+  },
+  "contrasts": {
+    "K1 false refusal: CRAG - Stage 2": {
+      "diff": -0.1,
+      "lo": -0.22,
+      "hi": 0.02,
+      "n": 50,
+      "ci_excludes_0": false
+    },
+    "K2 near refusal: CRAG - Stage 2": {
+      "diff": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 54,
+      "ci_excludes_0": false
+    },
+    "K3 false refusal: Agentic(RRF) - Stage 2": {
+      "diff": -0.1,
+      "lo": -0.24,
+      "hi": 0.04,
+      "n": 50,
+      "ci_excludes_0": false
+    },
+    "K4 near refusal: Agentic(RRF) - Stage 2": {
+      "diff": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 54,
+      "ci_excludes_0": false
+    },
+    "K5 near refusal: Agentic(dense) - Agentic(RRF)": {
+      "diff": -0.018518518518518517,
+      "lo": -0.05555555555555555,
+      "hi": 0.0,
+      "n": 54,
+      "ci_excludes_0": false
+    },
+    "K6 near refusal: Stage 2 - Stage 1": {
+      "diff": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 54,
+      "ci_excludes_0": false
+    }
+  }
+}

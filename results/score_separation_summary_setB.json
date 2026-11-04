@@ -1,0 +1,56 @@
+{
+  "n_answerable": 50,
+  "n_unanswerable": 24,
+  "words": {
+    "answerable_mean": 15.6,
+    "setB_mean": 17.5,
+    "length_only_auroc": 0.3233333333333333
+  },
+  "rrf_top1_raw": {
+    "auroc": 0.5479166666666667,
+    "ci95": [
+      0.3978958333333333,
+      0.6846145833333331
+    ]
+  },
+  "dense_top1_raw": {
+    "auroc": 0.8425,
+    "ci95": [
+      0.75,
+      0.9208333333333333
+    ]
+  },
+  "dense_minus_rrf_top1": {
+    "diff": 0.2945833333333333,
+    "ci95": [
+      0.13124999999999998,
+      0.4600104166666666
+    ]
+  },
+  "accept95": {
+    "rrf_top1_raw": {
+      "threshold": 0.015212150433944069,
+      "answerable_kept": 0.96,
+      "unanswerable_rejected": 0.08333333333333333
+    },
+    "dense_top1_raw": {
+      "threshold": 0.6999942064285278,
+      "answerable_kept": 0.96,
+      "unanswerable_rejected": 0.5
+    }
+  },
+  "per_doc": {
+    "ccby": {
+      "rrf_top1_raw": 0.62109375,
+      "dense_top1_raw": 0.7578125
+    },
+    "cdc": {
+      "rrf_top1_raw": 0.625,
+      "dense_top1_raw": 0.9117647058823529
+    },
+    "ragbench": {
+      "rrf_top1_raw": 0.39705882352941174,
+      "dense_top1_raw": 0.8897058823529411
+    }
+  }
+}

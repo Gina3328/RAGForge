@@ -1,0 +1,253 @@
+{
+  "arm_means": {
+    "original (claude-haiku-4-5)": {
+      "baseline": {
+        "faithfulness": 0.8212070097228766,
+        "answer_relevancy": 0.494967707536144,
+        "context_precision": 0.3154616012784266,
+        "context_recall": 0.5330882352941176
+      },
+      "generation_v2": {
+        "faithfulness": 0.8320575768186061,
+        "answer_relevancy": 0.5521710375370247,
+        "context_precision": 0.5187908496265115,
+        "context_recall": 0.543096405228758
+      },
+      "self_rag": {
+        "faithfulness": 0.9140953208627024,
+        "answer_relevancy": 0.6464888099555429,
+        "context_precision": 0.4476150347103072,
+        "context_recall": 0.7459763071895424
+      },
+      "crag": {
+        "faithfulness": 0.9079236121875188,
+        "answer_relevancy": 0.6439666025105647,
+        "context_precision": 0.4095352801803043,
+        "context_recall": 0.7608864379084967
+      },
+      "adaptive": {
+        "faithfulness": 0.822355272930646,
+        "answer_relevancy": 0.6749999425330641,
+        "context_precision": 0.3421720883362917,
+        "context_recall": 0.7669117647058824
+      },
+      "agentic": {
+        "faithfulness": 0.8692352818320311,
+        "answer_relevancy": 0.6378874664469417,
+        "context_precision": 0.18482659110713773,
+        "context_recall": 0.7612540849673203
+      },
+      "agentic_merge_rrf": {
+        "faithfulness": 0.9022205490229872,
+        "answer_relevancy": 0.6615430130021388,
+        "context_precision": 0.19854452080541182,
+        "context_recall": 0.7877042483660132
+      },
+      "agentic_merge_dense": {
+        "faithfulness": 0.905585471311801,
+        "answer_relevancy": 0.6675425462254413,
+        "context_precision": 0.3211444005747301,
+        "context_recall": 0.7076797385620915
+      }
+    },
+    "openai_gpt-6.1-sol_re-low": {
+      "baseline": {
+        "faithfulness": 0.8521987153961635,
+        "answer_relevancy": 0.5156289199289245,
+        "context_precision": 0.5847817946220776,
+        "context_recall": 0.4169730392156863
+      },
+      "generation_v2": {
+        "faithfulness": 0.8962772934317279,
+        "answer_relevancy": 0.6201196555984746,
+        "context_precision": 0.8799700435057677,
+        "context_recall": 0.46640114379084974
+      },
+      "self_rag": {
+        "faithfulness": 0.9075592334180252,
+        "answer_relevancy": 0.6554228433308288,
+        "context_precision": 0.6478642220390355,
+        "context_recall": 0.6190767973856209
+      },
+      "crag": {
+        "faithfulness": 0.905423394000125,
+        "answer_relevancy": 0.6973922341568972,
+        "context_precision": 0.6098679152975722,
+        "context_recall": 0.6354166666666667
+      },
+      "adaptive": {
+        "faithfulness": 0.8367770585725115,
+        "answer_relevancy": 0.6934391777959847,
+        "context_precision": 0.5417434020272076,
+        "context_recall": 0.6595179738562091
+      },
+      "agentic": {
+        "faithfulness": 0.8921637110431843,
+        "answer_relevancy": 0.6702717233171894,
+        "context_precision": 0.271465645732696,
+        "context_recall": 0.621732026143791
+      },
+      "agentic_merge_rrf": {
+        "faithfulness": 0.886989260059113,
+        "answer_relevancy": 0.6887953555123955,
+        "context_precision": 0.2849211303104506,
+        "context_recall": 0.6348039215686274
+      },
+      "agentic_merge_dense": {
+        "faithfulness": 0.9119340966245586,
+        "answer_relevancy": 0.6808879723021555,
+        "context_precision": 0.5223034095102289,
+        "context_recall": 0.5372753267973857
+      }
+    }
+  },
+  "rank_agreement": {
+    "openai_gpt-6.1-sol_re-low": {
+      "faithfulness": 0.8857142857142857,
+      "answer_relevancy": 0.7142857142857143,
+      "context_precision": 0.9428571428571428,
+      "context_recall": 0.9428571428571428
+    }
+  },
+  "question_agreement": {
+    "openai_gpt-6.1-sol_re-low": {
+      "faithfulness": {
+        "spearman": 0.363037687504703,
+        "n": 400
+      },
+      "answer_relevancy": {
+        "spearman": 0.7568431193964258,
+        "n": 400
+      },
+      "context_precision": {
+        "spearman": 0.5397945619169334,
+        "n": 397
+      },
+      "context_recall": {
+        "spearman": 0.7383188514716577,
+        "n": 400
+      }
+    }
+  },
+  "contrasts": {
+    "C1 Stage 2 vs Stage 1: context_precision": {
+      "original (claude-haiku-4-5)": {
+        "diff": 0.2023333333154278,
+        "lo": 0.09566666665939999,
+        "hi": 0.31299999997208333,
+        "n": 50,
+        "ci_excludes_0": true
+      },
+      "openai_gpt-6.1-sol_re-low": {
+        "diff": 0.2915555555288399,
+        "lo": 0.19661111109482263,
+        "hi": 0.3964444444074713,
+        "n": 50,
+        "ci_excludes_0": true
+      },
+      "verdict": "ROBUST"
+    },
+    "C2 Agentic vs Stage 2: context_precision": {
+      "original (claude-haiku-4-5)": {
+        "diff": -0.3318393179851569,
+        "lo": -0.4649069057334691,
+        "hi": -0.20876110742137455,
+        "n": 50,
+        "ci_excludes_0": true
+      },
+      "openai_gpt-6.1-sol_re-low": {
+        "diff": -0.6065180771487458,
+        "lo": -0.7014743820415699,
+        "hi": -0.500481922593838,
+        "n": 50,
+        "ci_excludes_0": true
+      },
+      "verdict": "ROBUST"
+    },
+    "C3 Agentic vs Stage 2: context_recall": {
+      "original (claude-haiku-4-5)": {
+        "diff": 0.21766666666666665,
+        "lo": 0.09333333333333334,
+        "hi": 0.33666666666666656,
+        "n": 50,
+        "ci_excludes_0": true
+      },
+      "openai_gpt-6.1-sol_re-low": {
+        "diff": 0.155,
+        "lo": 0.04333333333333334,
+        "hi": 0.2733333333333333,
+        "n": 50,
+        "ci_excludes_0": true
+      },
+      "verdict": "ROBUST"
+    },
+    "C4 CRAG vs Stage 2: context_recall": {
+      "original (claude-haiku-4-5)": {
+        "diff": 0.21600000000000003,
+        "lo": 0.10166666666666664,
+        "hi": 0.32666666666666666,
+        "n": 50,
+        "ci_excludes_0": true
+      },
+      "openai_gpt-6.1-sol_re-low": {
+        "diff": 0.16833333333333336,
+        "lo": 0.06333333333333334,
+        "hi": 0.27666666666666667,
+        "n": 50,
+        "ci_excludes_0": true
+      },
+      "verdict": "ROBUST"
+    },
+    "C5 CRAG vs Stage 2: faithfulness": {
+      "original (claude-haiku-4-5)": {
+        "diff": 0.07674538682403133,
+        "lo": 0.025214001542646032,
+        "hi": 0.12445714728579178,
+        "n": 50,
+        "ci_excludes_0": true
+      },
+      "openai_gpt-6.1-sol_re-low": {
+        "diff": 0.010413771071362932,
+        "lo": -0.04717534767023259,
+        "hi": 0.06616536390577311,
+        "n": 50,
+        "ci_excludes_0": false
+      },
+      "verdict": "SAME SIGN, NOT SIGNIFICANT UNDER A NEW JUDGE"
+    },
+    "C6 Self-RAG vs Stage 2: faithfulness": {
+      "original (claude-haiku-4-5)": {
+        "diff": 0.08294336130932577,
+        "lo": 0.03247312772080574,
+        "hi": 0.13797252487395845,
+        "n": 50,
+        "ci_excludes_0": true
+      },
+      "openai_gpt-6.1-sol_re-low": {
+        "diff": 0.01165341211935639,
+        "lo": -0.03548488096011316,
+        "hi": 0.05944185896662679,
+        "n": 50,
+        "ci_excludes_0": false
+      },
+      "verdict": "SAME SIGN, NOT SIGNIFICANT UNDER A NEW JUDGE"
+    },
+    "C7 Agentic(dense merge) vs Agentic(RRF merge): context_precision": {
+      "original (claude-haiku-4-5)": {
+        "diff": 0.12090346597771848,
+        "lo": 0.029281294964961613,
+        "hi": 0.2134989233300056,
+        "n": 50,
+        "ci_excludes_0": true
+      },
+      "openai_gpt-6.1-sol_re-low": {
+        "diff": 0.22960972290264153,
+        "lo": 0.13868385024419044,
+        "hi": 0.3236525157386114,
+        "n": 47,
+        "ci_excludes_0": true
+      },
+      "verdict": "ROBUST"
+    }
+  }
+}

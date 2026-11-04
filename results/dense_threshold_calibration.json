@@ -1,0 +1,107 @@
+{
+  "collections": [
+    "readme",
+    "test_doc",
+    "ccby_4_0_legalcode",
+    "cdc_program_evaluation_framework_2024",
+    "ragbench_2407_11005v2"
+  ],
+  "per_doc": {
+    "ccby": {
+      "target_collection": "ccby_4_0_legalcode",
+      "n_questions": 16,
+      "target_top1_min": 0.6957,
+      "target_top1_median": 0.75
+    },
+    "cdc": {
+      "target_collection": "cdc_program_evaluation_framework_2024",
+      "n_questions": 17,
+      "target_top1_min": 0.7064,
+      "target_top1_median": 0.8003
+    },
+    "ragbench": {
+      "target_collection": "ragbench_2407_11005v2",
+      "n_questions": 17,
+      "target_top1_min": 0.6655,
+      "target_top1_median": 0.7432
+    }
+  },
+  "grid": [
+    {
+      "threshold": 0.3,
+      "target_top1_kept_pct": 100.0,
+      "target_top5_kept_pct": 100.0,
+      "foreign_kept_pct": 100.0
+    },
+    {
+      "threshold": 0.35,
+      "target_top1_kept_pct": 100.0,
+      "target_top5_kept_pct": 100.0,
+      "foreign_kept_pct": 100.0
+    },
+    {
+      "threshold": 0.4,
+      "target_top1_kept_pct": 100.0,
+      "target_top5_kept_pct": 100.0,
+      "foreign_kept_pct": 100.0
+    },
+    {
+      "threshold": 0.45,
+      "target_top1_kept_pct": 100.0,
+      "target_top5_kept_pct": 100.0,
+      "foreign_kept_pct": 98.7
+    },
+    {
+      "threshold": 0.5,
+      "target_top1_kept_pct": 100.0,
+      "target_top5_kept_pct": 100.0,
+      "foreign_kept_pct": 92.8
+    },
+    {
+      "threshold": 0.55,
+      "target_top1_kept_pct": 100.0,
+      "target_top5_kept_pct": 100.0,
+      "foreign_kept_pct": 74.3
+    },
+    {
+      "threshold": 0.6,
+      "target_top1_kept_pct": 100.0,
+      "target_top5_kept_pct": 100.0,
+      "foreign_kept_pct": 45.8
+    },
+    {
+      "threshold": 0.65,
+      "target_top1_kept_pct": 100.0,
+      "target_top5_kept_pct": 97.2,
+      "foreign_kept_pct": 19.9
+    },
+    {
+      "threshold": 0.7,
+      "target_top1_kept_pct": 94.0,
+      "target_top5_kept_pct": 68.8,
+      "foreign_kept_pct": 7.2
+    },
+    {
+      "threshold": 0.75,
+      "target_top1_kept_pct": 58.0,
+      "target_top5_kept_pct": 26.8,
+      "foreign_kept_pct": 0.8
+    },
+    {
+      "threshold": 0.8,
+      "target_top1_kept_pct": 28.0,
+      "target_top5_kept_pct": 5.6,
+      "foreign_kept_pct": 0.0
+    },
+    {
+      "threshold": 0.85,
+      "target_top1_kept_pct": 4.0,
+      "target_top5_kept_pct": 0.8,
+      "foreign_kept_pct": 0.0
+    }
+  ],
+  "rule": "largest threshold keeping >= 95% of answerable questions' target-collection top-1 candidate",
+  "recommended_threshold": 0.65,
+  "n_target_top1": 50,
+  "n_foreign_chunks": 1000
+}

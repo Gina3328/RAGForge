@@ -1,0 +1,704 @@
+{
+  "docs": [
+    "attention",
+    "nist_ai_rmf",
+    "ipcc_spm",
+    "alice",
+    "who_handhygiene",
+    "roomba",
+    "tootsie"
+  ],
+  "complete": {
+    "attention|baseline": 20,
+    "attention|generation_v2": 20,
+    "attention|self_rag": 20,
+    "attention|crag": 20,
+    "attention|adaptive": 20,
+    "attention|agentic_rrf": 20,
+    "attention|agentic_dense": 20,
+    "nist_ai_rmf|baseline": 28,
+    "nist_ai_rmf|generation_v2": 28,
+    "nist_ai_rmf|self_rag": 28,
+    "nist_ai_rmf|crag": 28,
+    "nist_ai_rmf|adaptive": 28,
+    "nist_ai_rmf|agentic_rrf": 28,
+    "nist_ai_rmf|agentic_dense": 28,
+    "ipcc_spm|baseline": 28,
+    "ipcc_spm|generation_v2": 28,
+    "ipcc_spm|self_rag": 28,
+    "ipcc_spm|crag": 28,
+    "ipcc_spm|adaptive": 28,
+    "ipcc_spm|agentic_rrf": 28,
+    "ipcc_spm|agentic_dense": 28,
+    "alice|baseline": 28,
+    "alice|generation_v2": 28,
+    "alice|self_rag": 28,
+    "alice|crag": 28,
+    "alice|adaptive": 28,
+    "alice|agentic_rrf": 28,
+    "alice|agentic_dense": 28,
+    "who_handhygiene|baseline": 28,
+    "who_handhygiene|generation_v2": 28,
+    "who_handhygiene|self_rag": 28,
+    "who_handhygiene|crag": 28,
+    "who_handhygiene|adaptive": 28,
+    "who_handhygiene|agentic_rrf": 28,
+    "who_handhygiene|agentic_dense": 28,
+    "roomba|baseline": 14,
+    "roomba|generation_v2": 14,
+    "roomba|self_rag": 14,
+    "roomba|crag": 14,
+    "roomba|adaptive": 14,
+    "roomba|agentic_rrf": 14,
+    "roomba|agentic_dense": 14,
+    "tootsie|baseline": 28,
+    "tootsie|generation_v2": 28,
+    "tootsie|self_rag": 28,
+    "tootsie|crag": 28,
+    "tootsie|adaptive": 28,
+    "tootsie|agentic_rrf": 28,
+    "tootsie|agentic_dense": 28
+  },
+  "arms": {
+    "baseline": {
+      "docs": [
+        "attention",
+        "nist_ai_rmf",
+        "ipcc_spm",
+        "alice",
+        "who_handhygiene",
+        "roomba",
+        "tootsie"
+      ],
+      "n": 174,
+      "faithfulness": {
+        "pooled": 0.8967264334370062,
+        "macro": 0.8963186294188318
+      },
+      "answer_relevancy": {
+        "pooled": 0.6013534617898518,
+        "macro": 0.6057126432958945
+      },
+      "context_precision": {
+        "pooled": 0.5080140484850059,
+        "macro": 0.5050396824933369
+      },
+      "context_recall": {
+        "pooled": 0.6986590038314177,
+        "macro": 0.7022108843537415
+      }
+    },
+    "generation_v2": {
+      "docs": [
+        "attention",
+        "nist_ai_rmf",
+        "ipcc_spm",
+        "alice",
+        "who_handhygiene",
+        "roomba",
+        "tootsie"
+      ],
+      "n": 174,
+      "faithfulness": {
+        "pooled": 0.8312681040268582,
+        "macro": 0.8297966584192259
+      },
+      "answer_relevancy": {
+        "pooled": 0.5502042405047848,
+        "macro": 0.5450907952369304
+      },
+      "context_precision": {
+        "pooled": 0.5266602809207349,
+        "macro": 0.5141439908808906
+      },
+      "context_recall": {
+        "pooled": 0.5837712096332786,
+        "macro": 0.5798104956268222
+      }
+    },
+    "self_rag": {
+      "docs": [
+        "attention",
+        "nist_ai_rmf",
+        "ipcc_spm",
+        "alice",
+        "who_handhygiene",
+        "roomba",
+        "tootsie"
+      ],
+      "n": 174,
+      "faithfulness": {
+        "pooled": 0.7648524721346108,
+        "macro": 0.7757850796222845
+      },
+      "answer_relevancy": {
+        "pooled": 0.5707187581263733,
+        "macro": 0.5833570897326508
+      },
+      "context_precision": {
+        "pooled": 0.4513259831579377,
+        "macro": 0.4639136974726062
+      },
+      "context_recall": {
+        "pooled": 0.6932471264367817,
+        "macro": 0.7120323129251701
+      }
+    },
+    "crag": {
+      "docs": [
+        "attention",
+        "nist_ai_rmf",
+        "ipcc_spm",
+        "alice",
+        "who_handhygiene",
+        "roomba",
+        "tootsie"
+      ],
+      "n": 174,
+      "faithfulness": {
+        "pooled": 0.9268674352339079,
+        "macro": 0.9301341839511975
+      },
+      "answer_relevancy": {
+        "pooled": 0.68878376753364,
+        "macro": 0.6985457528683819
+      },
+      "context_precision": {
+        "pooled": 0.5287932476880471,
+        "macro": 0.5332501206812775
+      },
+      "context_recall": {
+        "pooled": 0.8201628352490422,
+        "macro": 0.8355867346938775
+      }
+    },
+    "adaptive": {
+      "docs": [
+        "attention",
+        "nist_ai_rmf",
+        "ipcc_spm",
+        "alice",
+        "who_handhygiene",
+        "roomba",
+        "tootsie"
+      ],
+      "n": 174,
+      "faithfulness": {
+        "pooled": 0.7707339618812327,
+        "macro": 0.7673368211963478
+      },
+      "answer_relevancy": {
+        "pooled": 0.6545454291965995,
+        "macro": 0.6604053842425897
+      },
+      "context_precision": {
+        "pooled": 0.48579888069933924,
+        "macro": 0.49505719785946567
+      },
+      "context_recall": {
+        "pooled": 0.770299671592775,
+        "macro": 0.7804361030126337
+      }
+    },
+    "agentic_rrf": {
+      "docs": [
+        "attention",
+        "nist_ai_rmf",
+        "ipcc_spm",
+        "alice",
+        "who_handhygiene",
+        "roomba",
+        "tootsie"
+      ],
+      "n": 174,
+      "faithfulness": {
+        "pooled": 0.8867776260894505,
+        "macro": 0.8895765947309694
+      },
+      "answer_relevancy": {
+        "pooled": 0.7018910560312394,
+        "macro": 0.704525242448095
+      },
+      "context_precision": {
+        "pooled": 0.1666181766647991,
+        "macro": 0.16288657106616067
+      },
+      "context_recall": {
+        "pooled": 0.8527777777777777,
+        "macro": 0.8616496598639456
+      }
+    },
+    "agentic_dense": {
+      "docs": [
+        "attention",
+        "nist_ai_rmf",
+        "ipcc_spm",
+        "alice",
+        "who_handhygiene",
+        "roomba",
+        "tootsie"
+      ],
+      "n": 174,
+      "faithfulness": {
+        "pooled": 0.8931877965624991,
+        "macro": 0.8958585099596504
+      },
+      "answer_relevancy": {
+        "pooled": 0.6571749667902712,
+        "macro": 0.6568750144651647
+      },
+      "context_precision": {
+        "pooled": 0.4736407948280581,
+        "macro": 0.48331392880087715
+      },
+      "context_recall": {
+        "pooled": 0.7712643678160919,
+        "macro": 0.772108843537415
+      }
+    }
+  },
+  "contrasts": {
+    "E1": {
+      "a": "agentic_rrf",
+      "b": "generation_v2",
+      "metric": "context_precision",
+      "prediction": "negative",
+      "diff": -0.36004210425593575,
+      "lo": -0.42195197454187183,
+      "hi": -0.29532022522551954,
+      "n": 174,
+      "docs": [
+        "attention",
+        "nist_ai_rmf",
+        "ipcc_spm",
+        "alice",
+        "who_handhygiene",
+        "roomba",
+        "tootsie"
+      ],
+      "verdict": "REPLICATES (CI excludes 0, predicted sign)",
+      "per_doc": {
+        "attention": -0.3834768464411483,
+        "nist_ai_rmf": -0.34103051514417865,
+        "ipcc_spm": -0.34495287418914833,
+        "alice": -0.3280599291892096,
+        "who_handhygiene": -0.4305511216106707,
+        "roomba": -0.2236652408303596,
+        "tootsie": -0.40706541129839346
+      },
+      "predicted_sign_docs": [
+        7,
+        7
+      ],
+      "heterogeneous": false
+    },
+    "E2": {
+      "a": "agentic_rrf",
+      "b": "generation_v2",
+      "metric": "context_recall",
+      "prediction": "positive",
+      "diff": 0.2690065681444992,
+      "lo": 0.21355363984674328,
+      "hi": 0.32690886699507393,
+      "n": 174,
+      "docs": [
+        "attention",
+        "nist_ai_rmf",
+        "ipcc_spm",
+        "alice",
+        "who_handhygiene",
+        "roomba",
+        "tootsie"
+      ],
+      "verdict": "REPLICATES (CI excludes 0, predicted sign)",
+      "per_doc": {
+        "attention": 0.2,
+        "nist_ai_rmf": 0.3113095238095238,
+        "ipcc_spm": 0.23422619047619048,
+        "alice": 0.31840986394557824,
+        "who_handhygiene": 0.2089285714285714,
+        "roomba": 0.48809523809523814,
+        "tootsie": 0.2119047619047619
+      },
+      "predicted_sign_docs": [
+        7,
+        7
+      ],
+      "heterogeneous": false
+    },
+    "E3": {
+      "a": "agentic_dense",
+      "b": "agentic_rrf",
+      "metric": "context_precision",
+      "prediction": "positive",
+      "diff": 0.307022618163259,
+      "lo": 0.2548497362685069,
+      "hi": 0.3611431031817203,
+      "n": 174,
+      "docs": [
+        "attention",
+        "nist_ai_rmf",
+        "ipcc_spm",
+        "alice",
+        "who_handhygiene",
+        "roomba",
+        "tootsie"
+      ],
+      "verdict": "REPLICATES (CI excludes 0, predicted sign)",
+      "per_doc": {
+        "attention": 0.38131414803654184,
+        "nist_ai_rmf": 0.22130044364302018,
+        "ipcc_spm": 0.2892710560148166,
+        "alice": 0.20181050898183608,
+        "who_handhygiene": 0.2816882781220377,
+        "roomba": 0.45223666937893103,
+        "tootsie": 0.41537039996583214
+      },
+      "predicted_sign_docs": [
+        7,
+        7
+      ],
+      "heterogeneous": false
+    },
+    "E4": {
+      "a": "agentic_dense",
+      "b": "agentic_rrf",
+      "metric": "context_recall",
+      "prediction": "none",
+      "diff": -0.08151340996168582,
+      "lo": -0.12332375478927203,
+      "hi": -0.04123563218390804,
+      "n": 174,
+      "docs": [
+        "attention",
+        "nist_ai_rmf",
+        "ipcc_spm",
+        "alice",
+        "who_handhygiene",
+        "roomba",
+        "tootsie"
+      ],
+      "verdict": "reported as it comes (no prediction); CI excludes 0",
+      "per_doc": {
+        "attention": -0.06666666666666668,
+        "nist_ai_rmf": -0.07916666666666668,
+        "ipcc_spm": -0.07291666666666667,
+        "alice": -0.10208333333333333,
+        "who_handhygiene": -0.07678571428571428,
+        "roomba": -0.20238095238095238,
+        "tootsie": -0.026785714285714284
+      }
+    },
+    "E5": {
+      "a": "crag",
+      "b": "generation_v2",
+      "metric": "context_recall",
+      "prediction": "positive",
+      "diff": 0.23639162561576357,
+      "lo": 0.18050766283524905,
+      "hi": 0.2957854406130268,
+      "n": 174,
+      "docs": [
+        "attention",
+        "nist_ai_rmf",
+        "ipcc_spm",
+        "alice",
+        "who_handhygiene",
+        "roomba",
+        "tootsie"
+      ],
+      "verdict": "REPLICATES (CI excludes 0, predicted sign)",
+      "per_doc": {
+        "attention": 0.25,
+        "nist_ai_rmf": 0.19345238095238096,
+        "ipcc_spm": 0.16339285714285715,
+        "alice": 0.2312074829931973,
+        "who_handhygiene": 0.20595238095238094,
+        "roomba": 0.5,
+        "tootsie": 0.24642857142857144
+      }
+    },
+    "E6": {
+      "a": "crag",
+      "b": "generation_v2",
+      "metric": "faithfulness",
+      "prediction": "none",
+      "diff": 0.0955993312070498,
+      "lo": 0.06879876133439175,
+      "hi": 0.12308211720843834,
+      "n": 174,
+      "docs": [
+        "attention",
+        "nist_ai_rmf",
+        "ipcc_spm",
+        "alice",
+        "who_handhygiene",
+        "roomba",
+        "tootsie"
+      ],
+      "verdict": "reported as it comes (no prediction); CI excludes 0",
+      "per_doc": {
+        "attention": 0.048872585747585746,
+        "nist_ai_rmf": 0.10447803676739988,
+        "ipcc_spm": 0.08670208759494473,
+        "alice": 0.09656190718220793,
+        "who_handhygiene": 0.13145598565766634,
+        "roomba": 0.18863504916136495,
+        "tootsie": 0.04565702661263254
+      }
+    },
+    "E7": {
+      "a": "generation_v2",
+      "b": "baseline",
+      "metric": "context_precision",
+      "prediction": "positive",
+      "diff": 0.018646232435729035,
+      "lo": -0.04693486589655491,
+      "hi": 0.07969348658064974,
+      "n": 174,
+      "docs": [
+        "attention",
+        "nist_ai_rmf",
+        "ipcc_spm",
+        "alice",
+        "who_handhygiene",
+        "roomba",
+        "tootsie"
+      ],
+      "verdict": "DOES NOT REPLICATE (CI includes 0: no detectable difference on the new documents)",
+      "per_doc": {
+        "attention": 0.12999999998670833,
+        "nist_ai_rmf": 0.0732142857041369,
+        "ipcc_spm": 0.053571428565922626,
+        "alice": -0.03273809523616071,
+        "who_handhygiene": 0.03373015872705027,
+        "roomba": -0.17857142855357142,
+        "tootsie": -0.015476190481210317
+      }
+    },
+    "E8": {
+      "a": "agentic_rrf",
+      "b": "crag",
+      "metric": "context_precision",
+      "prediction": "negative",
+      "diff": -0.36217507102324803,
+      "lo": -0.4164566962470789,
+      "hi": -0.3121798066323971,
+      "n": 174,
+      "docs": [
+        "attention",
+        "nist_ai_rmf",
+        "ipcc_spm",
+        "alice",
+        "who_handhygiene",
+        "roomba",
+        "tootsie"
+      ],
+      "verdict": "REPLICATES (CI excludes 0, predicted sign)",
+      "per_doc": {
+        "attention": -0.37066118988123165,
+        "nist_ai_rmf": -0.2956378126175255,
+        "ipcc_spm": -0.4128100170414797,
+        "alice": -0.2397782703858169,
+        "who_handhygiene": -0.3921474268086486,
+        "roomba": -0.47196456053342084,
+        "tootsie": -0.4095455700376948
+      }
+    }
+  },
+  "agentic": {
+    "agentic_rrf": {
+      "n": 174,
+      "stuck": 70,
+      "round1": 29,
+      "mean_rounds": 4.0,
+      "chunks_per_question": 130.7183908045977,
+      "target_share": 0.1,
+      "per_doc": {
+        "attention": {
+          "n": 20,
+          "stuck": 2,
+          "round1": 3,
+          "mean_rounds": 3.65,
+          "chunks": 132.55,
+          "target_share": 0.1
+        },
+        "nist_ai_rmf": {
+          "n": 28,
+          "stuck": 23,
+          "round1": 1,
+          "mean_rounds": 4.821428571428571,
+          "chunks": 155.39285714285714,
+          "target_share": 0.1
+        },
+        "ipcc_spm": {
+          "n": 28,
+          "stuck": 10,
+          "round1": 4,
+          "mean_rounds": 4.25,
+          "chunks": 126.32142857142857,
+          "target_share": 0.1
+        },
+        "alice": {
+          "n": 28,
+          "stuck": 8,
+          "round1": 8,
+          "mean_rounds": 3.607142857142857,
+          "chunks": 117.32142857142857,
+          "target_share": 0.1
+        },
+        "who_handhygiene": {
+          "n": 28,
+          "stuck": 15,
+          "round1": 4,
+          "mean_rounds": 4.214285714285714,
+          "chunks": 145.67857142857142,
+          "target_share": 0.1
+        },
+        "roomba": {
+          "n": 14,
+          "stuck": 3,
+          "round1": 3,
+          "mean_rounds": 3.5714285714285716,
+          "chunks": 110.85714285714286,
+          "target_share": 0.1
+        },
+        "tootsie": {
+          "n": 28,
+          "stuck": 9,
+          "round1": 6,
+          "mean_rounds": 3.5714285714285716,
+          "chunks": 117.5,
+          "target_share": 0.1
+        }
+      }
+    },
+    "agentic_dense": {
+      "n": 174,
+      "stuck": 60,
+      "round1": 49,
+      "mean_rounds": 3.2758620689655173,
+      "chunks_per_question": 18.74712643678161,
+      "target_share": 0.6509771943490364,
+      "per_doc": {
+        "attention": {
+          "n": 20,
+          "stuck": 3,
+          "round1": 4,
+          "mean_rounds": 3.25,
+          "chunks": 14.5,
+          "target_share": 0.6892962472308152
+        },
+        "nist_ai_rmf": {
+          "n": 28,
+          "stuck": 15,
+          "round1": 4,
+          "mean_rounds": 4.071428571428571,
+          "chunks": 30.785714285714285,
+          "target_share": 0.44121220445631665
+        },
+        "ipcc_spm": {
+          "n": 28,
+          "stuck": 9,
+          "round1": 7,
+          "mean_rounds": 3.107142857142857,
+          "chunks": 16.321428571428573,
+          "target_share": 0.6880618042174665
+        },
+        "alice": {
+          "n": 28,
+          "stuck": 7,
+          "round1": 8,
+          "mean_rounds": 2.9642857142857144,
+          "chunks": 26.535714285714285,
+          "target_share": 0.4807259047947824
+        },
+        "who_handhygiene": {
+          "n": 28,
+          "stuck": 15,
+          "round1": 8,
+          "mean_rounds": 3.6785714285714284,
+          "chunks": 18.571428571428573,
+          "target_share": 0.7434406041461105
+        },
+        "roomba": {
+          "n": 14,
+          "stuck": 4,
+          "round1": 7,
+          "mean_rounds": 2.642857142857143,
+          "chunks": 5.857142857142857,
+          "target_share": 0.9047541743970315
+        },
+        "tootsie": {
+          "n": 28,
+          "stuck": 7,
+          "round1": 11,
+          "mean_rounds": 2.892857142857143,
+          "chunks": 11.0,
+          "target_share": 0.747186212048095
+        }
+      }
+    }
+  },
+  "crag": {
+    "attention": {
+      "n": 20,
+      "declined": 0,
+      "routes": {
+        "direct_generate": 18,
+        "supplemental_retrieval": 2
+      }
+    },
+    "nist_ai_rmf": {
+      "n": 28,
+      "declined": 0,
+      "routes": {
+        "direct_generate": 24,
+        "supplemental_retrieval": 4
+      }
+    },
+    "ipcc_spm": {
+      "n": 28,
+      "declined": 0,
+      "routes": {
+        "direct_generate": 27,
+        "supplemental_retrieval": 1
+      }
+    },
+    "alice": {
+      "n": 28,
+      "declined": 0,
+      "routes": {
+        "supplemental_retrieval": 12,
+        "direct_generate": 16
+      }
+    },
+    "who_handhygiene": {
+      "n": 28,
+      "declined": 0,
+      "routes": {
+        "direct_generate": 24,
+        "supplemental_retrieval": 4
+      }
+    },
+    "roomba": {
+      "n": 14,
+      "declined": 0,
+      "routes": {
+        "supplemental_retrieval": 9,
+        "direct_generate": 5
+      }
+    },
+    "tootsie": {
+      "n": 28,
+      "declined": 0,
+      "routes": {
+        "direct_generate": 24,
+        "supplemental_retrieval": 4
+      }
+    }
+  },
+  "missing": [
+    "ipcc_spm/Agentic (dense)/faith: 1 of 28"
+  ]
+}
