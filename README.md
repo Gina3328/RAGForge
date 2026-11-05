@@ -94,10 +94,24 @@ field in the corresponding config file (e.g. `self_rag`, `crag`, `adaptive`, or
   complexity routing, round counts) alongside its answers, for evaluating
   routing/decision correctness rather than just final-answer quality.
 
-See `evaluation/README.md` for detailed usage. Evaluation source documents
-and generated reports are not included in this repository -- point the
-scripts at your own PDFs, or build an `eval_questions_*.json` file following
-the existing examples in `evaluation/`.
+See `evaluation/README.md` for detailed usage.
+
+Evaluation source documents and raw generated reports are not included in
+this repository. The question files (`evaluation/eval_questions_*.json`,
+`evaluation/eval_unanswerable_*.json`), the analysis plans
+(`evaluation/ANALYSIS_PLAN_*.md`) and the curated result summaries
+(`results/`) are included. `evaluation/SOURCES.md` lists the documents used
+and where to get them; put them at the paths given there and in
+`evaluation/new_docs.tsv` to re-run the experiments.
+
+The experiments in the paper "RRF Scores Are Not Confidence Signals:
+Reliability Failures at RAG Decision Points" were run with
+`evaluation/run_crag_rrf_confidence_comparison.sh`,
+`run_agentic_merge_comparison.sh`, `run_repeats.sh`, `run_new_docs.sh`,
+`run_window_split.sh`, `run_collection_count.sh` and `run_refusal.sh`. The
+header of each script explains the order of steps. For Agentic (RRF) on the
+new documents, some `context_precision` calls hit the RAGAS timeout, so
+`evaluation/rescore_nan_cp.py` re-scores only those questions.
 
 ## Notes
 
